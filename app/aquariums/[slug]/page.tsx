@@ -93,8 +93,8 @@ export default async function SpecialtyPage({ params }: PageProps<"/aquariums/[s
 
       <section className="bg-sand py-20 md:py-28">
         <Container>
-          <div className="grid items-start gap-12 lg:grid-cols-[1fr_1fr] lg:gap-16">
-            <Reveal className="lg:sticky lg:top-28">
+          <div className="grid items-stretch gap-12 lg:grid-cols-[1fr_1fr] lg:gap-16">
+            <Reveal className="flex flex-col">
               <h2 className="font-display text-[1.8rem] leading-tight text-abyss md:text-[2.3rem]">What Jason handles</h2>
               <ul className="mt-6 space-y-3">
                 {s.points.map((p) => (
@@ -110,11 +110,18 @@ export default async function SpecialtyPage({ params }: PageProps<"/aquariums/[s
                 ))}
               </div>
               <div className="mt-8 flex flex-wrap gap-3">
-                {services.map((sv) => (
+                {services.slice(0, 3).map((sv) => (
                   <Link key={sv.slug} href={`/services/${sv.slug}`} className="rounded-full bg-white px-4 py-2 text-[0.85rem] font-bold text-abyss ring-1 ring-[var(--line)] hover:bg-mist">
                     {sv.name}
                   </Link>
                 ))}
+              </div>
+              <div className="mt-8 hidden flex-1 items-end lg:flex">
+                <div className="w-full rounded-[1.5rem] bg-abyss p-6 text-white">
+                  <p className="eyebrow text-aqua">Text a photo</p>
+                  <p className="font-display mt-2 text-[1.3rem] leading-tight">Jason will tell you what your {s.name.toLowerCase()} needs</p>
+                  <a href={site.smsPhotoHref} className="btn btn-coral mt-4 w-full">Text {site.phone}</a>
+                </div>
               </div>
             </Reveal>
             <div className="grid grid-cols-2 gap-3 sm:gap-4">

@@ -38,8 +38,8 @@ export default function AboutPage() {
 
       <section className="bg-sand py-20 md:py-28">
         <Container>
-          <div className="grid items-start gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
-            <Reveal className="space-y-6 lg:sticky lg:top-28 text-pretty text-[1.08rem] leading-relaxed text-ink">
+          <div className="grid items-stretch gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
+            <Reveal className="space-y-6 text-pretty text-[1.08rem] leading-relaxed text-ink">
               <p className="font-display text-[1.6rem] leading-tight text-abyss md:text-[2rem]">
                 Hi, I&rsquo;m Jason. I take care of aquariums for a living and I have for a long time.
               </p>
@@ -80,8 +80,8 @@ export default function AboutPage() {
               </div>
             </Reveal>
 
-            <div className="space-y-5 lg:sticky lg:top-28">
-              <Reveal delay={80} className="relative aspect-[4/3] overflow-hidden rounded-[1.75rem] ring-1 ring-[var(--line)]">
+            <div className="flex flex-col gap-5">
+              <Reveal delay={80} className="relative min-h-[18rem] flex-1 overflow-hidden rounded-[1.75rem] ring-1 ring-[var(--line)]">
                 <Image
                   src="/images/work/lobby-reef.jpg"
                   alt="A wall-mounted reef aquarium Jason services in a Palm Beach County lobby"

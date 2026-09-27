@@ -69,7 +69,7 @@ export default async function GuidePage({ params }: PageProps<"/guides/[slug]">)
               <Image src={g.image} alt={g.imageAlt} fill priority sizes="(min-width: 1024px) 60vw, 100vw" className="object-cover" />
             </Reveal>
           </Container>
-          <Container className="grid gap-12 py-14 lg:grid-cols-[1fr_20rem] lg:gap-16 md:py-20">
+          <Container className="grid items-stretch gap-12 py-14 lg:grid-cols-[1fr_20rem] lg:gap-16 md:py-20">
             <div className="max-w-3xl">
               {g.sections.map((s, i) => (
                 <Reveal key={s.h} delay={Math.min(i, 2) * 50} className="mb-10">
@@ -84,7 +84,7 @@ export default async function GuidePage({ params }: PageProps<"/guides/[slug]">)
                 <p className="font-display mt-2 text-balance text-[1.25rem] leading-snug text-abyss">{g.takeaway}</p>
               </Reveal>
             </div>
-            <aside className="space-y-5 lg:sticky lg:top-28 lg:self-start">
+            <aside className="flex flex-col gap-5">
               <Reveal delay={80} className="rounded-[1.5rem] bg-abyss p-6 text-white">
                 <p className="eyebrow text-aqua">Skip the reading</p>
                 <p className="font-display mt-2 text-[1.3rem] leading-tight">Text Jason a photo of your tank</p>
@@ -106,6 +106,9 @@ export default async function GuidePage({ params }: PageProps<"/guides/[slug]">)
                   ))}
                 </ul>
               </Reveal>
+              <div className="relative min-h-[14rem] flex-1 overflow-hidden rounded-[1.5rem] ring-1 ring-[var(--line)] hidden lg:block">
+                <Image src="/images/stock/reef-tangs.jpg" alt="Two yellow tangs over coral in a reef aquarium" fill sizes="(min-width: 1024px) 30vw, 100vw" className="object-cover" />
+              </div>
             </aside>
           </Container>
         </div>

@@ -64,10 +64,10 @@ export default function VisitStory() {
           lede="No upsell and no mystery. This is what happens when Jason shows up, in the order it happens."
         />
 
-        <div ref={ref} className="mt-12 grid items-start gap-10 md:mt-16 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
+        <div ref={ref} className="mt-12 grid items-stretch gap-10 md:mt-16 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
           {/* test tube rack */}
-          <div className="lg:sticky lg:top-28">
-            <Reveal className="relative overflow-hidden rounded-[1.75rem] bg-abyss p-6 text-white md:p-8">
+          <div className="flex">
+            <Reveal className="relative flex w-full flex-col overflow-hidden rounded-[1.75rem] bg-abyss p-6 text-white md:p-8">
               <div
                 aria-hidden="true"
                 className="pointer-events-none absolute inset-0"
@@ -128,7 +128,7 @@ export default function VisitStory() {
 
               <p
                 className={clsx(
-                  "relative mt-4 rounded-2xl px-4 py-3 text-[0.9rem] font-semibold transition-all duration-700",
+                  "relative mt-auto rounded-2xl px-4 py-3 pt-3 text-[0.9rem] font-semibold transition-all duration-700",
                   done ? "bg-kelp/20 text-[#8ff0bd]" : "bg-white/8 text-white/70"
                 )}
               >

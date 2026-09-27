@@ -95,7 +95,7 @@ export default async function CityPage({ params }: PageProps<"/aquarium-service/
 
       <section className="bg-white py-20 md:py-28">
         <Container>
-          <div className="grid items-start gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
+          <div className="grid items-stretch gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
             <div>
               <Reveal className="space-y-5 text-pretty text-[1.05rem] leading-relaxed text-ink">
                 <h2 className="font-display text-[1.8rem] leading-tight text-abyss md:text-[2.3rem]">
@@ -143,10 +143,13 @@ export default async function CityPage({ params }: PageProps<"/aquarium-service/
               </Reveal>
             </div>
 
-            <div className="lg:sticky lg:top-28">
+            <div className="flex flex-col gap-6">
               <Reveal delay={100}>
                 <QuoteForm city={c.name} />
               </Reveal>
+              <div className="relative min-h-[14rem] flex-1 overflow-hidden rounded-[1.5rem] ring-1 ring-[var(--line)] hidden lg:block">
+                <Image src="/images/work/lobby-reef-1200.jpg" alt="A wall-mounted reef aquarium Jason services in Palm Beach County" fill sizes="(min-width: 1024px) 30vw, 100vw" className="object-cover" />
+              </div>
             </div>
           </div>
         </Container>

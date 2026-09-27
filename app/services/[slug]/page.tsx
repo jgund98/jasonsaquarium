@@ -81,7 +81,7 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
 
       <section className="bg-sand py-20 md:py-28">
         <Container>
-          <div className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
+          <div className="grid items-stretch gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
             <div>
               <Reveal>
                 <h2 className="font-display text-[1.8rem] leading-tight text-abyss md:text-[2.3rem]">What is included</h2>
@@ -112,7 +112,7 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
               </Reveal>
             </div>
 
-            <aside className="space-y-6 lg:sticky lg:top-28 lg:self-start">
+            <aside className="flex flex-col gap-6">
               <Reveal delay={80} className="rounded-[1.5rem] bg-white p-6 ring-1 ring-[var(--line)]">
                 <p className="eyebrow text-lagoon">Get a straight answer</p>
                 <p className="font-display mt-3 text-[1.35rem] leading-tight text-abyss">Text Jason the tank size and a photo</p>
@@ -150,6 +150,9 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
                   ))}
                 </ul>
               </Reveal>
+              <div className="relative min-h-[14rem] flex-1 overflow-hidden rounded-[1.5rem] ring-1 ring-[var(--line)] hidden lg:block">
+                <Image src="/images/stock/coral-macro.jpg" alt="Pink and teal hammer coral heads under reef lighting" fill sizes="(min-width: 1024px) 30vw, 100vw" className="object-cover" />
+              </div>
             </aside>
           </div>
         </Container>

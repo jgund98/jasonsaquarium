@@ -310,7 +310,7 @@ export default function WaterTestDecoder() {
   const clear = () => setVals({});
 
   return (
-    <div className="grid gap-8 lg:grid-cols-[1fr_1fr] lg:gap-12">
+    <div className="grid items-stretch gap-8 lg:grid-cols-[1fr_1fr] lg:gap-12">
       <div className="rounded-[1.75rem] bg-white p-6 ring-1 ring-[var(--line)] md:p-8">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div className="inline-flex rounded-full bg-shell p-1 ring-1 ring-[var(--line)]">
@@ -361,7 +361,7 @@ export default function WaterTestDecoder() {
         </div>
       </div>
 
-      <div className="lg:sticky lg:top-28 lg:self-start">
+      <div className="flex flex-col [&>div]:flex-1">
         {!verdict ? (
           <div className="rounded-[1.75rem] bg-abyss p-8 text-white">
             <p className="eyebrow text-aqua">Your read</p>

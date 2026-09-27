@@ -79,7 +79,7 @@ export default function HurricaneChecklist() {
   );
 
   return (
-    <div className="grid gap-8 lg:grid-cols-[1fr_20rem] lg:gap-12">
+    <div className="grid items-stretch gap-8 lg:grid-cols-[1fr_20rem] lg:gap-12">
       <div className="space-y-6">
         {phases.map((ph) => (
           <section key={ph.title} className="rounded-[1.75rem] bg-white p-6 ring-1 ring-[var(--line)] md:p-8">
@@ -107,7 +107,7 @@ export default function HurricaneChecklist() {
         ))}
       </div>
 
-      <aside className="space-y-5 lg:sticky lg:top-28 lg:self-start">
+      <aside className="flex flex-col gap-5">
         <div className="rounded-[1.75rem] bg-abyss p-7 text-white">
           <p className="eyebrow text-aqua">Progress</p>
           <p className="font-display mt-2 text-[2.4rem] leading-none">{pct}%</p>
@@ -129,7 +129,7 @@ export default function HurricaneChecklist() {
             </button>
           </div>
         </div>
-        <div className="rounded-[1.5rem] bg-mist p-5 text-[0.9rem] leading-relaxed text-ink">
+        <div className="mt-auto rounded-[1.5rem] bg-mist p-5 text-[0.9rem] leading-relaxed text-ink">
           Heavily stocked reefs have hours, not days, without power. If you have coral you care about and no generator, the time to talk to Jason is before the cone appears.
         </div>
       </aside>
