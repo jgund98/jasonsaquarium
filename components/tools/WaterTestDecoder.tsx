@@ -260,6 +260,14 @@ const KEY = "jas-water-test";
 export default function WaterTestDecoder() {
   const [water, setWater] = useState<Water>("saltwater");
   const [vals, setVals] = useState<Record<string, string>>({});
+  const [scrolledOnce, setScrolledOnce] = useState(false);
+  useEffect(() => {
+    const el = document.getElementById("tool-result");
+    if (!el) return;
+    const io = new IntersectionObserver((e) => { if (e[0]?.isIntersecting) setScrolledOnce(true); else setScrolledOnce(false); }, { threshold: 0.2 });
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
   const params = water === "saltwater" ? SALT : FRESH;
 
   useEffect(() => {
@@ -361,7 +369,19 @@ export default function WaterTestDecoder() {
         </div>
       </div>
 
-      <div>
+      <div id="tool-result" className="scroll-mt-28">
+        {results.length > 0 && !scrolledOnce && (
+        <a
+          href="#tool-result"
+          onClick={(e) => {
+            e.preventDefault();
+            document.getElementById("tool-result")?.scrollIntoView({ behavior: "smooth", block: "start" });
+          }}
+          className="fixed bottom-[calc(env(safe-area-inset-bottom)+5.2rem)] left-1/2 z-30 -translate-x-1/2 rounded-full bg-coral px-5 py-3 text-[0.9rem] font-bold text-white shadow-[0_18px_40px_-14px_rgba(255,106,77,0.8)] lg:hidden"
+        >
+          See your read
+        </a>
+        )}
         {!verdict ? (
           <div className="rounded-[1.75rem] bg-abyss p-8 text-white">
             <p className="eyebrow text-aqua">Your read</p>

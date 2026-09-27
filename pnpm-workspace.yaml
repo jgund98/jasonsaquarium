@@ -1,4 +1,3 @@
 onlyBuiltDependencies:
   - sharp
-  - puppeteer
   - unrs-resolver

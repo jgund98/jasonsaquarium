@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import clsx from "clsx";
 import Link from "next/link";
 import { site } from "@/lib/site";
@@ -87,13 +87,22 @@ export default function SchedulePlanner() {
     return { cadence, checks, why, summary };
   }, [water, size, stock, gear, owner]);
 
+  const resultRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (plan && window.matchMedia("(max-width: 1023px)").matches) {
+      resultRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    // only when the plan first appears
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [plan !== null]);
+
   const smsBody = plan
     ? encodeURIComponent(`Hi Jason, your planner suggested ${plan.summary}. Can you give me a quote?`)
     : "";
 
   return (
     <div className="grid items-start gap-8 lg:grid-cols-[1fr_1fr] lg:gap-12">
-      <div className="space-y-7 rounded-[1.75rem] bg-white p-6 ring-1 ring-[var(--line)] md:p-8">
+      <div className="grid gap-7 rounded-[1.75rem] bg-white p-6 ring-1 ring-[var(--line)] md:p-8 lg:grid-cols-2 lg:gap-x-8">
         <Q label="What kind of system" opts={waterOpts} value={water} onChange={setWater} />
         <Q label="How big" opts={sizeOpts} value={size} onChange={setSize} />
         <Q label="How stocked" opts={stockOpts} value={stock} onChange={setStock} />
@@ -101,7 +110,7 @@ export default function SchedulePlanner() {
         <Q label="And you" opts={ownerOpts} value={owner} onChange={setOwner} />
       </div>
 
-      <div>
+      <div ref={resultRef} id="tool-result" className="scroll-mt-28">
         {!plan ? (
           <div className="rounded-[1.75rem] bg-abyss p-8 text-white">
             <p className="eyebrow text-aqua">Your plan</p>

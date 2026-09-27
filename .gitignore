@@ -45,3 +45,6 @@ next-env.d.ts
 /raw
 /research/*.output
 /shots
+.vercel
+
+.vercel

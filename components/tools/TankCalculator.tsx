@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import clsx from "clsx";
 import { site } from "@/lib/site";
 
@@ -22,6 +22,14 @@ export default function TankCalculator() {
   const [rock, setRock] = useState("10");
   const [change, setChange] = useState("20");
   const [salt, setSalt] = useState(true);
+  const [inView, setInView] = useState(false);
+  useEffect(() => {
+    const el = document.getElementById("tool-result");
+    if (!el) return;
+    const io = new IntersectionObserver((e) => setInView(!!e[0]?.isIntersecting), { threshold: 0.2 });
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
 
   const out = useMemo(() => {
     const l = Number(L), w = Number(W), h = Number(H), b = Number(bow);
@@ -96,7 +104,19 @@ export default function TankCalculator() {
         </div>
       </div>
 
-      <div>
+      <div id="tool-result" className="scroll-mt-28">
+        {out && !inView && (
+        <a
+          href="#tool-result"
+          onClick={(e) => {
+            e.preventDefault();
+            document.getElementById("tool-result")?.scrollIntoView({ behavior: "smooth", block: "start" });
+          }}
+          className="fixed bottom-[calc(env(safe-area-inset-bottom)+5.2rem)] left-1/2 z-30 -translate-x-1/2 rounded-full bg-coral px-5 py-3 text-[0.9rem] font-bold text-white shadow-[0_18px_40px_-14px_rgba(255,106,77,0.8)] lg:hidden"
+        >
+          See your tank size
+        </a>
+        )}
         <div className="rounded-[1.75rem] bg-abyss p-7 text-white md:p-8">
           <p className="eyebrow text-aqua">Your tank</p>
           {!out ? (
