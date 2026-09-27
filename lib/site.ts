@@ -21,8 +21,8 @@ export const site = {
   // Where website leads are emailed. Override with LEAD_TO_EMAIL in Vercel.
   leadEmail: "jgundyt@gmail.com",
 
-  // No storefront. Mobile service based in west Boca Raton.
-  homeCity: "Boca Raton",
+  // No storefront and no home base. Mobile service across the county.
+  homeCity: "Palm Beach County",
   state: "FL",
   stateLong: "Florida",
   county: "Palm Beach County",
@@ -40,7 +40,7 @@ export const site = {
   // 2018, with clients already using Jason for years by then.
   founded: "2021",
   disambiguation:
-    "Jason's Aquarium Service LLC is based in Boca Raton, Florida and is not affiliated with Jason's Aquatics in Davie.",
+    "Jason's Aquarium Service LLC serves Palm Beach County and north Broward, Florida and is not affiliated with Jason's Aquatics in Davie.",
 
   // Service priority, in the order Jason wants them presented.
   primaryServices: [
@@ -58,7 +58,7 @@ export const site = {
 // Palm Beach County first, then the northern Broward towns within a short drive
 // of west Boca. Order matters: it is the order they appear in copy and schema.
 export const serviceAreas = [
-  { name: "Boca Raton", county: "Palm Beach", slug: "boca-raton", minutes: 0 },
+  { name: "Boca Raton", county: "Palm Beach", slug: "boca-raton", minutes: 1 },
   { name: "West Boca", county: "Palm Beach", slug: "west-boca-raton", minutes: 5 },
   { name: "Delray Beach", county: "Palm Beach", slug: "delray-beach", minutes: 15 },
   { name: "Highland Beach", county: "Palm Beach", slug: "highland-beach", minutes: 20 },

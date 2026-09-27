@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import QuoteForm from "@/components/QuoteForm";
 import { Container, Reveal } from "@/components/Section";
@@ -29,7 +28,7 @@ export default function ContactPage() {
 
       <section className="bg-white py-16 md:py-24">
         <Container>
-          <div className="grid items-stretch gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:gap-16">
+          <div className="grid items-start gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:gap-16">
             <Reveal>
               <QuoteForm />
             </Reveal>
@@ -52,11 +51,11 @@ export default function ContactPage() {
                 <dl className="mt-4 space-y-3 text-[0.92rem]">
                   <div className="flex justify-between gap-4">
                     <dt className="text-ink-soft">Hours</dt>
-                    <dd className="text-right font-semibold text-ink">Open 24 hours, 7 days</dd>
+                    <dd className="text-right font-semibold text-ink">Call or text any time</dd>
                   </div>
                   <div className="flex justify-between gap-4">
-                    <dt className="text-ink-soft">Based in</dt>
-                    <dd className="text-right font-semibold text-ink">West Boca Raton, FL</dd>
+                    <dt className="text-ink-soft">Store</dt>
+                    <dd className="text-right font-semibold text-ink">None. Jason comes to you</dd>
                   </div>
                   <div className="flex justify-between gap-4">
                     <dt className="text-ink-soft">Serving</dt>
@@ -71,9 +70,6 @@ export default function ContactPage() {
               <Reveal delay={200} className="rounded-[1.5rem] bg-mist p-6 text-[0.9rem] leading-relaxed text-ink">
                 Tank cracked or leaking right now? Turn off the lights, keep the pumps running if the water level allows it, and call. Jason has moved livestock into a new tank the same day more than once.
               </Reveal>
-              <div className="relative min-h-[14rem] flex-1 overflow-hidden rounded-[1.5rem] ring-1 ring-[var(--line)] hidden lg:block">
-                <Image src="/images/work/lobby-reef-1200.jpg" alt="A wall-mounted reef aquarium Jason services in Palm Beach County" fill sizes="(min-width: 1024px) 30vw, 100vw" className="object-cover" />
-              </div>
             </div>
           </div>
         </Container>

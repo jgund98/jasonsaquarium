@@ -22,6 +22,7 @@ export default function PageHero({
   video,
   poster,
   compact = false,
+  wave = true,
   children,
 }: {
   eyebrow?: string;
@@ -33,6 +34,7 @@ export default function PageHero({
   video?: string;
   poster?: string;
   compact?: boolean;
+  wave?: boolean;
   children?: React.ReactNode;
 }) {
   const hasMedia = Boolean(image || video);
@@ -123,7 +125,7 @@ export default function PageHero({
           )}
         </div>
       </Container>
-      <Wave from="#041a2e" to="#ffffff" className="relative" />
+      {wave && <Wave from="#041a2e" to="#ffffff" className="relative" />}
     </section>
   );
 }

@@ -126,6 +126,21 @@ export default function VisitStory() {
                 })}
               </svg>
 
+              <dl className="relative mt-5 grid grid-cols-2 gap-x-6 gap-y-2 border-t border-white/10 pt-5 text-[0.82rem]">
+                {[
+                  ["Salinity", "1.024 to 1.026"],
+                  ["Alkalinity", "8 to 9.5 dKH"],
+                  ["Calcium", "400 to 450 ppm"],
+                  ["Nitrate", "2 to 10 ppm"],
+                  ["Phosphate", "0.02 to 0.1 ppm"],
+                  ["pH", "8.1 to 8.3"],
+                ].map(([k, v]) => (
+                  <div key={k} className="flex items-baseline justify-between gap-2 border-b border-white/8 pb-1.5">
+                    <dt className="text-white/60">{k}</dt>
+                    <dd className="font-semibold text-white/90">{v}</dd>
+                  </div>
+                ))}
+              </dl>
               <p
                 className={clsx(
                   "relative mt-4 rounded-2xl px-4 py-3 text-[0.9rem] font-semibold transition-all duration-700",
@@ -139,7 +154,7 @@ export default function VisitStory() {
 
           <ol className="relative border-l border-[var(--line)] pl-8 md:pl-10">
             {steps.map((s, i) => (
-              <Reveal key={s.k} as="li" delay={i * 60} className="relative pb-7 last:pb-0">
+              <Reveal key={s.k} as="li" delay={i * 60} className="relative pb-8 last:pb-0">
                 <span className="absolute -left-8 top-[0.35rem] h-3 w-3 -translate-x-1/2 rounded-full bg-coral ring-4 ring-white md:-left-10" />
                 <span className="eyebrow text-lagoon">{s.k}</span>
                 <h3 className="font-display mt-1 text-[1.25rem] leading-tight text-abyss md:text-[1.45rem]">{s.title}</h3>

@@ -20,7 +20,6 @@ export function localBusinessJsonLd() {
     foundingDate: site.founded,
     address: {
       "@type": "PostalAddress",
-      addressLocality: site.homeCity,
       addressRegion: site.state,
       addressCountry: "US",
     },

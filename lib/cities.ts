@@ -25,11 +25,11 @@ export const cities: City[] = [
     name: "Boca Raton",
     county: "Palm Beach",
     zips: ["33431", "33432", "33433", "33434", "33486", "33487", "33496", "33498"],
-    drive: "home base",
+    drive: "Palm Beach County",
     lead:
-      "Jason's Aquarium Service is a mobile aquarium cleaning, installation and consultation company based in west Boca Raton. Jason services saltwater reef tanks, freshwater and planted aquariums and ponds in homes, offices and lobbies across Boca, from Broken Sound and Woodfield to Mizner Park and the beachside estates, on weekly, bi-weekly or monthly schedules.",
+      "Jason's Aquarium Service is a mobile aquarium cleaning, installation and consultation company serving Boca Raton. Jason services saltwater reef tanks, freshwater and planted aquariums and ponds in homes, offices and lobbies across Boca, from Broken Sound and Woodfield to Mizner Park and the beachside estates, on weekly, bi-weekly or monthly schedules.",
     local: [
-      "Boca is home. Most of Jason's route runs through the country club communities west of I-95, the office parks along Glades Road and Yamato Road, and the older neighborhoods east of Federal Highway where built-in tanks were part of the original architecture. A reef tank in Broken Sound and a discus tank in Old Floresta get the same attention: water tested, glass and rock cleaned, equipment checked, every fish looked at.",
+      "Boca is a big part of the route. Much of it runs through the country club communities west of I-95, the office parks along Glades Road and Yamato Road, and the older neighborhoods east of Federal Highway where built-in tanks were part of the original architecture. A reef tank in Broken Sound and a discus tank in Old Floresta get the same attention: water tested, glass and rock cleaned, equipment checked, every fish looked at.",
       "Lobby and office aquariums are a big part of the work here. Medical offices near Boca Raton Regional Hospital, law firms downtown and the corporate campuses along the Yamato corridor keep tanks because they calm a waiting room. Those tanks get serviced on a schedule that fits business hours, with access arrangements made once and kept.",
       "Boca tap water is hard and treated, which matters for freshwater tanks and reef tanks alike. Jason mixes saltwater and conditions freshwater ahead of every visit so a water change never shocks the system.",
     ],
@@ -56,7 +56,7 @@ export const cities: City[] = [
     faqs: [
       {
         q: "Do you service aquariums in west Boca and east Boca?",
-        a: "Yes. Jason is based in west Boca Raton and covers the whole city, from the communities along 441 to the beachside neighborhoods east of Federal Highway.",
+        a: "Yes. Jason covers the whole city, from the communities along 441 to the beachside neighborhoods east of Federal Highway.",
       },
       {
         q: "Can you maintain the aquarium in my Boca Raton office or medical practice?",
@@ -64,7 +64,7 @@ export const cities: City[] = [
       },
       {
         q: "How quickly can you come out to Boca Raton for an aquarium emergency?",
-        a: "Boca is Jason's home base, so emergency calls here are usually the fastest to reach. Call or text right away if a tank is leaking, cracked or crashing.",
+        a: "Boca is on Jason's route most days. Call or text right away if a tank is leaking, cracked or crashing and he will tell you honestly how fast he can be there.",
       },
     ],
     nearby: ["west-boca-raton", "delray-beach", "deerfield-beach", "highland-beach", "parkland"],
@@ -74,12 +74,12 @@ export const cities: City[] = [
     name: "West Boca",
     county: "Palm Beach",
     zips: ["33428", "33433", "33434", "33498"],
-    drive: "home base",
+    drive: "Palm Beach County",
     lead:
-      "Jason's Aquarium Service is based in west Boca Raton and services aquariums in the communities along 441 and Glades Road every week: Boca Winds, Loggers' Run, Mission Bay, Boca Falls, Sandalfoot Cove, Boca Pointe and the neighbors in between. Reef tanks, freshwater tanks and backyard ponds, cleaned and maintained on a schedule.",
+      "Jason's Aquarium Service services aquariums in the west Boca communities along 441 and Glades Road every week: Boca Winds, Loggers' Run, Mission Bay, Boca Falls, Sandalfoot Cove, Boca Pointe and the neighbors in between. Reef tanks, freshwater tanks and backyard ponds, cleaned and maintained on a schedule.",
     local: [
       "West Boca is unincorporated Palm Beach County, and for aquarium owners that mostly means big family homes with room for a tank and a lot of west-facing windows. Sun on a tank is the most common cause of the algae problems Jason sees out here, and it is fixable with placement, lighting schedules and a proper maintenance rhythm.",
-      "Because this is where Jason lives and works, west Boca clients get the tightest scheduling and the fastest response when something goes wrong. A cracked tank in Boca Winds or a failed pump in Mission Bay is a short drive, not a trip across the county.",
+      "West Boca sits in the middle of Jason's route, so scheduling here is easy and response when something goes wrong is quick. A cracked tank in Boca Winds or a failed pump in Mission Bay is on the way, not a trip across the county.",
     ],
     neighborhoods: [
       "Boca Winds",
@@ -101,7 +101,7 @@ export const cities: City[] = [
     faqs: [
       {
         q: "Is west Boca inside your normal service area?",
-        a: "It is the center of it. Jason is based in west Boca Raton, so the communities along 441 and Glades Road are the easiest to schedule.",
+        a: "Yes. The communities along 441 and Glades Road are in the middle of Jason's route and easy to schedule.",
       },
       {
         q: "My tank in west Boca gets a lot of algae. Can you fix that?",
@@ -119,7 +119,7 @@ export const cities: City[] = [
     lead:
       "Jason's Aquarium Service cleans, installs and troubleshoots aquariums throughout Delray Beach, from the west Delray communities near Kings Point and the Villages of Oriole to downtown Atlantic Avenue and the beachside streets east of the Intracoastal. Saltwater, reef, freshwater, planted tanks and ponds, serviced on a schedule by Jason himself.",
     local: [
-      "Jason's business started in west Delray, so this is familiar ground. The 55-plus communities west of Military Trail have a lot of long-time hobbyists with well-established tanks that need steady, knowledgeable care rather than a salesperson. Several of Jason's longest client relationships are here.",
+      "Delray is familiar ground. The 55-plus communities west of Military Trail have a lot of long-time hobbyists with well-established tanks that need steady, knowledgeable care rather than a salesperson. Several of Jason's longest client relationships are here.",
       "Downtown Delray is a different world: restaurants and bars along Atlantic Avenue, boutique offices and condos where a tank is a design feature. Those systems get serviced early or after hours so the room is spotless when guests arrive.",
       "Delray also has some of the prettiest planted freshwater tanks on the route. The lighting in a bright Lake Ida or Tropic Isle home is a gift for plants and a challenge for algae, and the maintenance plan is built around that.",
     ],
@@ -144,7 +144,7 @@ export const cities: City[] = [
     faqs: [
       {
         q: "Do you service aquariums in the 55-plus communities in west Delray?",
-        a: "Yes. Kings Point, the Villages of Oriole, Huntington Lakes and the surrounding communities are on Jason's regular route, and he started the business in west Delray.",
+        a: "Yes. Kings Point, the Villages of Oriole, Huntington Lakes and the surrounding communities are on Jason's regular route, and Jason has serviced tanks there for years.",
       },
       {
         q: "Can you maintain a restaurant aquarium on Atlantic Avenue?",
@@ -483,9 +483,9 @@ export const cities: City[] = [
     zips: ["33441", "33442"],
     drive: "about 10 minutes",
     lead:
-      "Jason's Aquarium Service cleans, maintains and installs aquariums in Deerfield Beach, just south of Boca Raton across the county line. Deer Creek, Century Village East, The Cove and the beachside neighborhoods are minutes from Jason's base, so reef tanks, freshwater tanks and ponds here get the same fast scheduling as Boca.",
+      "Jason's Aquarium Service cleans, maintains and installs aquariums in Deerfield Beach, just south of Boca Raton across the county line. Deer Creek, Century Village East, The Cove and the beachside neighborhoods are on the same route days as Boca, so reef tanks, freshwater tanks and ponds here get the same easy scheduling.",
     local: [
-      "Deerfield is the first town south of the Palm Beach County line and closer to west Boca than most of Boca is. The Cove and the beach neighborhoods have older homes with established tanks; Deer Creek and Century Village East have a lot of retirees who have kept fish for decades and want a technician who respects that.",
+      "Deerfield is the first town south of the Palm Beach County line and sits right on Jason's Boca route days. The Cove and the beach neighborhoods have older homes with established tanks; Deer Creek and Century Village East have a lot of retirees who have kept fish for decades and want a technician who respects that.",
       "The Deerfield fishing pier crowd tends to keep saltwater tanks, and those are Jason's favorite kind of conversation. Fish selection and reef chemistry are where he spends the most time here.",
     ],
     neighborhoods: ["The Cove", "Deer Creek", "Century Village East", "Waterways", "Deerfield Beach Island", "Crystal Lake"],
@@ -494,7 +494,7 @@ export const cities: City[] = [
     faqs: [
       {
         q: "You are in Palm Beach County. Do you really service Deerfield Beach?",
-        a: "Yes. Deerfield Beach is about ten minutes from Jason's base in west Boca, closer than most of Palm Beach County, and it is on the regular route.",
+        a: "Yes. Deerfield Beach is minutes from Boca Raton and on the regular route. Jason serves Palm Beach County and the north Broward towns next to it.",
       },
       {
         q: "Do you service tanks in Century Village East?",
@@ -510,7 +510,7 @@ export const cities: City[] = [
     zips: ["33067", "33076"],
     drive: "about 15 minutes",
     lead:
-      "Jason's Aquarium Service designs, installs and maintains aquariums in Parkland, including Heron Bay, Parkland Golf and Country Club, MiraLago, Cascata and Watercrest. Large built-in reef systems and family freshwater tanks are serviced on a weekly or bi-weekly schedule from Jason's base fifteen minutes away in west Boca.",
+      "Jason's Aquarium Service designs, installs and maintains aquariums in Parkland, including Heron Bay, Parkland Golf and Country Club, MiraLago, Cascata and Watercrest. Large built-in reef systems and family freshwater tanks are serviced on a weekly or bi-weekly schedule alongside Jason's Boca Raton route.",
     local: [
       "Parkland is newer, larger homes with a lot of great-room walls that were designed for a big tank. Many of those tanks were installed by a builder's subcontractor and never had a real maintenance plan. Jason's assessment visits often start there: what was installed, what it needs, and how to keep it healthy.",
       "Families with kids are the norm, and a well-run aquarium is one of the best things in a house full of them. Jason sets tanks up so they are safe, stable and interesting, and teaches the kids what the fish need.",
@@ -525,7 +525,7 @@ export const cities: City[] = [
       },
       {
         q: "Do you service Parkland even though it is in Broward County?",
-        a: "Yes. Parkland is about fifteen minutes from Jason's base in west Boca and is part of the regular route.",
+        a: "Yes. Parkland is minutes from Boca Raton and part of the regular route. Jason serves Palm Beach County and the north Broward towns next to it.",
       },
     ],
     nearby: ["coral-springs", "boca-raton", "west-boca-raton", "coconut-creek", "deerfield-beach"],
@@ -583,7 +583,7 @@ export const cities: City[] = [
     zips: ["33063", "33066", "33073"],
     drive: "about 20 minutes",
     lead:
-      "Jason's Aquarium Service cleans, maintains and sets up aquariums in Coconut Creek, including Wynmoor, Winston Park, Banyan Trails and the communities near the Promenade. Freshwater, planted, saltwater and reef tanks are serviced on a regular schedule from Jason's base in west Boca.",
+      "Jason's Aquarium Service cleans, maintains and sets up aquariums in Coconut Creek, including Wynmoor, Winston Park, Banyan Trails and the communities near the Promenade. Freshwater, planted, saltwater and reef tanks are serviced on a regular schedule alongside the Boca Raton and Parkland route days.",
     local: [
       "Coconut Creek is family neighborhoods and a very large retirement community in Wynmoor, and both keep a lot of fish. Wynmoor residents in particular have kept tanks for decades and want a technician who shows up when he says he will and treats the tank like his own.",
       "Newer homes in Winston Park and Banyan Trails often have a first family tank. Jason sets those up to succeed and keeps them clean on a schedule that fits a busy household.",

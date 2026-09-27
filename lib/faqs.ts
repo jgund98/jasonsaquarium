@@ -11,7 +11,7 @@ export const faqGroups: FaqGroup[] = [
     faqs: [
       {
         q: "Who cleans fish tanks near me in Palm Beach County?",
-        a: "Jason's Aquarium Service. Jason is a mobile aquarium technician based in west Boca Raton who cleans and maintains saltwater, reef, freshwater and planted aquariums and ponds in homes and businesses across Palm Beach County and the north Broward towns next door. Call or text (516) 528-7824.",
+        a: "Jason's Aquarium Service. Jason is a mobile aquarium technician who cleans and maintains saltwater, reef, freshwater and planted aquariums and ponds in homes and businesses across Palm Beach County and the north Broward towns next door. Call or text (516) 528-7824.",
       },
       {
         q: "Do you come to my house or do I bring the tank somewhere?",
@@ -142,11 +142,11 @@ export const faqGroups: FaqGroup[] = [
     faqs: [
       {
         q: "Where is Jason's Aquarium Service located?",
-        a: "Jason is based in west Boca Raton, Florida and serves Palm Beach County plus the north Broward towns of Deerfield Beach, Parkland, Coral Springs, Coconut Creek, Lighthouse Point and Pompano Beach. It is a mobile service with no retail store.",
+        a: "It is a mobile service with no store and no fixed address. Jason serves all of Palm Beach County plus the north Broward towns of Deerfield Beach, Parkland, Coral Springs, Coconut Creek, Lighthouse Point and Pompano Beach.",
       },
       {
         q: "Are you the same as Jason's Aquatics in Davie?",
-        a: "No. Jason's Aquarium Service LLC is a separate company based in Boca Raton, Palm Beach County, and is not affiliated with Jason's Aquatics in Davie.",
+        a: "No. Jason's Aquarium Service LLC is a separate company serving Palm Beach County and north Broward, and is not affiliated with Jason's Aquatics in Davie.",
       },
       {
         q: "Is Jason's Aquarium Service open on weekends?",
@@ -154,7 +154,7 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         q: "How long has Jason been servicing aquariums?",
-        a: "Jason's Aquarium Service LLC was formed in 2021, and public Google reviews show Jason maintaining clients' tanks in the Boca Raton and Delray Beach area since at least 2015.",
+        a: "Jason's Aquarium Service LLC was formed in 2021, and public Google reviews show Jason maintaining clients' tanks in Palm Beach County since at least 2015.",
       },
     ],
   },
@@ -167,6 +167,8 @@ export const homeFaqs: Faq[] = [
   faqGroups[1].faqs[0],
   faqGroups[1].faqs[1],
   faqGroups[1].faqs[2],
+  faqGroups[1].faqs[3],
   faqGroups[2].faqs[0],
   faqGroups[3].faqs[1],
+  faqGroups[1].faqs[5],
 ];

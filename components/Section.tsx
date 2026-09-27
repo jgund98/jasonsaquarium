@@ -137,6 +137,7 @@ export function Bubbles({ count = 14, className }: { count?: number; className?:
 
 /** Wave edge between sections. `from` is the color of the section above. */
 export function Wave({
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   from,
   to,
   flip = false,
@@ -151,16 +152,17 @@ export function Wave({
     <div
       aria-hidden="true"
       className={clsx("relative h-14 w-full overflow-hidden md:h-20", className)}
-      style={{ background: to }}
+      style={{ background: "transparent" }}
     >
+      {/* Only the next section's curved edge is drawn, so the background above runs through uninterrupted. */}
       <svg
         viewBox="0 0 1440 80"
         preserveAspectRatio="none"
         className={clsx("absolute inset-0 h-full w-full", flip && "rotate-180")}
       >
         <path
-          d="M0 0h1440v34c-120 26-240 42-360 42S840 60 720 44 480 20 360 24 120 56 0 40z"
-          fill={from}
+          d="M0 40C120 56 240 24 360 24S600 44 720 44 960 76 1080 76 1320 60 1440 34V80H0z"
+          fill={to}
         />
       </svg>
     </div>

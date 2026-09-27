@@ -33,6 +33,20 @@ export function FishList({
   );
 }
 
+/** Outline-only fish for decorative corners: reads as a fish at any opacity. */
+export function FishOutline({ className, stroke = "currentColor" }: { className?: string; stroke?: string }) {
+  return (
+    <svg viewBox="0 0 44 40" className={className} aria-hidden="true" fill="none" stroke={stroke} strokeWidth="1.6" strokeLinejoin="round" strokeLinecap="round">
+      <path d="M3 20.5 C9.5 9.5 23.5 9.5 31.5 20.5 C23.5 31.5 9.5 31.5 3 20.5 Z" />
+      <path d="M30.5 20.5 L39 13.5 L36.8 20.5 L39 27.5 Z" />
+      <path d="M12 14.5 C16 11 22 11 26 14.5" />
+      <circle cx="10.5" cy="18.6" r="1.6" fill={stroke} stroke="none" />
+      <circle cx="36" cy="7.5" r="2.1" />
+      <circle cx="40.5" cy="3.4" r="1.2" />
+    </svg>
+  );
+}
+
 /** A tinted note that breaks up a run of paragraphs. */
 export function Callout({
   eyebrow,
@@ -52,8 +66,7 @@ export function Callout({
   }[tone];
   const eye = { mist: "text-sea", abyss: "text-aqua", coral: "text-white/85" }[tone];
   return (
-    <div className={clsx("relative overflow-hidden rounded-[1.5rem] p-6 md:p-7", styles, className)}>
-      <FishMark className="pointer-events-none absolute -right-4 -top-3 h-24 w-28 opacity-[0.12]" id={`co-${tone}`} />
+    <div className={clsx("relative overflow-hidden rounded-[1.5rem] border-l-4 p-6 md:p-7", tone === "mist" ? "border-coral" : "border-aqua", styles, className)}>
       {eyebrow && <p className={clsx("eyebrow mb-2", eye)}>{eyebrow}</p>}
       <div className="relative text-pretty text-[1rem] leading-relaxed">{children}</div>
     </div>
@@ -62,12 +75,8 @@ export function Callout({
 
 /** Large faint brand fish for the corner of a dark section. */
 export function Watermark({ className }: { className?: string }) {
-  return (
-    <FishMark
-      className={clsx("pointer-events-none absolute -right-16 top-10 h-[22rem] w-[26rem] opacity-[0.06] md:-right-10", className)}
-      id="wm-bg"
-    />
-  );
+  void className;
+  return null;
 }
 
 /** Scrolling brand strip: what Jason services, separated by the mark. */

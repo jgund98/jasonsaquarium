@@ -44,7 +44,7 @@ export default function AreasBand() {
             />
             <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-abyss/90 via-abyss/15 to-transparent" />
             <div className="absolute inset-x-0 bottom-0 p-6 text-white md:p-8">
-              <p className="eyebrow text-aqua">Based in west Boca Raton</p>
+              <p className="eyebrow text-aqua">Palm Beach County and north Broward</p>
               <p className="font-display mt-2 text-balance text-[1.5rem] leading-tight md:text-[1.9rem]">
                 Palm Beach County first and the Broward line ten minutes away
               </p>
@@ -55,7 +55,7 @@ export default function AreasBand() {
             <SectionHead
               eyebrow="Where Jason drives"
               title="Route days across the county so the schedule never slips"
-              lede="Visits are grouped by area, which is how a one-person service stays on time. The minutes are the drive from Jason's base."
+              lede="Visits are grouped by area, which is how a one-person service stays on time."
             />
             <div className="mt-8 grid gap-x-8 gap-y-8 sm:grid-cols-3">
               <Reveal delay={80} className="sm:col-span-2">

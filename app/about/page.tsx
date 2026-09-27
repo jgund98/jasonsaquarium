@@ -143,7 +143,7 @@ export default function AboutPage() {
             ))}
           </div>
           <Reveal delay={200} className="mt-10 text-[0.9rem] text-white/60">
-            {site.legalName}, formed 2021, based in west Boca Raton, serving Palm Beach County and north Broward.{" "}
+            {site.legalName}, formed 2021, serving all of Palm Beach County and north Broward.{" "}
             <Link href="/service-areas" className="font-semibold text-aqua underline-offset-4 hover:underline">
               See every area
             </Link>

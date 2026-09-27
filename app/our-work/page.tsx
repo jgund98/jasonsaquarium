@@ -58,6 +58,7 @@ export default function OurWorkPage() {
         title="Real tanks and the stories behind them"
         lede="Jason does not stage photos. What is here is a tank he services and the jobs his clients have described in their own public reviews."
         compact
+        wave={false}
       />
 
       <section className="relative bg-abyss text-white">
@@ -95,7 +96,7 @@ export default function OurWorkPage() {
               <Image src="/images/work/lobby-reef-1200.jpg" alt="Closer view of the coral and fish in the lobby reef aquarium" fill sizes="(min-width: 640px) 55vw, 100vw" className="object-cover object-[20%_center]" />
             </Reveal>
             <Reveal delay={80} className="relative aspect-[16/10] overflow-hidden rounded-[1.5rem] ring-1 ring-white/10 sm:aspect-auto">
-              <Image src="/images/work/reef-display.jpg" alt="A mixed reef aquarium with colorful coral, a blue tang and a yellow tang" fill sizes="(min-width: 640px) 40vw, 100vw" className="object-cover" />
+              <Image src="/images/work/reef-display-2.jpg" alt="A mixed reef aquarium with colorful coral, a blue tang and a yellow tang" fill sizes="(min-width: 640px) 40vw, 100vw" className="object-cover" />
             </Reveal>
           </div>
         </Container>

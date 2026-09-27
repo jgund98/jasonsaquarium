@@ -87,7 +87,7 @@ export default async function CityPage({ params }: PageProps<"/aquarium-service/
           { name: "Service Areas", url: "/service-areas" },
           { name: c.name, url: `/aquarium-service/${c.slug}` },
         ]}
-        eyebrow={`${c.county} County${c.drive === "home base" ? " · Home base" : ""}`}
+        eyebrow={`${c.county} County`}
         title={`Aquarium service in ${c.name}`}
         lede={c.lead}
         image={image.src}
