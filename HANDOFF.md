@@ -26,6 +26,13 @@ Every business fact lives in `lib/site.ts`. Copy for services, cities, FAQs and 
 
 Google Business Profile category "Aquarium service" with the service area set to the 22 towns, review velocity, Bing Places (this is what ChatGPT reads), Yelp, Facebook Page, Apple Business Connect, Nextdoor, Thumbtack, BBB, with identical name and phone everywhere. Full checklist in `research/competitors-and-seo.md` section 5 and the three audits in `research/audit-*.md`.
 
+## Jordan's standing rules on this site
+
+- No home base or "based in" anywhere. Jason serves Palm Beach County and north Broward; no drive-time minutes, no review counts.
+- No stretched empty cards to fill a column. Balance columns with real content or a photo; never pin (sticky) a column.
+- No decorative fish blobs or watermarks. Brand shows through the wordmark, fish bullets and the brand band strips.
+- Real, vibrant reef photography blended into the hero is welcome; the vector scene and schools stay on top.
+
 ## Gotchas learned
 
 - Never put a canonical in the root layout; every page sets its own.
