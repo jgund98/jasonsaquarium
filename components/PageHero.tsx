@@ -24,6 +24,8 @@ export default function PageHero({
   compact = false,
   wave = true,
   waveTo = "#ffffff",
+  ctaHref = "/contact",
+  ctaLabel = "Get a Free Quote",
   children,
 }: {
   eyebrow?: string;
@@ -38,6 +40,9 @@ export default function PageHero({
   wave?: boolean;
   /** Background of the section directly under the hero, so the wave edge matches it. */
   waveTo?: string;
+  /** Where the coral button goes. Pages that carry the quote form pass "#quote" so it scrolls there. */
+  ctaHref?: string;
+  ctaLabel?: string;
   children?: React.ReactNode;
 }) {
   const hasMedia = Boolean(image || video);
@@ -52,7 +57,7 @@ export default function PageHero({
         <div
           className={clsx(
             "grid items-center gap-10 pt-[calc(72px+2.5rem)] md:pt-[calc(84px+3rem)]",
-            compact ? "pb-14 md:pb-16" : "pb-16 md:pb-24",
+            compact ? "pb-10 md:pb-16" : "pb-16 md:pb-24",
             hasMedia && "lg:grid-cols-[1.05fr_0.95fr] lg:gap-16"
           )}
         >
@@ -81,11 +86,20 @@ export default function PageHero({
               </p>
             )}
             {children}
-            <div className="mt-8 flex flex-wrap items-center gap-3">
-              <Link href="/contact" className="btn btn-coral">
-                Get a Free Quote
-              </Link>
-              <a href={site.phoneHref} className="btn btn-foam">
+            <div className="mt-8 grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:items-center">
+              {ctaHref.startsWith("#") ? (
+                <a href={ctaHref} className="btn btn-coral px-3 sm:px-6">
+                  {ctaLabel}
+                  <svg viewBox="0 0 20 20" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M10 4v12M5 11l5 5 5-5" />
+                  </svg>
+                </a>
+              ) : (
+                <Link href={ctaHref} className="btn btn-coral px-3 sm:px-6">
+                  {ctaLabel}
+                </Link>
+              )}
+              <a href={site.phoneHref} className="btn btn-foam px-3 sm:px-6">
                 <PhoneIcon /> {site.phone}
               </a>
             </div>

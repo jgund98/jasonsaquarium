@@ -24,9 +24,11 @@ export default function ContactPage() {
         title="Tell Jason about your tank"
         lede="Three quick questions and a phone number. Jason reads every one himself and usually texts back the same day."
         compact
+        ctaHref="#quote"
+        ctaLabel="Start the form"
       />
 
-      <section className="bg-white py-16 md:py-24">
+      <section id="quote" className="scroll-mt-20 bg-white py-12 md:py-24">
         <Container>
           <div className="grid items-start gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:gap-16">
             <Reveal>

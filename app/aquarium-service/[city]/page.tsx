@@ -93,6 +93,7 @@ export default async function CityPage({ params }: PageProps<"/aquarium-service/
         lede={c.lead}
         image={image.src}
         imageAlt={image.alt}
+        ctaHref="#quote"
       />
 
       <section className="bg-white py-20 md:py-28">
@@ -146,7 +147,7 @@ export default async function CityPage({ params }: PageProps<"/aquarium-service/
               </Reveal>
             </div>
 
-            <div className="flex flex-col gap-6">
+            <div id="quote" className="flex scroll-mt-20 flex-col gap-6">
               <Reveal delay={100}>
                 <QuoteForm city={c.name} />
               </Reveal>
