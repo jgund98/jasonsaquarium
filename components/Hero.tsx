@@ -113,6 +113,15 @@ export default function Hero() {
               <span className="hidden h-1 w-1 rounded-full bg-white/40 sm:inline-block" />
               <span>Call or text any time</span>
             </div>
+            <div className="rise-in mt-5 inline-flex items-center gap-3 rounded-full border border-white/15 bg-abyss/45 px-4 py-2 text-[0.66rem] font-bold uppercase tracking-[0.22em] text-white/85 backdrop-blur-sm" style={{ animationDelay: "520ms" }}>
+              <span>Reef</span>
+              <span className="h-1 w-1 rounded-full bg-aqua/80" />
+              <span>Saltwater</span>
+              <span className="h-1 w-1 rounded-full bg-aqua/80" />
+              <span>Freshwater</span>
+              <span className="h-1 w-1 rounded-full bg-aqua/80" />
+              <span>Ponds</span>
+            </div>
           </div>
           </div>
         </div>
