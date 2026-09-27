@@ -91,7 +91,7 @@ export default function Header() {
             <PhoneIcon />
             {site.phone}
           </a>
-          <Link href="/contact" className="btn btn-coral hidden !py-3 !px-4 text-[0.9rem] md:inline-flex">
+          <Link href="/contact#quote" className="btn btn-coral hidden !py-3 !px-4 text-[0.9rem] md:inline-flex">
             Get a Quote
           </Link>
           <a
@@ -162,7 +162,7 @@ export default function Header() {
             ))}
           </nav>
           <div className="mt-auto flex flex-col gap-3 pb-8">
-            <Link href="/contact" className="btn btn-coral w-full">
+            <Link href="/contact#quote" className="btn btn-coral w-full">
               Get a Quote
             </Link>
             <a href={site.phoneHref} className="btn btn-abyss w-full">

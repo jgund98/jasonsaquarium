@@ -115,7 +115,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-white/80 hover:text-white">
+                <Link href="/contact#quote" className="text-white/80 hover:text-white">
                   Get a Quote
                 </Link>
               </li>

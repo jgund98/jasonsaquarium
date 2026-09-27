@@ -24,7 +24,8 @@ export default function PageHero({
   compact = false,
   wave = true,
   waveTo = "#ffffff",
-  ctaHref = "/contact",
+  ctaHref = "/contact#quote",
+  noCta = false,
   ctaLabel = "Get a Free Quote",
   children,
 }: {
@@ -43,6 +44,8 @@ export default function PageHero({
   /** Where the coral button goes. Pages that carry the quote form pass "#quote" so it scrolls there. */
   ctaHref?: string;
   ctaLabel?: string;
+  /** Pages whose body IS the call to action (the contact form) hide the button row. */
+  noCta?: boolean;
   children?: React.ReactNode;
 }) {
   const hasMedia = Boolean(image || video);
@@ -86,6 +89,7 @@ export default function PageHero({
               </p>
             )}
             {children}
+            {!noCta && (<>
             <div className="mt-8 grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:items-center">
               {ctaHref.startsWith("#") ? (
                 <a href={ctaHref} className="btn btn-coral px-3 sm:px-6">
@@ -109,6 +113,7 @@ export default function PageHero({
               </span>
               <span>Call or text any time</span>
             </p>
+            </>)}
           </div>
 
           {hasMedia && (

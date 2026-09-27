@@ -32,7 +32,7 @@ export default function CtaBand({
             </p>
           </Reveal>
           <Reveal delay={120} className="flex flex-col gap-3 sm:flex-row lg:flex-col lg:items-stretch">
-            <Link href="/contact" className="btn btn-coral !py-4 text-base">
+            <Link href="/contact#quote" className="btn btn-coral !py-4 text-base">
               Get a Free Quote
             </Link>
             <a href={site.phoneHref} className="btn btn-foam !py-4 text-base">

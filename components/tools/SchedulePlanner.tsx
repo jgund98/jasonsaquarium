@@ -141,7 +141,7 @@ export default function SchedulePlanner() {
               <a href={`${site.smsHref}?&body=${smsBody}`} className="btn btn-coral w-full">
                 Text this plan to Jason for a price
               </a>
-              <Link href="/contact" className="btn btn-foam w-full">
+              <Link href="/contact#quote" className="btn btn-foam w-full">
                 Or request a quote
               </Link>
               <a href={site.phoneHref} className="btn btn-glass w-full">

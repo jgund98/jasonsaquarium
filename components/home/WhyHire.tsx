@@ -154,7 +154,7 @@ export default function WhyHire() {
               One visit tells you where your tank actually stands. No contract, no minimum, and Jason will say so if it needs less than you think.
             </p>
             <div className="mt-auto flex flex-wrap gap-3 pt-6">
-              <Link href="/contact" className="btn btn-coral">
+              <Link href="/contact#quote" className="btn btn-coral">
                 Book a first visit
               </Link>
               <a href={site.phoneHref} className="btn btn-abyss">

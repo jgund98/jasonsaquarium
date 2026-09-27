@@ -120,7 +120,7 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
                 <p className="mt-2 text-[0.95rem] text-ink-soft">He usually replies the same day with what it needs and what it costs.</p>
                 <div className="mt-5 flex flex-col gap-2.5">
                   <a href={site.smsHref} className="btn btn-abyss w-full">Text {site.phone}</a>
-                  <Link href="/contact" className="btn btn-coral w-full">Request a Quote</Link>
+                  <Link href="/contact#quote" className="btn btn-coral w-full">Request a Quote</Link>
                 </div>
               </Reveal>
               <Reveal delay={120} className="rounded-[1.5rem] bg-mist p-6">

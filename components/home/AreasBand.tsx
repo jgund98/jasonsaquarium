@@ -74,7 +74,7 @@ export default function AreasBand() {
               <Link href="/service-areas" className="btn btn-abyss">
                 Every area <Arrow />
               </Link>
-              <Link href="/contact" className="btn btn-coral">
+              <Link href="/contact#quote" className="btn btn-coral">
                 Is my town covered
               </Link>
             </Reveal>

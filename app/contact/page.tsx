@@ -20,15 +20,14 @@ export default function ContactPage() {
       <JsonLd data={breadcrumbJsonLd([{ name: "Home", url: "/" }, { name: "Get a Quote", url: "/contact" }])} />
       <PageHero
         crumbs={[{ name: "Home", url: "/" }, { name: "Get a Quote", url: "/contact" }]}
-        eyebrow="Get a quote"
-        title="Tell Jason about your tank"
-        lede="Three quick questions and a phone number. Jason reads every one himself and usually texts back the same day."
+        eyebrow="Free quote"
+        title="Get a free quote"
+        lede={<>Three quick questions below, or call or text <a href={site.phoneHref} className="font-bold text-white underline decoration-aqua/60 underline-offset-4">{site.phone}</a>.</>}
         compact
-        ctaHref="#quote"
-        ctaLabel="Start the form"
+        noCta
       />
 
-      <section id="quote" className="scroll-mt-20 bg-white py-12 md:py-24">
+      <section id="quote" className="scroll-mt-20 bg-white pb-12 pt-6 md:py-24">
         <Container>
           <div className="grid items-start gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:gap-16">
             <Reveal>

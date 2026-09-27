@@ -90,7 +90,7 @@ export default function OwnerPopup() {
           <a href={site.phoneHref} className="btn btn-abyss flex-1 !px-3 !py-3 text-[0.85rem]">
             <PhoneIcon /> Call
           </a>
-          <Link href="/contact" className="btn btn-coral flex-1 !px-3 !py-3 text-[0.85rem]" onClick={() => setOpen(false)}>
+          <Link href="/contact#quote" className="btn btn-coral flex-1 !px-3 !py-3 text-[0.85rem]" onClick={() => setOpen(false)}>
             Get a quote
           </Link>
         </div>

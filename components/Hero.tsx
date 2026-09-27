@@ -104,7 +104,7 @@ export default function Hero() {
               <strong className="font-bold text-white">Palm Beach County and north Broward</strong>.
             </p>
             <div className="mt-7 grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:items-center">
-              <Link href="/contact" className="btn btn-coral px-3 sm:px-6">
+              <Link href="/contact#quote" className="btn btn-coral px-3 sm:px-6">
                 Get a Free Quote
               </Link>
               <a href={site.phoneHref} className="btn btn-foam px-3 sm:px-6">

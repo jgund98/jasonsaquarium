@@ -28,7 +28,7 @@ export default function MobileDock() {
         <a href={site.smsHref} className="btn btn-glass flex-1 !py-3.5 text-[0.9rem]">
           Text
         </a>
-        <Link href="/contact" className="btn btn-coral flex-[1.4] !py-3.5 text-[0.9rem]">
+        <Link href="/contact#quote" className="btn btn-coral flex-[1.4] !py-3.5 text-[0.9rem]">
           Get a Quote
         </Link>
       </div>
