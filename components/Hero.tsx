@@ -66,7 +66,7 @@ export default function Hero() {
       />
 
       <div className="container-x pointer-events-none relative z-10 [&_a]:pointer-events-auto">
-        <div className="flex min-h-[100svh] flex-col justify-center pb-28 pt-[calc(72px+2rem)] md:pt-[calc(84px+2rem)] lg:pb-32">
+        <div className="flex min-h-[100svh] flex-col justify-center pb-28 pt-[calc(72px+2rem)] md:pt-[calc(84px+2rem)] lg:pb-40">
           <div ref={copyRef} className="max-w-4xl">
           {/* headline */}
           <div className="pointer-events-none max-w-4xl">
@@ -78,7 +78,7 @@ export default function Hero() {
               <span className="rise-in hidden h-1 w-1 rounded-full bg-aqua/70 sm:inline-block" />
               <span className="rise-in hidden sm:inline">Owner operated</span>
             </p>
-            <div className="rise-in mb-5 inline-flex max-w-full sm:hidden items-center gap-2 rounded-full border border-white/15 bg-abyss/45 px-3 py-2 text-[0.58rem] font-bold uppercase tracking-[0.12em] text-white/85 backdrop-blur-sm" style={{ animationDelay: "0ms" }}>
+            <div className="rise-in mb-6 flex w-full sm:hidden items-center justify-between rounded-full border border-white/15 bg-abyss/60 px-4 py-2.5 text-[0.62rem] font-bold uppercase tracking-[0.1em] text-white/90" style={{ animationDelay: "0ms" }}>
               <span>Reef</span>
               <span className="h-1 w-1 rounded-full bg-aqua/80" />
               <span>Saltwater</span>
@@ -123,15 +123,15 @@ export default function Hero() {
               </a>
               <span className="hidden h-1 w-1 rounded-full bg-white/40 sm:inline-block" />
               <span>Call or text any time</span>
-            </div>
-            <div className="rise-in mt-5 hidden sm:inline-flex items-center gap-3 rounded-full border border-white/15 bg-abyss/45 px-4 py-2 text-[0.66rem] font-bold uppercase tracking-[0.22em] text-white/85 backdrop-blur-sm" style={{ animationDelay: "520ms" }}>
-              <span>Reef</span>
-              <span className="h-1 w-1 rounded-full bg-aqua/80" />
-              <span>Saltwater</span>
-              <span className="h-1 w-1 rounded-full bg-aqua/80" />
-              <span>Freshwater</span>
-              <span className="h-1 w-1 rounded-full bg-aqua/80" />
-              <span>Ponds</span>
+              <span className="hidden items-center gap-3 rounded-full border border-white/15 bg-abyss/60 px-4 py-2 text-[0.68rem] font-bold uppercase tracking-[0.18em] text-white/90 sm:inline-flex lg:ml-1" style={{ animationDelay: "520ms" }}>
+                <span>Reef</span>
+                <span className="h-1 w-1 rounded-full bg-aqua/80" />
+                <span>Saltwater</span>
+                <span className="h-1 w-1 rounded-full bg-aqua/80" />
+                <span>Freshwater</span>
+                <span className="h-1 w-1 rounded-full bg-aqua/80" />
+                <span>Ponds</span>
+              </span>
             </div>
           </div>
           </div>

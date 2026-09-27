@@ -16,6 +16,9 @@ export default function Specialties() {
             "radial-gradient(70% 60% at 80% 0%, rgba(18,166,201,0.35), transparent 60%), radial-gradient(50% 40% at 10% 100%, rgba(255,106,77,0.18), transparent 60%)",
         }}
       />
+      {/* phones: the glow above meets flat navy as a hard line, so fade it in and mark the seam */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-abyss via-abyss/70 to-transparent md:hidden" />
+      <div aria-hidden="true" className="pointer-events-none absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-aqua/60 to-transparent md:hidden" />
       <Bubbles count={16} />
       <Watermark />
       <Container className="relative">

@@ -227,6 +227,7 @@ export default function ReefCanvas({
       const nw = Math.max(1, Math.round(rect.width));
       const nh = Math.max(1, Math.round(rect.height));
       if (nw === W && nh === H && fish.length) return;
+      const keep = fish.length > 0 && nw === W && Math.abs(nh - H) < H * 0.35;
       W = nw;
       H = nh;
       canvas.width = Math.round(W * dpr);
@@ -235,9 +236,13 @@ export default function ReefCanvas({
       front.width = canvas.width;
       front.height = canvas.height;
       fctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      spawn();
-      spawnBubbles();
-      spawnShadows();
+      if (!keep) {
+        spawn();
+        spawnBubbles();
+        spawnShadows();
+      } else {
+        for (const f of fish) f.y = Math.min(f.y, H * 0.86);
+      }
       scenery = buildScenery(W, H, dpr);
       scrollBase = window.scrollY;
     };
@@ -266,6 +271,7 @@ export default function ReefCanvas({
     readAvoid();
 
     // ---------- input ----------
+    let downAt: { x: number; y: number; t: number; id: number } | null = null;
     const toLocal = (e: PointerEvent) => {
       const r = canvas.getBoundingClientRect();
       return { x: e.clientX - r.left, y: e.clientY - r.top };
@@ -283,6 +289,7 @@ export default function ReefCanvas({
     };
     const onMove = (e: PointerEvent) => {
       if (reduced || !interactive) return;
+      if (e.pointerType === "touch" && !downAt) return; // scrolling, not playing
       const p = toLocal(e);
       setPointer(p.x, p.y);
     };
@@ -294,7 +301,6 @@ export default function ReefCanvas({
       ripples.push({ x, y, t: 0, big: true });
       if (!fedRef.current) { fedRef.current = true; onFirstFeedRef.current?.(); }
     };
-    let downAt: { x: number; y: number; t: number; id: number } | null = null;
     const onDown = (e: PointerEvent) => {
       if (reduced || !interactive) return;
       const p = toLocal(e);
@@ -310,7 +316,7 @@ export default function ReefCanvas({
       if (dx * dx + dy * dy < 15 * 15 && dt < 450) feed(p.x, p.y);
       if (e.pointerType === "touch") pointer.t = time - 2.2; // fade the touch light soon after lift
     };
-    const onCancel = () => { downAt = null; };
+    const onCancel = () => { downAt = null; pointer.on = false; pointer.speed = 0; par.tx = 0; par.ty = 0; };
     canvas.addEventListener("pointermove", onMove, { passive: true });
     canvas.addEventListener("pointerleave", onLeave, { passive: true });
     canvas.addEventListener("pointerdown", onDown, { passive: true });
@@ -321,8 +327,11 @@ export default function ReefCanvas({
     const onTilt = (e: DeviceOrientationEvent) => {
       if (e.gamma == null || e.beta == null) return;
       tilt.on = true;
-      tilt.x = Math.max(-1, Math.min(1, e.gamma / 30));
-      tilt.y = Math.max(-1, Math.min(1, (e.beta - 45) / 30));
+      const rx = Math.max(-1, Math.min(1, e.gamma / 30));
+      const ry = Math.max(-1, Math.min(1, (e.beta - 45) / 30));
+      const dz = (v: number) => (Math.abs(v) < 0.06 ? 0 : v);
+      tilt.x += (dz(rx) - tilt.x) * 0.08;
+      tilt.y += (dz(ry) - tilt.y) * 0.08;
     };
     const DOE = window.DeviceOrientationEvent as unknown as { requestPermission?: () => Promise<string> } | undefined;
     if (coarse && !reduced && DOE && typeof DOE.requestPermission !== "function") {
@@ -348,7 +357,7 @@ export default function ReefCanvas({
       pointer.still += dt;
       const pointerOn = pointer.on && t - pointer.t < 3;
       const calm = pointerOn && pointer.speed < 4 && pointer.still > 0.25;
-      const fast = pointerOn && pointer.speed > 14;
+      const fast = pointerOn && !coarse && pointer.speed > 14;
 
       // wake bubbles while the pointer moves through the water
       wakeTick += dt;
@@ -509,8 +518,9 @@ export default function ReefCanvas({
           if (f.x > bx && f.x < bx + bw && f.y > by && f.y < by + bh) {
             const dl = f.x - bx, dr = bx + bw - f.x, dtp = f.y - by, dbt = by + bh - f.y;
             const m = Math.min(dl, dr, dtp, dbt);
-            const k = W < 768 ? 0.14 : 0.05;
+            const k = (W < 768 ? 0.09 : 0.05) * Math.min(1, m / 60 + 0.25);
             if (m === dl) ax -= k; else if (m === dr) ax += k; else if (m === dtp) ay -= k; else ay += k;
+            f.vx *= 0.985; f.vy *= 0.985; // bleed speed so the exit is a glide, not a bounce
           }
         }
 
@@ -823,6 +833,13 @@ export default function ReefCanvas({
 
       if (scenery) {
         fctx.save();
+        if (avoidBox.on) {
+          // foreground coral never paints over the copy: punch the copy box out of the clip
+          fctx.beginPath();
+          fctx.rect(0, 0, W, H);
+          fctx.rect(avoidBox.x + 12, avoidBox.y + 12, avoidBox.w - 24, avoidBox.h - 24);
+          fctx.clip("evenodd");
+        }
         fctx.translate(-par.x * 46, par.y * 18);
         drawAnims(fctx, scenery.front, t);
         fctx.restore();
