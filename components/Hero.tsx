@@ -27,6 +27,23 @@ export default function Hero() {
             "radial-gradient(60% 80% at 50% 0%, rgba(51,214,242,0.35), rgba(51,214,242,0) 70%)",
         }}
       />
+      {/* a real reef, dissolved into the water behind the vector scene */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-y-0 right-0 w-[85%] md:w-[56%]"
+        style={{
+          backgroundImage: "url(/images/hero/reef-backdrop.jpg)",
+          backgroundSize: "cover",
+          backgroundPosition: "70% 60%",
+          opacity: 0.5,
+          WebkitMaskImage:
+            "radial-gradient(70% 85% at 72% 58%, #000 18%, rgba(0,0,0,0.6) 48%, transparent 76%), linear-gradient(180deg, transparent 0%, #000 30%, #000 80%, transparent 100%)",
+          maskImage:
+            "radial-gradient(70% 85% at 72% 58%, #000 18%, rgba(0,0,0,0.6) 48%, transparent 76%), linear-gradient(180deg, transparent 0%, #000 30%, #000 80%, transparent 100%)",
+          WebkitMaskComposite: "source-in",
+          maskComposite: "intersect",
+        }}
+      />
       <div aria-hidden="true" className="caustics pointer-events-none absolute inset-0 opacity-80" />
 
       {/* the living reef */}

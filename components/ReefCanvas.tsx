@@ -103,6 +103,9 @@ export default function ReefCanvas({
     const flakes: Flake[] = [];
     const ripples: Ripple[] = [];
     const bubbles: Bubble[] = [];
+    // far-distance silhouettes for depth
+    type Shadow = { x: number; y: number; vx: number; vy: number; L: number; phase: number; wag: number; big: boolean };
+    const shadows: Shadow[] = [];
     const pointer = { x: -9999, y: -9999, px: -9999, py: -9999, speed: 0, on: false, t: -10, still: 0 };
     const par = { x: 0, y: 0, tx: 0, ty: 0 }; // parallax
     const tilt = { x: 0, y: 0, on: false };
@@ -152,6 +155,17 @@ export default function ReefCanvas({
       addSchool("clown", 0.9, 2, [38, 46], { x: W * 0.66, y: H * 0.86 });
     };
 
+    const spawnShadows = () => {
+      shadows.length = 0;
+      const n = W < 720 ? 10 : 18;
+      const cx = rand(W * 0.3, W * 0.8), cy = rand(H * 0.15, H * 0.5);
+      for (let i = 0; i < n; i++) {
+        shadows.push({ x: cx + rand(-140, 140), y: cy + rand(-70, 70), vx: -0.22, vy: 0, L: rand(14, 22), phase: rand(0, 6.28), wag: rand(5, 8), big: false });
+      }
+      // one large slow shape far back
+      shadows.push({ x: -220, y: rand(H * 0.2, H * 0.55), vx: 0.28, vy: 0, L: W < 720 ? 110 : 170, phase: 0, wag: 3.5, big: true });
+    };
+
     const spawnBubbles = () => {
       bubbles.length = 0;
       const n = Math.round((W * H) / 170000);
@@ -175,6 +189,7 @@ export default function ReefCanvas({
       fctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       spawn();
       spawnBubbles();
+      spawnShadows();
       scenery = buildScenery(W, H, dpr);
       scrollBase = window.scrollY;
     };
@@ -455,6 +470,37 @@ export default function ReefCanvas({
         ripples[i].t += dt;
         if (ripples[i].t > 1.4) ripples.splice(i, 1);
       }
+      // distant school drifts as a loose group, wraps around
+      {
+        const small = shadows.filter((s) => !s.big);
+        let mx = 0, my = 0;
+        for (const s of small) { mx += s.x; my += s.y; }
+        mx /= small.length || 1; my /= small.length || 1;
+        for (const s of shadows) {
+          if (!s.big) {
+            s.vx += ((mx - s.x) * 0.0006 + Math.sin(t * 0.4 + s.phase) * 0.004 - 0.22 * 0.02) * dt * 60;
+            s.vy += ((my - s.y) * 0.0006 + Math.cos(t * 0.3 + s.phase) * 0.003) * dt * 60;
+            const sp = Math.hypot(s.vx, s.vy) || 1e-6;
+            const mx2 = 0.45;
+            if (sp > mx2) { s.vx = (s.vx / sp) * mx2; s.vy = (s.vy / sp) * mx2; }
+          } else {
+            s.vy = Math.sin(t * 0.2) * 0.08;
+          }
+          s.x += s.vx * dt * 60;
+          s.y += s.vy * dt * 60;
+          s.phase += dt * s.wag;
+          if (s.big) {
+            if (s.vx > 0 && s.x > W + 260) { s.x = -260; s.y = rand(H * 0.2, H * 0.55); }
+            if (s.vx < 0 && s.x < -260) { s.x = W + 260; s.y = rand(H * 0.2, H * 0.55); }
+          } else {
+            if (s.x < -60) s.x = W + 60;
+            if (s.x > W + 60) s.x = -60;
+            if (s.y < H * 0.06) s.y = H * 0.06;
+            if (s.y > H * 0.7) s.y = H * 0.7;
+          }
+        }
+      }
+
       for (let i = bubbles.length - 1; i >= 0; i--) {
         const b = bubbles[i];
         b.y -= b.vy * dt * 60;
@@ -564,6 +610,46 @@ export default function ReefCanvas({
       const t = time;
       const pointerOn = pointer.on && t - pointer.t < 3;
       const lightK = pointerOn ? Math.max(0, 1 - Math.max(0, t - pointer.t - 1.5) / 1.5) : 0;
+
+      // far silhouettes: flat shapes slightly darker than the water, drawn first
+      ctx.save();
+      for (const s of shadows) {
+        const ang = Math.atan2(s.vy, s.vx);
+        const flip = Math.cos(ang) < 0;
+        const L = s.L;
+        const tall = s.big ? 0.5 : 0.36;
+        const wag = Math.sin(s.phase) * 0.3;
+        ctx.save();
+        ctx.translate(s.x - par.x * (s.big ? 10 : 6), s.y + par.y * 4);
+        ctx.rotate(ang);
+        if (flip) ctx.scale(1, -1);
+        ctx.fillStyle = s.big ? "rgba(3,18,34,0.42)" : "rgba(3,18,34,0.5)";
+        ctx.beginPath();
+        ctx.moveTo(-L * 0.45, 0);
+        ctx.bezierCurveTo(-L * 0.25, -L * tall, L * 0.2, -L * tall, L * 0.5, 0);
+        ctx.bezierCurveTo(L * 0.2, L * tall, -L * 0.25, L * tall, -L * 0.45, 0);
+        ctx.closePath();
+        ctx.fill();
+        ctx.save();
+        ctx.translate(-L * 0.42, 0);
+        ctx.rotate(wag);
+        ctx.beginPath();
+        ctx.moveTo(0, 0);
+        ctx.lineTo(-L * 0.34, -L * 0.24);
+        ctx.quadraticCurveTo(-L * 0.24, 0, -L * 0.34, L * 0.24);
+        ctx.closePath();
+        ctx.fill();
+        ctx.restore();
+        if (s.big) {
+          ctx.beginPath();
+          ctx.moveTo(-L * 0.25, -L * tall * 0.75);
+          ctx.quadraticCurveTo(0, -L * tall * 1.5, L * 0.22, -L * tall * 0.7);
+          ctx.closePath();
+          ctx.fill();
+        }
+        ctx.restore();
+      }
+      ctx.restore();
 
       // light rays, shifted by parallax
       for (let i = 0; i < 3; i++) {
