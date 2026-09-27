@@ -130,15 +130,16 @@ export default function ReefCanvas({
     const addSchool = (species: Species, z: number, n: number, sizeRange: [number, number], anchor?: { x: number; y: number }) => {
       const id = schools.length;
       // enter from off the right edge on load
-      const cx = anchor ? anchor.x : W + rand(80, 260);
-      const cy = anchor ? anchor.y : rand(H * 0.25, H * 0.65);
+      // schools enter from off the right edge; single residents start scattered in the open water
+      const cx = anchor ? anchor.x : n === 1 ? rand(W * 0.35, W * 0.95) : W + rand(80, 260);
+      const cy = anchor ? anchor.y : n === 1 ? rand(H * 0.14, H * 0.7) : rand(H * 0.25, H * 0.65);
       schools.push({ species, z, tz: z, tx: rand(W * 0.5, W * 0.9), ty: cy, retarget: rand(1, 3), anchor });
       for (let i = 0; i < n; i++) {
         fish.push({
           x: cx + rand(-70, 70),
           y: cy + rand(-40, 40),
           z,
-          vx: -0.9,
+          vx: n === 1 ? rand(-0.5, 0.5) : -0.9,
           vy: 0,
           size: rand(sizeRange[0], sizeRange[1]),
           species,
@@ -174,13 +175,30 @@ export default function ReefCanvas({
       schools = [];
       const small = W < 720;
       const k = small ? 0.62 : W < 1100 ? 0.8 : 1;
-      addSchool("chromis", 0.15, Math.round(7 * k), [28, 36]);
-      addSchool("chromis", 0.55, Math.round(9 * k), [30, 40]);
-      addSchool("yellowTang", 0.85, 3, [48, 62]);
-      addSchool("blueTang", 0.95, Math.max(2, Math.round(3 * k)), [50, 66]);
-      // solo wanderers: enter from one side, cross, leave, come back as someone else
-      const solos = small ? 3 : 5;
-      for (let i = 0; i < solos; i++) spawnWanderer(i * 2.5);
+      // One small school of chromis, plus residents: individuals that live in the
+      // tank at their own depth and pace, retargeting like real fish do.
+      addSchool("chromis", 0.5, Math.round(8 * k), [28, 38]);
+      if (!small) addSchool("chromis", 0.15, 4, [24, 30]);
+      const residents: [Species, number, [number, number]][] = [
+        ["yellowTang", 0.9, [50, 58]],
+        ["blueTang", 0.7, [52, 62]],
+        ["angel", 0.85, [58, 70]],
+        ["gramma", 0.6, [30, 36]],
+        ["butterfly", 0.75, [52, 60]],
+        ["mandarin", 0.45, [30, 38]],
+        ["wrasse", 0.65, [44, 54]],
+        ["purpleTang", 0.55, [46, 54]],
+        ["wrasse", 0.95, [40, 48]],
+        ["yellowTang", 0.4, [40, 48]],
+        ["butterfly", 0.35, [40, 48]],
+      ];
+      const count = small ? 6 : residents.length;
+      for (let i = 0; i < count; i++) {
+        const [sp, z, sz] = residents[i];
+        addSchool(sp, z, 1, sz);
+      }
+      // two transient visitors that cross and leave
+      for (let i = 0; i < 2; i++) spawnWanderer(4 + i * 6);
       addSchool("clown", 0.9, 2, [38, 46], { x: W * 0.66, y: H * 0.86 });
     };
 
@@ -344,7 +362,7 @@ export default function ReefCanvas({
       for (const s of schools) {
         s.retarget -= dt;
         if (s.retarget <= 0) {
-          s.retarget = rand(4, 9);
+          s.retarget = rand(3, 8);
           if (s.anchor) {
             s.tx = s.anchor.x + rand(-W * 0.06, W * 0.06);
             s.ty = s.anchor.y + rand(-H * 0.08, -H * 0.02);

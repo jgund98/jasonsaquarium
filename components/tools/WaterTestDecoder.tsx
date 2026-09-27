@@ -351,7 +351,7 @@ export default function WaterTestDecoder() {
                       "w-full rounded-2xl border bg-shell px-4 py-3 pr-14 text-[1rem] text-ink outline-none transition focus:bg-white",
                       r ? (r.level === "bad" ? "border-coral" : r.level === "watch" ? "border-[#f2c14e]" : "border-kelp") : "border-[var(--line)] focus:border-lagoon"
                     )}
-                    placeholder="—"
+                    placeholder=""
                   />
                   {p.unit && <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[0.8rem] font-semibold text-ink-soft">{p.unit}</span>}
                 </span>

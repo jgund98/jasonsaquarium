@@ -35,7 +35,9 @@ export default function Hero() {
           backgroundImage: "url(/images/hero/reef-backdrop-2.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "65% 55%",
-          opacity: 0.62,
+          opacity: 0.5,
+          filter: "blur(7px) saturate(1.15)",
+          transform: "scale(1.06)",
           WebkitMaskImage:
             "radial-gradient(70% 85% at 72% 58%, #000 18%, rgba(0,0,0,0.6) 48%, transparent 76%), linear-gradient(180deg, transparent 0%, #000 30%, #000 80%, transparent 100%)",
           maskImage:

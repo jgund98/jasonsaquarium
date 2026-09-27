@@ -179,7 +179,20 @@ export default function QuoteForm({ defaultNeed, city }: { defaultNeed?: string;
   }
 
   return (
-    <div ref={topRef} className="scroll-mt-28 rounded-[1.75rem] bg-white p-6 ring-1 ring-[var(--line)] md:p-9">
+    <div ref={topRef} className="scroll-mt-28 overflow-hidden rounded-[1.75rem] bg-white ring-1 ring-[var(--line)] shadow-[0_30px_60px_-30px_rgba(4,33,58,0.45)]">
+      {/* header band: this is the action */}
+      <div className="relative overflow-hidden bg-abyss px-6 py-6 text-white md:px-9 md:py-7">
+        <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-1 bg-coral" />
+        <div className="flex items-start justify-between gap-4">
+          <div>
+            <p className="eyebrow text-aqua">Free quote</p>
+            <h3 className="font-display mt-2 text-[1.5rem] leading-tight md:text-[1.8rem]">Tell Jason about your tank</h3>
+            <p className="mt-2 text-[0.92rem] text-white/75">Three quick steps. He reads every one himself and usually texts back the same day.</p>
+          </div>
+          <FishMark className="mt-1 h-9 w-10 shrink-0" id="qf" />
+        </div>
+      </div>
+      <div className="p-6 md:p-9">
       {/* progress */}
       <ol className="flex items-center" aria-label="Progress">
         {["Your tank", "What it needs", "Where to reach you"].map((label, i) => (
@@ -321,6 +334,7 @@ export default function QuoteForm({ defaultNeed, city }: { defaultNeed?: string;
           </p>
         </form>
       )}
+      </div>
     </div>
   );
 }
