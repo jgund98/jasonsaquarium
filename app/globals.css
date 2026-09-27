@@ -100,7 +100,7 @@ html {
   }
 }
 .rise-in {
-  animation: rise-in 0.9s var(--ease-water) both;
+  animation: rise-in 0.9s var(--ease-water) backwards;
 }
 
 body {

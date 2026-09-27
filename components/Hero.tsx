@@ -70,23 +70,19 @@ export default function Hero() {
           <div ref={copyRef} className="max-w-4xl">
           {/* headline */}
           <div className="pointer-events-none max-w-4xl">
-            <p className="eyebrow mb-4 hidden flex-wrap items-center gap-x-3 gap-y-1 text-aqua sm:flex">
-              <span className="rise-in">
-                Palm Beach County&rsquo;s
-                <br className="sm:hidden" /> best aquarium specialist
-              </span>
+            <p className="eyebrow mb-4 flex flex-wrap items-center gap-x-3 gap-y-1.5 text-aqua">
+              <span className="rise-in hidden sm:inline-block">Palm Beach County&rsquo;s best aquarium specialist</span>
               <span className="rise-in hidden h-1 w-1 rounded-full bg-aqua/70 sm:inline-block" />
-              <span className="rise-in hidden sm:inline">Owner operated</span>
+              <span className="rise-in inline-flex items-center gap-x-2.5 tracking-[0.13em] text-white/80 sm:gap-x-3 sm:tracking-[0.22em]">
+                <span>Reef</span>
+                <span className="h-1 w-1 rounded-full bg-aqua/70" />
+                <span>Saltwater</span>
+                <span className="h-1 w-1 rounded-full bg-aqua/70" />
+                <span>Freshwater</span>
+                <span className="h-1 w-1 rounded-full bg-aqua/70" />
+                <span>Ponds</span>
+              </span>
             </p>
-            <div className="rise-in mb-6 flex w-full sm:hidden items-center justify-between rounded-full border border-white/15 bg-abyss/60 px-4 py-2.5 text-[0.62rem] font-bold uppercase tracking-[0.1em] text-white/90" style={{ animationDelay: "0ms" }}>
-              <span>Reef</span>
-              <span className="h-1 w-1 rounded-full bg-aqua/80" />
-              <span>Saltwater</span>
-              <span className="h-1 w-1 rounded-full bg-aqua/80" />
-              <span>Freshwater</span>
-              <span className="h-1 w-1 rounded-full bg-aqua/80" />
-              <span>Ponds</span>
-            </div>
             <h1 className="font-display text-[clamp(2.4rem,5.4vw,5rem)] leading-[1.04]">
               <span className="rise-in water-text block" style={{ animationDelay: "60ms" }}>
                 A beautiful aquarium.
@@ -123,15 +119,6 @@ export default function Hero() {
               </a>
               <span className="hidden h-1 w-1 rounded-full bg-white/40 sm:inline-block" />
               <span>Call or text any time</span>
-              <span className="hidden items-center gap-3 rounded-full border border-white/15 bg-abyss/60 px-4 py-2 text-[0.68rem] font-bold uppercase tracking-[0.18em] text-white/90 sm:inline-flex lg:ml-1" style={{ animationDelay: "520ms" }}>
-                <span>Reef</span>
-                <span className="h-1 w-1 rounded-full bg-aqua/80" />
-                <span>Saltwater</span>
-                <span className="h-1 w-1 rounded-full bg-aqua/80" />
-                <span>Freshwater</span>
-                <span className="h-1 w-1 rounded-full bg-aqua/80" />
-                <span>Ponds</span>
-              </span>
             </div>
           </div>
           </div>

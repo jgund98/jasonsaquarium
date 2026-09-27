@@ -55,7 +55,7 @@ export default function Reviews() {
 
         <div className="mt-14 grid gap-x-8 gap-y-12 md:mt-20 md:grid-cols-2 lg:grid-cols-3">
           {featuredReviews.slice(0, 6).map((r, i) => (
-            <Reveal key={r.name} delay={(i % 3) * 90} as="figure" className="relative flex flex-col pl-6">
+            <Reveal key={r.name} delay={(i % 3) * 90} as="figure" className={`relative flex-col pl-6 ${i >= 3 ? "hidden md:flex" : "flex"}`}>
               <span aria-hidden="true" className="absolute left-0 top-1 h-[calc(100%-0.5rem)] w-[3px] rounded-full bg-gradient-to-b from-aqua to-coral/70" />
               <blockquote>
                 <p className={`font-display text-balance leading-[1.12] ${sizes[i % sizes.length]}`}>
