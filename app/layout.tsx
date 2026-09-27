@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: `%s | Jason's Aquarium`,
   },
   description: clip(
-    "Owner-operated aquarium cleaning, maintenance, installation and assessments for reef, freshwater and pond systems across Palm Beach County and north Broward, FL."
+    "Owner-operated aquarium cleaning, maintenance, installation and assessments for reef, freshwater and pond systems across Palm Beach County and north Broward."
   ),
   openGraph: {
     type: "website",
