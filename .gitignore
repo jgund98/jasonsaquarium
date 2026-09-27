@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# large source assets, not needed to build
+/stock
+/raw
+/research/*.output
