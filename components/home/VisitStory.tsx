@@ -28,6 +28,7 @@ const tubes = [
 
 export default function VisitStory() {
   const ref = useRef<HTMLDivElement>(null);
+  const rackRef = useRef<HTMLDivElement>(null);
   const [p, setP] = useState(0);
 
   useEffect(() => {
@@ -37,9 +38,12 @@ export default function VisitStory() {
     const onScroll = () => {
       cancelAnimationFrame(raf);
       raf = requestAnimationFrame(() => {
-        const r = el.getBoundingClientRect();
+        // Drive the fill from the rack itself, so it completes while the rack is on screen
+        // on every viewport, not after the whole section has scrolled past.
+        const target = rackRef.current ?? el;
+        const r = target.getBoundingClientRect();
         const vh = window.innerHeight;
-        const k = (vh * 0.9 - r.top) / (r.height + vh * 0.3);
+        const k = (vh * 0.92 - r.top) / (vh * 0.55);
         setP(Math.max(0, Math.min(1, k)));
       });
     };
@@ -66,7 +70,7 @@ export default function VisitStory() {
 
         <div ref={ref} className="mt-12 grid items-start gap-10 md:mt-16 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
           {/* test tube rack */}
-          <div>
+          <div ref={rackRef}>
             <Reveal className="relative overflow-hidden rounded-[1.75rem] bg-abyss p-6 text-white md:p-8">
               <div
                 aria-hidden="true"
@@ -126,13 +130,13 @@ export default function VisitStory() {
                 })}
               </svg>
 
-              <dl className="relative mt-5 grid grid-cols-2 gap-x-6 gap-y-2 border-t border-white/10 pt-5 text-[0.82rem]">
+              <dl className="relative mt-5 grid grid-cols-1 gap-x-6 gap-y-2 border-t border-white/10 pt-5 text-[0.82rem] sm:grid-cols-2">
                 {[
-                  ["Salinity", "1.024 to 1.026"],
+                  ["Salinity", "1.025 to 1.026"],
                   ["Alkalinity", "8 to 9.5 dKH"],
-                  ["Calcium", "400 to 450 ppm"],
+                  ["Calcium", "400 to 450"],
                   ["Nitrate", "2 to 10 ppm"],
-                  ["Phosphate", "0.02 to 0.1 ppm"],
+                  ["Phosphate", "0.03 to 0.1"],
                   ["pH", "8.1 to 8.3"],
                 ].map(([k, v]) => (
                   <div key={k} className="flex items-baseline justify-between gap-2 border-b border-white/8 pb-1.5">
