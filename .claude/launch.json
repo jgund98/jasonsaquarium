@@ -1,0 +1,7 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "jasons-dev", "runtimeExecutable": "pnpm", "runtimeArgs": ["dev"], "port": 3590 },
+    { "name": "jasons-prod", "runtimeExecutable": "pnpm", "runtimeArgs": ["start"], "port": 3591 }
+  ]
+}
