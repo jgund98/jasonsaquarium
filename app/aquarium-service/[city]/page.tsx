@@ -39,7 +39,11 @@ function metaFromLead(lead: string, name: string) {
     if ((out + sn).length > 120) break;
     out += sn;
   }
-  if (!out) out = sentences[0].slice(0, 120);
+  if (!out) {
+    const first = sentences[0].trim();
+    const cut = first.slice(0, 118);
+    out = cut.slice(0, cut.lastIndexOf(" ")).replace(/[,;:]$/, "") + ".";
+  }
   return `${out.trim()} Call or text Jason for aquarium service in ${name}.`;
 }
 
