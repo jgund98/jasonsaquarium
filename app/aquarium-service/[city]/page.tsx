@@ -25,26 +25,16 @@ export async function generateMetadata({ params }: PageProps<"/aquarium-service/
   if (!c) return {};
   return {
     title: `Aquarium Service in ${c.name}, FL`,
-    description: metaFromLead(c.lead, c.name),
+    description: cityMeta(c),
     alternates: { canonical: `/aquarium-service/${c.slug}` },
   };
 }
 
 // Tank photos matched to what dominates in each town. Never a stock house or
 // skyline pretending to be the city.
-function metaFromLead(lead: string, name: string) {
-  const sentences = lead.match(/[^.!?]+[.!?]/g) ?? [lead];
-  let out = "";
-  for (const sn of sentences) {
-    if ((out + sn).length > 120) break;
-    out += sn;
-  }
-  if (!out) {
-    const first = sentences[0].trim();
-    const cut = first.slice(0, 118);
-    out = cut.slice(0, cut.lastIndexOf(" ")).replace(/[,;:]$/, "") + ".";
-  }
-  return `${out.trim()} Call or text Jason for aquarium service in ${name}.`;
+function cityMeta(c: { name: string; angle: string }) {
+  const angle = c.angle.charAt(0).toUpperCase() + c.angle.slice(1);
+  return `Aquarium service in ${c.name}, FL: cleaning, maintenance, installation and assessments for reef, freshwater and pond systems. ${angle}. Call or text Jason at ${site.phone}.`;
 }
 
 function cityImage(angle: string): { src: string; alt: string } {
