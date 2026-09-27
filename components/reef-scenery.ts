@@ -164,9 +164,9 @@ export function buildScenery(W: number, H: number, dpr: number): Scenery {
 
   // ---- animated pieces (behind fish)
   const anims: Anim[] = [];
-  const grassColors = ["#2f9e6a", "#3fbf7e", "#2a7f57", "#57c286"];
-  for (let i = 0; i < 5; i++) {
-    const x = W * (0.06 + i * 0.21) + (rng() - 0.5) * W * 0.05;
+  const grassColors = ["#2f9e6a", "#3fbf7e", "#2a7f57"];
+  for (let i = 0; i < 3; i++) {
+    const x = W * (0.12 + i * 0.36) + (rng() - 0.5) * W * 0.05;
     anims.push({
       kind: "grass",
       x,
@@ -186,7 +186,7 @@ export function buildScenery(W: number, H: number, dpr: number): Scenery {
       y: floor - unit * 1,
       h: unit * (16 + rng() * 10),
       phase: rng() * Math.PI * 2,
-      color: i === 1 ? "#a63d5a" : "#3a9b6f",
+      color: i === 1 ? "#c94a72" : "#9b6cff",
       alpha: 0.6,
     });
   }
@@ -225,21 +225,27 @@ export function drawAnims(ctx: CanvasRenderingContext2D, items: Anim[], t: numbe
         ctx.stroke();
       }
     } else if (it.kind === "stem") {
+      // sea whip: a few thin rods from one holdfast, tiny polyp dots along each
       ctx.strokeStyle = it.color;
-      ctx.lineWidth = 2;
-      ctx.beginPath();
-      ctx.moveTo(it.x, it.y);
-      ctx.quadraticCurveTo(it.x + it.h * sway * 0.5, it.y - it.h * 0.5, it.x + it.h * sway * 1.4, it.y - it.h);
-      ctx.stroke();
-      ctx.fillStyle = it.color;
-      for (let i = 1; i <= 6; i++) {
-        const k = i / 6;
-        const px = it.x + it.h * sway * (0.5 * k * k + 0.9 * k * k * k);
-        const py = it.y - it.h * k;
-        const side = i % 2 ? 1 : -1;
+      ctx.lineCap = "round";
+      for (let b = 0; b < 3; b++) {
+        const h = it.h * (0.75 + b * 0.12);
+        const lean = (b - 1) * 0.35;
+        const s = sway * 0.8 + lean;
+        ctx.lineWidth = 2.2;
         ctx.beginPath();
-        ctx.ellipse(px + side * it.h * 0.06, py, it.h * 0.075, it.h * 0.035, side * (0.5 + sway), 0, Math.PI * 2);
-        ctx.fill();
+        ctx.moveTo(it.x, it.y);
+        ctx.quadraticCurveTo(it.x + h * s * 0.5, it.y - h * 0.5, it.x + h * s * 1.3, it.y - h);
+        ctx.stroke();
+        ctx.fillStyle = "rgba(255,255,255,0.55)";
+        for (let i = 1; i <= 5; i++) {
+          const k = i / 5.5;
+          const px = it.x + h * s * (0.5 * k * k + 0.8 * k * k * k);
+          const py = it.y - h * k;
+          ctx.beginPath();
+          ctx.arc(px, py, 1.2, 0, Math.PI * 2);
+          ctx.fill();
+        }
       }
     } else if (it.kind === "fan") {
       ctx.translate(it.x, it.y);

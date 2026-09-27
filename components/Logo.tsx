@@ -1,5 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import clsx from "clsx";
+import Wordmark from "./Wordmark";
+import { usePathname } from "next/navigation";
 
 export function FishMark({ className, id = "fm" }: { className?: string; id?: string }) {
   return (
@@ -29,23 +33,20 @@ export default function Logo({
   className?: string;
   compact?: boolean;
 }) {
-  const ink = tone === "light" ? "text-white" : "text-abyss";
+  const pathname = usePathname();
   return (
     <Link
       href="/"
       aria-label="Jason's Aquarium Service, home"
-      className={clsx("inline-flex items-center gap-2.5 select-none", className)}
+      className={clsx("inline-flex items-center select-none", className)}
+      onClick={(e) => {
+        if (pathname === "/") {
+          e.preventDefault();
+          window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+        }
+      }}
     >
-      <FishMark className={clsx("shrink-0", compact ? "h-7 w-8 sm:h-9 sm:w-10" : "h-11 w-12")} id={tone} />
-      <span
-        className={clsx(
-          "font-logo whitespace-nowrap leading-none",
-          ink,
-          compact ? "text-[1.05rem] sm:text-[1.42rem]" : "text-[1.3rem] sm:text-[1.7rem]"
-        )}
-      >
-        Jason&rsquo;s Aquarium Service
-      </span>
+      <Wordmark tone={tone} id={`hdr-${tone}`} className={clsx("w-auto", compact ? "h-10 sm:h-12 md:h-14" : "h-14 md:h-16")} />
     </Link>
   );
 }
