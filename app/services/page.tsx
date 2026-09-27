@@ -81,7 +81,7 @@ export default function ServicesPage() {
                   <h3 className="font-display text-[1.4rem] leading-tight">{s.name}</h3>
                   <p className="mt-2 text-pretty text-[0.95rem] text-white/70">{s.short}</p>
                   <span className="mt-auto inline-flex items-center gap-2 pt-5 text-[0.85rem] font-bold text-aqua">
-                    Learn more <Arrow className="transition-transform duration-500 group-hover:translate-x-1" />
+                    See how it&rsquo;s serviced <Arrow className="transition-transform duration-500 group-hover:translate-x-1" />
                   </span>
                 </Link>
               </Reveal>

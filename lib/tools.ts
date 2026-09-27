@@ -14,7 +14,7 @@ export const tools = [
   {
     slug: "service-planner",
     name: "Service Schedule Planner",
-    short: "Five questions about your tank and you get the visit rhythm Jason would recommend and what each visit should include.",
+    short: "Five questions about your tank. You get the visit rhythm Jason would recommend and what each visit should include.",
     tag: "Two minutes",
   },
   {

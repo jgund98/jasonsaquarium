@@ -187,7 +187,7 @@ export default async function CityPage({ params }: PageProps<"/aquarium-service/
         </Container>
       </section>
 
-      <CtaBand title={`Book aquarium service in ${c.name}`} body="Tank size and a photo is all Jason needs. He will tell you what it needs and when he can be there." />
+      <CtaBand title={`Book aquarium service in ${c.name}`} body="Tank size and a photo is all Jason needs. He will tell you what it takes and when he can be there." />
     </>
   );
 }

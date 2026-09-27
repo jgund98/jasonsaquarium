@@ -11,7 +11,7 @@ import Link from "next/link";
 import { Arrow } from "@/components/home/ServicesShowcase";
 
 export const metadata: Metadata = {
-  title: "Aquarium Service FAQ: Cost, Frequency, Emergencies",
+  title: "Aquarium Service FAQ for Palm Beach County Tank Owners",
   description: clip("How much aquarium maintenance costs in Palm Beach County, how often a reef tank should be serviced, what a visit includes, what to do when a tank leaks or fish are dying, hurricane prep and more. Straight answers from Jason."),
   alternates: { canonical: "/faq" },
 };

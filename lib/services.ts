@@ -25,7 +25,7 @@ export const services: Service[] = [
   {
     slug: "aquarium-cleaning-maintenance",
     name: "Aquarium Cleaning & Maintenance",
-    short: "Scheduled visits that keep glass clear, water stable and fish thriving.",
+    short: "Scheduled visits that keep the glass clear, the water stable and the fish healthy.",
     eyebrow: "Maintenance",
     headline: "Aquarium cleaning and maintenance across Palm Beach County",
     intro:
@@ -41,7 +41,7 @@ export const services: Service[] = [
     body: [
       "Most fish tank problems are slow. Nitrate creeps up, algae takes hold, a pump gets a little louder each week. Regular fish tank cleaning catches all of it before it becomes a crash. Jason has serviced the same tanks in Boca Raton, Delray Beach and Boynton Beach for years, so he notices when something is off before you do.",
       "Every visit ends with the tank looking the way it did the day it was set up: clean glass, bright rock, clear water, fish out and eating. If a parameter drifts, you hear about it and what he is doing about it. If a piece of equipment is on its way out, you hear that too, before it fails.",
-      "Maintenance plans work for saltwater reef tanks, fish-only saltwater systems, freshwater community tanks, planted aquariums, cichlid tanks and ponds. Whether it is a 20 gallon on a desk or a 300 gallon built into a wall, the routine scales to the system.",
+      "Maintenance plans work for saltwater reef tanks, fish-only saltwater systems, freshwater community tanks, planted aquariums, cichlid tanks and ponds. A 20 gallon on a desk and a 300 gallon built into a wall get the same routine, scaled to the system.",
     ],
     keywords: [
       "aquarium maintenance Boca Raton",
@@ -66,7 +66,7 @@ export const services: Service[] = [
       },
       {
         q: "Can you service my tank while I am at work?",
-        a: "Yes. Many of Jason's clients are offices, lobbies and homes where nobody is around during the visit. Arrangements for access are made once and kept.",
+        a: "Yes. Many of Jason's clients are offices, lobbies and homes where nobody is around during the visit. Access gets set up once and stays that way.",
       },
       {
         q: "How much does aquarium maintenance cost in Boca Raton?",
@@ -95,8 +95,8 @@ export const services: Service[] = [
     ],
     body: [
       "Custom aquarium installation in Boca Raton is not the same as buying a kit. A wall-mounted reef in a lobby needs a plan for water changes and access. A planted tank in a bright room needs different lighting than one in a hallway. Jason has set up and upgraded tanks across Palm Beach County and designs around how the tank will actually be lived with.",
-      "The stocking is where the difference shows. Fish and coral are chosen for the system, added in the right order and given time to settle. Clients have watched the species Jason picked thrive for years because they were the right animals for that tank, not whatever was in the store that week.",
-      "Already have a tank that has outgrown its equipment? Jason handles upgrades and swaps too, including moving livestock from an old tank into a new one in a single day when a tank cracks or fails.",
+      "The stocking is where the difference shows. Fish and coral are chosen for the system, added in the right order and given time to settle. Clients still have the fish Jason picked years later because they were the right animals for that tank, not whatever was in the store that week.",
+      "If your tank has outgrown its equipment, Jason handles upgrades and swaps too, including moving livestock from an old tank into a new one in a single day when a tank cracks or fails.",
     ],
     keywords: [
       "custom aquarium installation Boca Raton",
@@ -131,7 +131,7 @@ export const services: Service[] = [
   {
     slug: "aquarium-assessment",
     name: "Aquarium Assessments",
-    short: "A second set of expert eyes on a tank that is struggling, or one you just bought.",
+    short: "A second set of eyes on a tank that is struggling, or one that came with the house.",
     eyebrow: "Assessments",
     headline: "Aquarium assessments and troubleshooting",
     intro:
@@ -145,7 +145,7 @@ export const services: Service[] = [
       "A plain-language plan you can follow yourself, or hand back to Jason",
     ],
     body: [
-      "Clients call Jason a mentor for a reason. He has helped hobbyists across Boca Raton and Delray Beach understand what their water is telling them and adjust levels themselves. An assessment is not a sales visit. It is an honest look at the system and a plan.",
+      "More than one client has called Jason a mentor. He has taught hobbyists across Boca Raton and Delray Beach to read their own water and adjust levels themselves. An assessment is not a sales visit. It is a look at the system and a plan.",
       "Assessments also make sense when you inherit a tank: buying a home with a built-in aquarium, taking over an office lobby tank, or moving into a property with a pond. Jason tells you what you have, what condition it is in and what it will take to keep it healthy.",
     ],
     keywords: [
@@ -191,7 +191,7 @@ export const services: Service[] = [
       "Honest advice by phone while you wait",
     ],
     body: [
-      "Two of Jason's public reviews describe emergencies: a reef whose glass broke without warning, and an old tank swapped for a new one in a single day. In both cases the fish and coral came through because someone answered the phone and showed up. That is what emergency aquarium service means here.",
+      "Two of the stories clients tell about Jason are emergencies: a reef whose glass broke without warning, and an old tank swapped for a new one in a single day. In both cases the fish and coral came through because someone answered the phone and showed up. That is what emergency aquarium service means here.",
       "The most useful thing you can do while you wait is nothing drastic. Turn off the lights, keep water moving if the level allows it, do not feed, and do not add chemicals. Text a photo and any test results you have so Jason can start thinking before he arrives.",
       "After the emergency, the tank usually needs a few days of daily testing and a plan to keep it from happening again. That is where a maintenance schedule comes from for most of Jason's long-term clients.",
     ],
@@ -213,7 +213,7 @@ export const services: Service[] = [
       },
       {
         q: "Do you charge extra for emergency aquarium calls?",
-        a: "Emergency visits are quoted when you call, based on the time and what is needed. Jason will tell you the number before he leaves his driveway.",
+        a: "Emergency visits are quoted when you call, based on the time and what is needed. Jason tells you the number before he heads your way.",
       },
       {
         q: "What should I do while I wait for help?",
@@ -257,7 +257,7 @@ export const specialties: Specialty[] = [
     ],
     body: [
       "Saltwater is less forgiving than freshwater, and reef tanks least of all. The difference between a tank full of color and a tank full of brown rock is usually water chemistry that drifted for a few weeks. Jason's maintenance visits test the numbers that matter and keep them where the coral wants them.",
-      "He also helps pick the animals. Clients in Boca Raton have reef tanks whose fish and corals have thrived for years because they were selected for that tank's size, light and flow rather than bought on impulse.",
+      "He also helps pick the animals. Clients in Boca Raton still have the fish and corals he chose years ago because they were selected for that tank's size, light and flow rather than bought on impulse.",
     ],
     keywords: [
       "reef tank service Boca Raton",
@@ -272,7 +272,7 @@ export const specialties: Specialty[] = [
       },
       {
         q: "Can you help me choose fish and coral for my reef?",
-        a: "Yes. Selecting compatible, healthy livestock for the specific tank is part of what Jason does, and clients have seen those picks thrive for years.",
+        a: "Yes. Selecting compatible, healthy livestock for the specific tank is part of what Jason does, and clients still have those picks years later.",
       },
     ],
     image: "/images/specialties/reef.jpg",

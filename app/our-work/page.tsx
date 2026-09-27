@@ -21,7 +21,7 @@ const stories = [
   {
     title: "The reef that lost its glass",
     kicker: "Emergency replacement",
-    body: "A long-time reef client's tank glass broke without warning. Jason sourced a replacement, got the new system set up and moved the livestock across quickly enough that the owner called it seamless.",
+    body: "A long-time reef client's tank glass broke without warning. Jason sourced a replacement, set up the new system and moved the livestock across. The owner's review says he was there for every step.",
     quote: "When my tank glass unexpectedly broke, I needed a replacement immediately, and he was there to help every step of the way.",
     who: "Christina Ross",
   },
@@ -33,7 +33,7 @@ const stories = [
     who: "Michael Zapin",
   },
   {
-    title: "A reef built to thrive",
+    title: "A reef stocked to last",
     kicker: "Design and stocking",
     body: "Jason helped a client establish a reef from scratch, chose the fish and coral for that specific system, and has serviced it on a schedule ever since. Years later the animals he picked are still there.",
     quote: "The selection of fish and coral created a beautiful tank and the species he helped me select have thrived.",

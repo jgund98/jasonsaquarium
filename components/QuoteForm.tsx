@@ -169,7 +169,7 @@ export default function QuoteForm({ defaultNeed, city }: { defaultNeed?: string;
           Got it {name.trim().split(" ")[0]}. Jason will text you back.
         </h3>
         <p className="mx-auto mt-4 max-w-md text-pretty text-[1.02rem] leading-relaxed text-white/80">
-          Usually the same day. If it cannot wait, the fast lane is his cell.
+          Usually the same day. If it cannot wait, call his cell.
         </p>
         <a href={site.phoneHref} className="btn btn-foam mt-7">
           <PhoneIcon /> {site.phone}

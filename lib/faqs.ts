@@ -19,11 +19,11 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         q: "Can I hire someone to take care of my aquarium completely?",
-        a: "Yes. A scheduled maintenance plan covers water changes, cleaning, testing, equipment checks and livestock health so you can simply enjoy the tank. Many of Jason's clients never touch their tanks between visits.",
+        a: "Yes. A scheduled maintenance plan covers water changes, cleaning, testing, equipment checks and livestock health. Your job is to look at the tank. Many of Jason's clients never touch theirs between visits.",
       },
       {
         q: "Do you do one-time cleanings or only ongoing service?",
-        a: "Both. One-time cleanings, deep cleans and rescues are available, and most people move to a schedule once they see the difference.",
+        a: "Both. Jason does one-time cleanings, deep cleans and rescues. Most people move to a schedule after the first one.",
       },
       {
         q: "How do I get a quote?",
@@ -73,11 +73,11 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         q: "Do you work on koi ponds and water features?",
-        a: "Yes. Pond cleaning, pump and filter service, UV clarifiers and water clarity problems are handled, along with seasonal cleanouts.",
+        a: "Yes. Pond cleaning, pump and filter service, UV clarifiers, water clarity problems and seasonal cleanouts.",
       },
       {
         q: "Can you help me pick fish and coral for my reef tank?",
-        a: "Yes. Livestock selection for the specific tank is part of what Jason does, and clients have watched those picks thrive for years. He also sells fish and coral to his service clients.",
+        a: "Yes. Livestock selection for the specific tank is part of what Jason does, and clients still have those picks years later. He also sells fish and coral to his service clients.",
       },
       {
         q: "Do you service planted tanks with CO2?",
@@ -96,7 +96,7 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         q: "My aquarium is leaking or the glass cracked. Can you help today?",
-        a: "Call immediately. Jason has replaced tanks on short notice, moving fish and coral into a new system the same day. Speed matters most for the livestock.",
+        a: "Call immediately. Jason has replaced tanks on short notice, moving fish and coral into a new system the same day. The sooner he hears, the better the odds for the fish.",
       },
       {
         q: "Why is my aquarium water cloudy?",
@@ -131,7 +131,7 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         q: "Can you move my aquarium to a new house?",
-        a: "Tank moves and upgrades, including transferring livestock into a new system, are handled. Call to talk through the specifics of your move.",
+        a: "Yes. Jason moves tanks and handles upgrades, including transferring livestock into a new system. Call to talk through the specifics of your move.",
       },
     ],
   },

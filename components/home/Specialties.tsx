@@ -25,7 +25,7 @@ export default function Specialties() {
         <SectionHead
           tone="dark"
           eyebrow="Every kind of water"
-          title="Care for every kind of aquatic space"
+          title="From reef tanks to backyard koi ponds"
           lede="Saltwater and reef systems are where the reviews pile up, but Jason services planted tanks, cichlid tanks, discus tanks, goldfish tanks and koi ponds with the same routine: test, clean, check, look at every fish."
         />
 

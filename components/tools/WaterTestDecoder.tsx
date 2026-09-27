@@ -303,7 +303,7 @@ export default function WaterTestDecoder() {
     results.length === 0
       ? null
       : counts.bad > 0
-        ? { level: "bad" as Level, title: "Something needs fixing today", body: "At least one number is in the danger zone. Do the action listed, and call or text Jason with these results before adding anything else to the tank." }
+        ? { level: "bad" as Level, title: "Something needs fixing today", body: "At least one number is outside the safe range. Do the action listed, then call or text Jason with these results before adding anything else to the tank." }
         : counts.watch > 0
           ? { level: "watch" as Level, title: "Stable but drifting", body: "Nothing is on fire. A couple of numbers are heading the wrong way, which is exactly what a scheduled visit catches before it costs you fish." }
           : { level: "good" as Level, title: "Your tank is in good shape", body: "Every number you entered is where it should be. Keep the routine that got you here." };

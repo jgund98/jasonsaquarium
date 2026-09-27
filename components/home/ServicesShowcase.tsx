@@ -76,7 +76,7 @@ export default function ServicesShowcase() {
                     ))}
                   </ul>
                   <span className="mt-auto inline-flex items-center gap-2 pt-6 text-[0.9rem] font-bold text-abyss">
-                    Learn more
+                    See the service
                     <Arrow className="transition-transform duration-500 ease-[var(--ease-water)] group-hover:translate-x-1" />
                   </span>
                 </div>

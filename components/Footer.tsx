@@ -125,9 +125,9 @@ export default function Footer() {
 
         <p className="mt-12 max-w-4xl text-[0.85rem] leading-relaxed text-white/45 text-pretty">
           {site.disambiguation}{" "}
-          Proudly serving aquarium owners in Boca Raton, Delray Beach, Boynton Beach, Highland
-          Beach, Deerfield Beach, Parkland, Coral Springs, Wellington, West Palm Beach and the
-          surrounding Palm Beach County and north Broward communities.
+          Jason services aquariums in Boca Raton, Delray Beach, Boynton Beach, Highland Beach,
+          Deerfield Beach, Parkland, Coral Springs, Wellington, West Palm Beach and the rest of
+          Palm Beach County and north Broward.
         </p>
 
         <div className="mt-8 flex flex-col gap-4 border-t border-[var(--line-dark)] pt-6 text-[0.8rem] text-white/50 sm:flex-row sm:items-center sm:justify-between">

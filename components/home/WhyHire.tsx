@@ -79,7 +79,7 @@ function Tank({ t, label, good }: { t: number; label: string; good: boolean }) {
 const points = [
   ["Tanks fail slowly and then all at once.", "Nitrate creeps, alkalinity drifts, a pump gets a little louder. Nobody notices for a month, then the coral browns out or the fish start dying. A weekly set of test results is the only early warning there is."],
   ["The animals are worth more than the service.", "A stocked reef holds hundreds to thousands of dollars of coral and fish. One missed problem can cost more than a year of visits, and the animals cannot be replaced by a refund."],
-  ["You bought the tank to enjoy it.", "Not to haul buckets on Sunday. A scheduled visit gives you the tank you pictured when you bought it, every single week."],
+  ["You bought the tank to enjoy it.", "Not to haul buckets on Sunday. A scheduled visit gives you the tank you pictured when you bought it, every week."],
   ["Guessing is the expensive part.", "The internet has ten answers for every cloudy tank and nine are wrong for yours. Jason has seen the problem before, on a tank like yours, in the same water."],
 ];
 

@@ -40,7 +40,7 @@ export const site = {
   // 2018, with clients already using Jason for years by then.
   founded: "2021",
   disambiguation:
-    "Jason's Aquarium Service LLC serves Palm Beach County and north Broward, Florida and is not affiliated with Jason's Aquatics in Davie.",
+    "Jason's Aquarium Service LLC serves Palm Beach County and north Broward, Florida, and is not affiliated with Jason's Aquatics in Davie.",
 
   // Service priority, in the order Jason wants them presented.
   primaryServices: [

@@ -18,7 +18,7 @@ function TownList({ towns }: { towns: readonly { name: string; slug: string; min
               {t.name}
             </span>
             <span className="text-[0.72rem] font-bold uppercase tracking-[0.14em] text-ink-soft/70 group-hover:text-lagoon">
-              {t.minutes === 0 ? "Base" : `${t.minutes} min`}
+              {t.minutes === 0 ? "Weekly route" : "Route day"}
             </span>
           </Link>
         </li>
@@ -46,7 +46,7 @@ export default function AreasBand() {
             <div className="absolute inset-x-0 bottom-0 p-6 text-white md:p-8">
               <p className="eyebrow text-aqua">Palm Beach County and north Broward</p>
               <p className="font-display mt-2 text-balance text-[1.5rem] leading-tight md:text-[1.9rem]">
-                Palm Beach County first and the Broward line ten minutes away
+                Palm Beach County first and north Broward on the same route days
               </p>
             </div>
           </Reveal>

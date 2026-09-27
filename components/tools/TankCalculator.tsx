@@ -88,7 +88,7 @@ export default function TankCalculator() {
           {shape === "bowfront" && <Field label="Bow depth" value={bow} onChange={setBow} />}
         </div>
 
-        <p className="mt-6 text-[0.85rem] font-bold uppercase tracking-[0.16em] text-lagoon">Real-world adjustments</p>
+        <p className="mt-6 text-[0.85rem] font-bold uppercase tracking-[0.16em] text-lagoon">What is actually in the tank</p>
         <div className="mt-3 grid grid-cols-2 gap-3">
           <Field label="Filled to (%)" value={fill} onChange={setFill} hint="Most tanks run 90 to 95" />
           <Field label="Rock and sand (%)" value={rock} onChange={setRock} hint="Reefs 10 to 20" />

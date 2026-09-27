@@ -14,7 +14,7 @@ import { Callout, FishBullet, Watermark } from "@/components/Brand";
 import { Bubbles } from "@/components/Section";
 
 export const metadata: Metadata = {
-  title: "About Jason, Palm Beach County Aquarium Technician",
+  title: "About Jason: Palm Beach County Aquarium Technician",
   description: clip("Meet Jason, the owner and only technician at Jason's Aquarium Service. Years of hands-on reef, freshwater and pond care for clients across Palm Beach County, and he answers his own phone."),
   alternates: { canonical: "/about" },
 };

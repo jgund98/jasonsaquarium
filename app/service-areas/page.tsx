@@ -31,8 +31,8 @@ export default function ServiceAreasPage() {
       />
 
       {[
-        { title: "Palm Beach County", list: pb, blurb: "The core of the route, from the Boca country clubs up the coast to Jupiter and out west to Wellington." },
-        { title: "North Broward", list: bw, blurb: "Closer to Jason than most of Palm Beach County. Parkland and Deerfield are a shorter drive than Delray." },
+        { title: "Palm Beach County", list: pb, blurb: "The core of the route from the Boca country clubs up the coast to Jupiter and out west to Wellington" },
+        { title: "North Broward", list: bw, blurb: "Just over the county line and on the same route days as Boca" },
       ].map((grp, gi) => (
         <section key={grp.title} className={gi === 0 ? "bg-white py-20 md:py-24" : "bg-shell py-20 md:py-24"}>
           <Container>

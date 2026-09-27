@@ -29,8 +29,8 @@ export const guides: Guide[] = [
       {
         h: "The four things that set the price",
         p: [
-          "Size is the obvious one. A 30 gallon freshwater tank and a 300 gallon reef are different jobs, and the water alone for a large saltwater change has real cost. Saltwater versus freshwater is the second: reef systems need mixed saltwater, more testing and more equipment attention. Frequency is the third, and it is set by the tank, not by a sales target. Weekly for most reefs, every two to four weeks for most freshwater tanks. Equipment is the fourth. Sumps, dosing, controllers and skimmers add time to every visit.",
-          "In Palm Beach County you will see companies publish monthly plans from a couple hundred dollars for a small tank on a bi-weekly schedule up to several hundred a month for large reefs on weekly visits with extras. Jason quotes each tank individually rather than forcing it into a tier, which usually lands lower for small tanks and fairer for large ones.",
+          "Size is the obvious one. A 30 gallon freshwater tank and a 300 gallon reef are different jobs, and the water alone for a large saltwater change has real cost. Saltwater versus freshwater is the second: reef systems need mixed saltwater, more testing and more equipment attention. Frequency is the third, and the tank should set it, not a plan tier. Weekly for most reefs, every two to four weeks for most freshwater tanks. Equipment is the fourth. Sumps, dosing, controllers and skimmers add time to every visit.",
+          "In Palm Beach County you will see companies publish monthly plans from a couple hundred dollars for a small tank on a bi-weekly schedule up to several hundred a month for large reefs on weekly visits with extras. Jason quotes each tank on its own instead of fitting it to a tier. Small tanks usually come in under the published plans, and large ones pay for the work they actually need.",
         ],
       },
       {
@@ -42,13 +42,13 @@ export const guides: Guide[] = [
       {
         h: "What costs more than the service",
         p: [
-          "A crash. A stocked reef in a Boca Raton living room can hold thousands of dollars of coral and fish, and one missed problem can take it all in a week. Regular testing is what turns a crash into a note on a clipboard.",
+          "A crash. A stocked reef in a Boca Raton living room can hold thousands of dollars of coral and fish, and one missed problem can take it all in a week. Most crashes show up in the test numbers a week or two before anything looks wrong. That is what the testing is for.",
         ],
       },
       {
         h: "How to get an exact number",
         p: [
-          "Text Jason the tank size, whether it is saltwater or freshwater, and a photo. He replies with a real price, usually the same day, and will tell you if the tank needs fewer visits than you assumed.",
+          "Text Jason the tank size, whether it is saltwater or freshwater, and a photo. He replies with a price, usually the same day. If the tank needs fewer visits than you were planning on, he will say so.",
         ],
       },
     ],
@@ -91,7 +91,7 @@ export const guides: Guide[] = [
     slug: "how-to-choose-an-aquarium-service-boca-raton",
     title: "How to choose an aquarium service in Boca Raton",
     description:
-      "What separates a good aquarium maintenance company from an expensive mistake: who actually shows up, whether they test water, how they handle saltwater, what they do in an emergency, and the questions to ask before you hire anyone.",
+      "What to check before hiring an aquarium maintenance company: who actually shows up, whether they test water, how they handle saltwater, what they do in an emergency, and the questions to ask before you hire anyone.",
     date: "2026-09-27",
     minutes: 6,
     image: "/images/work/lobby-reef-1200.jpg",
@@ -135,7 +135,7 @@ export const guides: Guide[] = [
     slug: "boca-raton-tap-water-aquarium",
     title: "What Boca Raton tap water means for your aquarium",
     description:
-      "Palm Beach County tap water comes from shallow wells, is treated with chloramine and is softened before it reaches you. Here is what that does to freshwater and reef tanks, and how water is prepared so a water change helps instead of hurts.",
+      "Palm Beach County tap water comes from shallow wells, is treated with chloramine and is softened before it reaches you. Here is what that does to freshwater and reef tanks, and how to prepare water so a water change does not set the tank back.",
     date: "2026-09-27",
     minutes: 5,
     image: "/images/stock/tetras.jpg",
@@ -195,7 +195,7 @@ export const guides: Guide[] = [
       {
         h: "Then call",
         p: [
-          "If more than one fish is affected or you cannot find the cause, call Jason with the photo and the test results. He has talked clients through this on the phone many times and can usually get to a Palm Beach County tank fast when it matters.",
+          "If more than one fish is affected or you cannot find the cause, call Jason with the photo and the test results. He has talked people through this on the phone before, and if the tank needs someone standing in front of it, he will come out.",
         ],
       },
     ],
@@ -205,7 +205,7 @@ export const guides: Guide[] = [
     slug: "saltwater-vs-freshwater-aquarium-which-is-right",
     title: "Saltwater or freshwater: which aquarium is right for your home",
     description:
-      "An honest comparison for Palm Beach County homeowners deciding on a first tank or an upgrade: cost, effort, what lives in each, how each is serviced, and which one fits a busy household.",
+      "For Palm Beach County homeowners deciding on a first tank or an upgrade: cost, effort, what lives in each, how each is serviced, and which one fits a busy household.",
     date: "2026-09-27",
     minutes: 6,
     image: "/images/stock/planted-angelfish.jpg",
@@ -231,7 +231,7 @@ export const guides: Guide[] = [
         ],
       },
     ],
-    takeaway: "Freshwater for forgiving beauty, saltwater for the showpiece. Both thrive on a schedule.",
+    takeaway: "Freshwater is the forgiving one, saltwater is the showpiece. Both depend on a schedule.",
   },
 ];
 
