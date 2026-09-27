@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clip } from "@/lib/seo";
 import PageHero from "@/components/PageHero";
 import TankCalculator from "@/components/tools/TankCalculator";
 import { Container, Reveal } from "@/components/Section";
@@ -16,8 +17,7 @@ const faqs = [
 
 export const metadata: Metadata = {
   title: "Aquarium Volume and Water Change Calculator",
-  description:
-    "Enter your tank's inside dimensions to get real water volume in gallons and liters, how much water a 10 to 25 percent change is, and how much salt mix to weigh out at reef salinity. Free from Jason's Aquarium Service.",
+  description: clip("Enter your tank's inside dimensions to get real water volume in gallons and liters, how much water a 10 to 25 percent change is, and how much salt mix to weigh out at reef salinity. Free from Jason's Aquarium Service."),
   alternates: { canonical: "/tools/tank-volume" },
 };
 

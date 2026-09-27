@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clip } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
@@ -14,8 +15,7 @@ import { Bubbles } from "@/components/Section";
 
 export const metadata: Metadata = {
   title: "About Jason, Palm Beach County Aquarium Technician",
-  description:
-    "Meet Jason, the owner and only technician at Jason's Aquarium Service. Years of hands-on reef, freshwater and pond care for clients across Palm Beach County, and he answers his own phone.",
+  description: clip("Meet Jason, the owner and only technician at Jason's Aquarium Service. Years of hands-on reef, freshwater and pond care for clients across Palm Beach County, and he answers his own phone."),
   alternates: { canonical: "/about" },
 };
 

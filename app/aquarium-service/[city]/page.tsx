@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clip } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -26,7 +27,7 @@ export async function generateMetadata({ params }: PageProps<"/aquarium-service/
   if (!c) return {};
   return {
     title: `Aquarium Service in ${c.name}, FL`,
-    description: cityMeta(c),
+    description: clip(cityMeta(c)),
     alternates: { canonical: `/aquarium-service/${c.slug}` },
   };
 }

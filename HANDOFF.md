@@ -4,12 +4,12 @@ Built 2026-09-27. Next.js 16 + Tailwind 4 + TypeScript.
 
 - Repo: https://github.com/jgund98/jasonsaquarium (private, branch `main`)
 - Live preview: https://jasonsaquarium.vercel.app (Vercel project `jasonsaquarium`, deployed with `vercel --prod` from the project folder; the project is also linked to the GitHub repo)
-- Custom domain not yet attached; `site.url` in `lib/site.ts` assumes jasonsaquariumservice.com
+- Custom domain not yet attached; `site.url` in `lib/site.ts` assumes jasonsaquarium.epicdevsolutions.com
 - Vercel pnpm quirk: build-script approvals live in `pnpm-workspace.yaml` (`allowBuilds` + `onlyBuiltDependencies` + `strictDepBuilds: false`); without them Vercel's pnpm fails the install step. Client-facing notes are in CLIENT-HANDOFF.md.
 
 - Dev: `pnpm dev` on http://localhost:3590 (launch name `jasons-dev`)
 - Prod: `npx next build` then `pnpm start` on http://localhost:3591 (launch name `jasons-prod`)
-- Domain assumed in code: jasonsaquariumservice.com (change `site.url` in `lib/site.ts` if different)
+- Domain assumed in code: jasonsaquarium.epicdevsolutions.com (change `site.url` in `lib/site.ts` if different)
 
 ## What is in it
 

@@ -1,7 +1,8 @@
 import type { Metadata, Viewport } from "next";
-import { Figtree, Fredoka } from "next/font/google";
+import { Figtree } from "next/font/google";
 import "./globals.css";
 import { site } from "@/lib/site";
+import { clip } from "@/lib/seo";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileDock from "@/components/MobileDock";
@@ -16,20 +17,13 @@ const figtree = Figtree({
   display: "swap",
 });
 
-const fredoka = Fredoka({
-  variable: "--font-fredoka",
-  subsets: ["latin"],
-  weight: ["500", "600"],
-  display: "swap",
-});
-
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
     default: `Aquarium Service in Palm Beach County, FL | ${site.name}`,
     template: `%s | Jason's Aquarium`,
   },
-  description: site.description,
+  description: clip(site.description),
   openGraph: {
     type: "website",
     siteName: site.name,
@@ -49,7 +43,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${figtree.variable} ${fredoka.variable} h-full antialiased`}>
+    <html lang="en" className={`${figtree.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         <script
           type="application/ld+json"

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clip } from "@/lib/seo";
 import PageHero from "@/components/PageHero";
 import { Container, Reveal } from "@/components/Section";
 import FaqList from "@/components/Faq";
@@ -10,9 +11,8 @@ import Link from "next/link";
 import { Arrow } from "@/components/home/ServicesShowcase";
 
 export const metadata: Metadata = {
-  title: "Aquarium Service Questions Answered: Cost, Frequency, Emergencies",
-  description:
-    "How much aquarium maintenance costs in Palm Beach County, how often a reef tank should be serviced, what a visit includes, what to do when a tank leaks or fish are dying, hurricane prep and more. Straight answers from Jason.",
+  title: "Aquarium Service FAQ: Cost, Frequency, Emergencies",
+  description: clip("How much aquarium maintenance costs in Palm Beach County, how often a reef tank should be serviced, what a visit includes, what to do when a tank leaks or fish are dying, hurricane prep and more. Straight answers from Jason."),
   alternates: { canonical: "/faq" },
 };
 

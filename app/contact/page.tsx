@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clip } from "@/lib/seo";
 import PageHero from "@/components/PageHero";
 import QuoteForm from "@/components/QuoteForm";
 import { Container, Reveal } from "@/components/Section";
@@ -9,8 +10,7 @@ import { JsonLd, breadcrumbJsonLd } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Get a Free Aquarium Service Quote in Palm Beach County",
-  description:
-    "Tell Jason about your tank and get a straight answer, usually the same day. Aquarium cleaning, installation and assessments across Palm Beach County and north Broward. Call or text (516) 528-7824.",
+  description: clip("Tell Jason about your tank and get a straight answer, usually the same day. Aquarium cleaning, installation and assessments across Palm Beach County and north Broward. Call or text (516) 528-7824."),
   alternates: { canonical: "/contact" },
 };
 

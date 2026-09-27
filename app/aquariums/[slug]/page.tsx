@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clip } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -53,7 +54,7 @@ export async function generateMetadata({ params }: PageProps<"/aquariums/[slug]"
   if (!s) return {};
   return {
     title: `${s.name} Service in Palm Beach County, FL`,
-    description: `${s.short} Cleaning, maintenance, setup and troubleshooting for ${s.name.toLowerCase()} in Boca Raton, Delray Beach, Boynton Beach and across Palm Beach County.`,
+    description: clip(`${s.short} Cleaning, maintenance, setup and troubleshooting for ${s.name.toLowerCase()} in Boca Raton, Delray Beach, Boynton Beach and across Palm Beach County.`),
     alternates: { canonical: `/aquariums/${s.slug}` },
   };
 }

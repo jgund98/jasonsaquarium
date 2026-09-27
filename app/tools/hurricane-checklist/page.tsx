@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clip } from "@/lib/seo";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import HurricaneChecklist from "@/components/tools/HurricaneChecklist";
@@ -9,8 +10,7 @@ import { JsonLd, breadcrumbJsonLd } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Hurricane Checklist for Aquariums in Palm Beach County",
-  description:
-    "An interactive storm checklist for fish tank and reef owners in Palm Beach County: what to do the week before, 48 hours out, during a power outage and after. Saves progress on your phone. From Jason's Aquarium Service.",
+  description: clip("An interactive storm checklist for fish tank and reef owners in Palm Beach County: what to do the week before, 48 hours out, during a power outage and after. Saves progress on your phone. From Jason's Aquarium Service."),
   alternates: { canonical: "/tools/hurricane-checklist" },
 };
 

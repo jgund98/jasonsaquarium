@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clip } from "@/lib/seo";
 import Link from "next/link";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
@@ -10,8 +11,7 @@ import { JsonLd, breadcrumbJsonLd } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Aquarium Guides for Palm Beach County Tank Owners",
-  description:
-    "Plain-English guides from Jason: what aquarium maintenance costs in Palm Beach County, hurricane prep for tanks, what Boca tap water does to a reef, why fish die and what to do, and how to choose a service.",
+  description: clip("Plain-English guides from Jason: what aquarium maintenance costs in Palm Beach County, hurricane prep for tanks, what Boca tap water does to a reef, why fish die and what to do, and how to choose a service."),
   alternates: { canonical: "/guides" },
 };
 

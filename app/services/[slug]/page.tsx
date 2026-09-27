@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clip } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -25,7 +26,7 @@ export async function generateMetadata({ params }: PageProps<"/services/[slug]">
   if (!s) return {};
   return {
     title: `${s.name} in Palm Beach County, FL`,
-    description: `${s.short} ${s.name} for saltwater, reef, freshwater and pond systems in Boca Raton, Delray Beach, Boynton Beach and across Palm Beach County. Owner-operated by Jason.`,
+    description: clip(`${s.short} ${s.name} for saltwater, reef, freshwater and pond systems in Boca Raton, Delray Beach, Boynton Beach and across Palm Beach County. Owner-operated by Jason.`),
     alternates: { canonical: `/services/${s.slug}` },
   };
 }

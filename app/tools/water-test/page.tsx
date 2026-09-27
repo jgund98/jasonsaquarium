@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clip } from "@/lib/seo";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import WaterTestDecoder from "@/components/tools/WaterTestDecoder";
@@ -18,8 +19,7 @@ const faqs = [
 
 export const metadata: Metadata = {
   title: "Aquarium Water Test Decoder: What Your Numbers Mean",
-  description:
-    "Enter your aquarium test results and get a plain-English read on salinity, pH, ammonia, nitrite, nitrate, phosphate, alkalinity, calcium and magnesium, with what to do next. Free from Jason's Aquarium Service in Palm Beach County.",
+  description: clip("Enter your aquarium test results and get a plain-English read on salinity, pH, ammonia, nitrite, nitrate, phosphate, alkalinity, calcium and magnesium, with what to do next. Free from Jason's Aquarium Service in Palm Beach County."),
   alternates: { canonical: "/tools/water-test" },
 };
 

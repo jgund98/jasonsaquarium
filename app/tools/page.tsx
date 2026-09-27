@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clip } from "@/lib/seo";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import { Container, Reveal } from "@/components/Section";
@@ -8,9 +9,8 @@ import { JsonLd, breadcrumbJsonLd } from "@/lib/schema";
 import { tools } from "@/lib/tools";
 
 export const metadata: Metadata = {
-  title: "Free Aquarium Tools: Water Test Decoder, Schedule Planner, Hurricane Checklist",
-  description:
-    "Three free tools from Jason's Aquarium Service for Palm Beach County tank owners: decode your water test results in plain English, plan the right service schedule for your tank, and get your aquarium ready for a hurricane.",
+  title: "Free Aquarium Tools for Palm Beach County Tank Owners",
+  description: clip("Three free tools from Jason's Aquarium Service for Palm Beach County tank owners: decode your water test results in plain English, plan the right service schedule for your tank, and get your aquarium ready for a hurricane."),
   alternates: { canonical: "/tools" },
 };
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clip } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -21,7 +22,7 @@ export async function generateMetadata({ params }: PageProps<"/guides/[slug]">):
   if (!g) return {};
   return {
     title: g.title,
-    description: g.description,
+    description: clip(g.description),
     alternates: { canonical: `/guides/${g.slug}` },
     openGraph: { type: "article", publishedTime: g.date, images: [{ url: g.image }] },
   };

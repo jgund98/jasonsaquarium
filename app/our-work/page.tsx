@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clip } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
@@ -11,8 +12,7 @@ import { FishBullet } from "@/components/Brand";
 
 export const metadata: Metadata = {
   title: "Our Work: Real Aquariums Serviced in Palm Beach County",
-  description:
-    "A wall-mounted lobby reef, a same-day tank replacement, a 55 to 75 gallon upgrade. Real aquariums and real stories from Jason's clients in Boca Raton, Delray Beach and across Palm Beach County.",
+  description: clip("A wall-mounted lobby reef, a same-day tank replacement, a 55 to 75 gallon upgrade. Real aquariums and real stories from Jason's clients in Boca Raton, Delray Beach and across Palm Beach County."),
   alternates: { canonical: "/our-work" },
 };
 

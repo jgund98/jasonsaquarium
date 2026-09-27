@@ -1,5 +1,6 @@
 "use client";
 
+import { preload } from "react-dom";
 import { useRef } from "react";
 import Link from "next/link";
 import ReefCanvas from "./ReefCanvas";
@@ -8,6 +9,7 @@ import { Stars } from "./Footer";
 import { PhoneIcon } from "./Header";
 
 export default function Hero() {
+  preload("/images/hero/reef-backdrop-3.jpg", { as: "image", fetchPriority: "high" });
   const copyRef = useRef<HTMLDivElement>(null);
 
   return (
@@ -32,7 +34,7 @@ export default function Hero() {
         aria-hidden="true"
         className="pointer-events-none absolute inset-y-0 right-0 w-[85%] md:w-[56%]"
         style={{
-          backgroundImage: "url(/images/hero/reef-backdrop-2.jpg)",
+          backgroundImage: "url(/images/hero/reef-backdrop-3.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "65% 55%",
           opacity: 0.5,
@@ -93,10 +95,7 @@ export default function Hero() {
               <strong className="font-bold text-white">Palm Beach County and north Broward</strong>.
             </p>
             <div className="mt-7 flex flex-wrap items-center gap-3">
-              <a href={site.smsPhotoHref} className="btn btn-coral md:hidden">
-                Text Jason a photo
-              </a>
-              <Link href="/contact" className="btn btn-coral hidden md:inline-flex">
+              <Link href="/contact" className="btn btn-coral">
                 Get a Free Quote
               </Link>
               <a href={site.phoneHref} className="btn btn-foam">

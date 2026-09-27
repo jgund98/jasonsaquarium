@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clip } from "@/lib/seo";
 import Link from "next/link";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
@@ -11,8 +12,7 @@ import { JsonLd, breadcrumbJsonLd } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Aquarium Services in Palm Beach County, FL",
-  description:
-    "Aquarium cleaning and maintenance, custom design and installation, and honest aquarium assessments for saltwater, reef, freshwater and pond systems across Palm Beach County and north Broward. Owner-operated by Jason.",
+  description: clip("Aquarium cleaning and maintenance, custom design and installation, and honest aquarium assessments for saltwater, reef, freshwater and pond systems across Palm Beach County and north Broward. Owner-operated by Jason."),
   alternates: { canonical: "/services" },
 };
 

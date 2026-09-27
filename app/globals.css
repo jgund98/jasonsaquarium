@@ -26,7 +26,7 @@
 
   --font-display: var(--font-figtree);
   --font-body: var(--font-figtree);
-  --font-logo: var(--font-fredoka);
+  --font-logo: var(--font-figtree);
 
   --ease-water: cubic-bezier(0.22, 1, 0.36, 1);
   --header-h: 84px;

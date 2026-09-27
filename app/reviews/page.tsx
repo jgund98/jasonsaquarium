@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clip } from "@/lib/seo";
 import PageHero from "@/components/PageHero";
 import { Container, Reveal } from "@/components/Section";
 import CtaBand from "@/components/home/CtaBand";
@@ -10,8 +11,7 @@ import { FishMark } from "@/components/Logo";
 
 export const metadata: Metadata = {
   title: "Aquarium Service Reviews in Palm Beach County",
-  description:
-    "Every public Google review of Jason's Aquarium Service, quoted in full. Reef tank rescues, tank upgrades, water chemistry help and years of scheduled maintenance in Boca Raton, Delray Beach and Palm Beach County.",
+  description: clip("Every public Google review of Jason's Aquarium Service, quoted in full. Reef tank rescues, tank upgrades, water chemistry help and years of scheduled maintenance in Boca Raton, Delray Beach and Palm Beach County."),
   alternates: { canonical: "/reviews" },
 };
 

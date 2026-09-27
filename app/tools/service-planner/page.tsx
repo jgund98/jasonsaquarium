@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clip } from "@/lib/seo";
 import PageHero from "@/components/PageHero";
 import SchedulePlanner from "@/components/tools/SchedulePlanner";
 import { Container, Reveal } from "@/components/Section";
@@ -15,9 +16,8 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: "Aquarium Service Schedule Planner: How Often Your Tank Needs a Visit",
-  description:
-    "Answer five questions about your saltwater, freshwater, planted or pond system and get the service rhythm Jason recommends, plus what each visit includes. Free planner from Jason's Aquarium Service, Palm Beach County.",
+  title: "Aquarium Service Schedule Planner",
+  description: clip("Answer five questions about your saltwater, freshwater, planted or pond system and get the service rhythm Jason recommends, plus what each visit includes. Free planner from Jason's Aquarium Service, Palm Beach County."),
   alternates: { canonical: "/tools/service-planner" },
 };
 

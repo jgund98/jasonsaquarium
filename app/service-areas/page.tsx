@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clip } from "@/lib/seo";
 import Link from "next/link";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
@@ -10,8 +11,7 @@ import { JsonLd, breadcrumbJsonLd } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Aquarium Service Areas: Palm Beach County and North Broward",
-  description:
-    "Jason's Aquarium Service covers Boca Raton, Delray Beach, Boynton Beach, Wellington, West Palm Beach, Jupiter and the north Broward towns of Parkland, Coral Springs, Deerfield Beach, Coconut Creek, Lighthouse Point and Pompano Beach.",
+  description: clip("Jason's Aquarium Service covers Boca Raton, Delray Beach, Boynton Beach, Wellington, West Palm Beach, Jupiter and the north Broward towns of Parkland, Coral Springs, Deerfield Beach, Coconut Creek, Lighthouse Point and Pompano Beach."),
   alternates: { canonical: "/service-areas" },
 };
 
