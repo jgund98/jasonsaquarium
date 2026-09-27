@@ -69,7 +69,7 @@ export default function Hero() {
           {/* headline */}
           <div className="pointer-events-none max-w-4xl">
             <p className="eyebrow mb-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-aqua">
-              <span className="rise-in">Palm Beach County&rsquo;s aquarium specialist</span>
+              <span className="rise-in">Palm Beach County&rsquo;s best aquarium specialist</span>
               <span className="rise-in hidden h-1 w-1 rounded-full bg-aqua/70 sm:inline-block" />
               <span className="rise-in hidden sm:inline">Owner operated</span>
             </p>
