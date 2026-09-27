@@ -70,7 +70,7 @@ export default function Hero() {
           <div ref={copyRef} className="max-w-4xl">
           {/* headline */}
           <div className="pointer-events-none max-w-4xl">
-            <p className="eyebrow mb-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-aqua">
+            <p className="eyebrow mb-4 hidden flex-wrap items-center gap-x-3 gap-y-1 text-aqua sm:flex">
               <span className="rise-in">
                 Palm Beach County&rsquo;s
                 <br className="sm:hidden" /> best aquarium specialist
@@ -78,6 +78,15 @@ export default function Hero() {
               <span className="rise-in hidden h-1 w-1 rounded-full bg-aqua/70 sm:inline-block" />
               <span className="rise-in hidden sm:inline">Owner operated</span>
             </p>
+            <div className="rise-in mb-5 inline-flex max-w-full sm:hidden items-center gap-2 rounded-full border border-white/15 bg-abyss/45 px-3 py-2 text-[0.58rem] font-bold uppercase tracking-[0.12em] text-white/85 backdrop-blur-sm" style={{ animationDelay: "0ms" }}>
+              <span>Reef</span>
+              <span className="h-1 w-1 rounded-full bg-aqua/80" />
+              <span>Saltwater</span>
+              <span className="h-1 w-1 rounded-full bg-aqua/80" />
+              <span>Freshwater</span>
+              <span className="h-1 w-1 rounded-full bg-aqua/80" />
+              <span>Ponds</span>
+            </div>
             <h1 className="font-display text-[clamp(2.4rem,5.4vw,5rem)] leading-[1.04]">
               <span className="rise-in water-text block" style={{ animationDelay: "60ms" }}>
                 A beautiful aquarium.
@@ -94,11 +103,11 @@ export default function Hero() {
               aquarium healthy and looking its best, across{" "}
               <strong className="font-bold text-white">Palm Beach County and north Broward</strong>.
             </p>
-            <div className="mt-7 flex flex-wrap items-center gap-3">
-              <Link href="/contact" className="btn btn-coral">
+            <div className="mt-7 grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:items-center">
+              <Link href="/contact" className="btn btn-coral px-3 sm:px-6">
                 Get a Free Quote
               </Link>
-              <a href={site.phoneHref} className="btn btn-foam">
+              <a href={site.phoneHref} className="btn btn-foam px-3 sm:px-6">
                 <PhoneIcon /> {site.phone}
               </a>
             </div>
@@ -115,7 +124,7 @@ export default function Hero() {
               <span className="hidden h-1 w-1 rounded-full bg-white/40 sm:inline-block" />
               <span>Call or text any time</span>
             </div>
-            <div className="rise-in mt-5 inline-flex items-center gap-3 rounded-full border border-white/15 bg-abyss/45 px-4 py-2 text-[0.66rem] font-bold uppercase tracking-[0.22em] text-white/85 backdrop-blur-sm" style={{ animationDelay: "520ms" }}>
+            <div className="rise-in mt-5 hidden sm:inline-flex items-center gap-3 rounded-full border border-white/15 bg-abyss/45 px-4 py-2 text-[0.66rem] font-bold uppercase tracking-[0.22em] text-white/85 backdrop-blur-sm" style={{ animationDelay: "520ms" }}>
               <span>Reef</span>
               <span className="h-1 w-1 rounded-full bg-aqua/80" />
               <span>Saltwater</span>
