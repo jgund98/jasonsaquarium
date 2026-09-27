@@ -45,9 +45,11 @@ export default function Header() {
     <header
       className={clsx(
         "fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow,backdrop-filter] duration-500",
-        scrolled && !open
-          ? "bg-white/92 backdrop-blur-md shadow-[0_1px_0_rgba(11,31,46,0.08)]"
-          : "bg-transparent"
+        open
+          ? "bg-white shadow-none"
+          : scrolled
+            ? "bg-white/92 backdrop-blur-md shadow-[0_1px_0_rgba(11,31,46,0.08)]"
+            : "bg-transparent"
       )}
     >
       <div className="container-x flex h-[72px] items-center justify-between gap-6 md:h-[84px]">
