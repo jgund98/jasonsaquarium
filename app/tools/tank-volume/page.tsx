@@ -10,7 +10,7 @@ import { JsonLd, breadcrumbJsonLd, faqJsonLd } from "@/lib/schema";
 const faqs = [
   { q: "How do I calculate how many gallons my aquarium holds?", a: "Multiply the inside length, width and height in inches, then divide by 231. That is the empty volume. Real water volume is lower once you subtract the space above the waterline and the rock and sand, which is why the calculator asks for both." },
   { q: "How much water should I change and how often?", a: "Ten to twenty five percent is typical. Reef tanks usually get a smaller change more often; freshwater tanks a larger change less often. What matters most is doing it on a schedule with matched water." },
-  { q: "How much salt do I need for a water change?", a: "Reef salinity is about 35 grams of salt per liter, which works out to roughly 0.29 pounds, or about half a cup, per US gallon. Mix, heat and circulate before it goes in, and confirm with a refractometer." },
+  { q: "How much salt do I need for a water change?", a: "To reach reef salinity of 1.026, plan on roughly 0.34 pounds of dry mix per US gallon, about 40 grams per liter or a generous half cup. The half-cup-per-gallon rule printed on most labels only mixes to about 1.022. Mix, heat and circulate before it goes in, and confirm with a refractometer." },
   { q: "Does tank size change what service costs?", a: "Yes. Larger tanks use more water per change and take longer, and reef tanks more than freshwater. Text Jason your gallons and a photo for an exact number." },
 ];
 

@@ -26,7 +26,7 @@ const phases = [
     title: "48 hours out",
     items: [
       "Stop feeding, or feed very lightly, so there is less waste to break down",
-      "Move the tank away from windows if it is small enough to move safely",
+      "Shade the windows. Only move a tank that can be moved safely with the water lowered",
       "Clean filter socks, skimmer cup and mechanical media so nothing rots in the dark",
       "Lower the water level an inch in rimless tanks to keep sloshing inside the glass",
       "Set the air pump and airline where you can reach them without light",
@@ -35,11 +35,11 @@ const phases = [
   {
     title: "During the outage",
     items: [
-      "Run the battery air pump, one airstone per 50 gallons or so",
-      "Keep the room closed, blinds down, and cover the tank with a towel to slow heat gain",
+      "Run the battery air pump, one pump per 50 gallons or so, or as the pump is rated",
+      "Keep the room closed, blinds down, and cover the tank with a towel to slow heat gain. A battery fan across the water surface cools it by evaporation",
       "Do not feed and do not open the tank more than you need to",
-      "Every few hours, gently stir the surface or swap in a little prepared water at the same temperature",
-      "Watch for gasping at the surface or a cloudy haze; both mean oxygen is running low",
+      "Every few hours, gently stir the surface. Leave the water alone unless the outage runs past a day with no air pump, then a small change with matched water helps",
+      "Gasping at the surface means oxygen is low. A cloudy haze means bacteria are dying off and the water is turning. Both mean act now",
     ],
   },
   {
@@ -48,7 +48,7 @@ const phases = [
       "Confirm every pump restarted and nothing lost prime or is running dry",
       "Check the temperature and let the heater or chiller catch up slowly",
       "Test ammonia and nitrite daily for three days while the filter bacteria recover",
-      "Do a water change the next day, then resume light feeding",
+      "Do a water change the next day, or sooner if ammonia or nitrite reads above zero, then resume light feeding",
       "Text Jason a photo and your test numbers if anything looks off",
     ],
   },

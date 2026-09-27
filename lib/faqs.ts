@@ -92,7 +92,7 @@ export const faqGroups: FaqGroup[] = [
     faqs: [
       {
         q: "My fish are dying. What should I do?",
-        a: "Stop feeding, do not add anything else to the tank, and call or text Jason right away with a photo and any test results you have. Sudden losses are usually water quality, temperature or a disease that needs to be identified quickly.",
+        a: "Stop feeding, do not add anything else to the tank, test ammonia and nitrite if you can, and call or text Jason right away with a photo and the results. Sudden losses are usually water quality, temperature or a disease that needs to be identified quickly.",
       },
       {
         q: "My aquarium is leaking or the glass cracked. Can you help today?",

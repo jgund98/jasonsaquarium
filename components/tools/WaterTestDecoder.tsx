@@ -30,7 +30,7 @@ const SALT: Param[] = [
     key: "salinity",
     label: "Salinity",
     unit: "sg",
-    hint: "1.024 to 1.026",
+    hint: "1.025 to 1.026 (35 ppt)",
     step: 0.001,
     read: (v) =>
       v < 1.02 || v > 1.03
@@ -58,8 +58,8 @@ const SALT: Param[] = [
     hint: "8.1 to 8.3",
     step: 0.1,
     read: (v) =>
-      v < 7.7 || v > 8.5
-        ? { level: "bad", note: "Well outside the marine range.", action: "Usually low alkalinity or CO2 in the house. Check alkalinity next." }
+      v < 7.8 || v > 8.5
+        ? { level: "bad", note: "Well outside the marine range.", action: "Usually carbon dioxide building up in a closed house, sometimes low alkalinity. Check alkalinity and get fresh air to the tank." }
         : v < 8.0 || v > 8.4
           ? { level: "watch", note: "Slightly off. Often reads low in a closed-up air-conditioned home.", action: "Fine to watch. If alkalinity is also low, fix that." }
           : { level: "good", note: "Healthy marine pH." },
@@ -71,10 +71,10 @@ const SALT: Param[] = [
     hint: "0",
     step: 0.05,
     read: (v) =>
-      v >= 0.5
-        ? { level: "bad", note: "Toxic. Fish are being hurt right now.", action: "Stop feeding, do a water change today, and call." }
+      v >= 0.25
+        ? { level: "bad", note: "Toxic at reef pH. The high pH turns more of it into the form that burns gills.", action: "Stop feeding, do a water change today, and call." }
         : v > 0
-          ? { level: "watch", note: "Should be zero in an established tank.", action: "Skip a feeding, check for a dead fish or a stalled filter." }
+          ? { level: "watch", note: "Should be zero in an established tank.", action: "Skip a feeding, check for a dead fish or a stalled filter, retest tomorrow." }
           : { level: "good", note: "Zero. Filter is doing its job." },
   },
   {
@@ -84,10 +84,10 @@ const SALT: Param[] = [
     hint: "0",
     step: 0.05,
     read: (v) =>
-      v >= 0.5
-        ? { level: "bad", note: "Toxic. Same urgency as ammonia.", action: "Water change today, stop feeding, call." }
+      v >= 1
+        ? { level: "bad", note: "The cycle has stalled. Nitrite is far less toxic in saltwater than in freshwater, but this high means something broke.", action: "Find the cause, hold off on feeding, and call before adding anything." }
         : v > 0
-          ? { level: "watch", note: "Filter is catching up from something.", action: "Reduce feeding and retest in two days." }
+          ? { level: "watch", note: "The cycle was disturbed. Not the emergency ammonia is, but find out why.", action: "Reduce feeding and retest in two days." }
           : { level: "good", note: "Zero. Good." },
   },
   {
@@ -109,7 +109,7 @@ const SALT: Param[] = [
     key: "phosphate",
     label: "Phosphate",
     unit: "ppm",
-    hint: "0.02 to 0.1",
+    hint: "0.03 to 0.1",
     target: 0.1,
     step: 0.01,
     read: (v) =>
@@ -148,7 +148,7 @@ const SALT: Param[] = [
     key: "magnesium",
     label: "Magnesium",
     unit: "ppm",
-    hint: "1250 to 1400",
+    hint: "1250 to 1350",
     read: (v) =>
       v < 1100 || v > 1600
         ? { level: "bad", note: "Out of range. Alkalinity and calcium will not hold until this is fixed.", action: "Raise or lower slowly with a magnesium supplement or water changes." }
@@ -192,7 +192,7 @@ const FRESH: Param[] = [
     step: 0.05,
     read: (v) =>
       v >= 0.5
-        ? { level: "bad", note: "Toxic. This is the most common reason fish die.", action: "Stop feeding, water change today, add a chloramine-safe conditioner, call." }
+        ? { level: "bad", note: "Toxic. This is the most common reason fish die.", action: "Stop feeding, water change today, add a conditioner that detoxifies ammonia, and redose it every day or two until the reading is zero. Call if it will not drop." }
         : v > 0
           ? { level: "watch", note: "Should be zero.", action: "Skip a feeding, check the filter and look for a dead fish." }
           : { level: "good", note: "Zero. Filter is healthy." },
@@ -214,13 +214,13 @@ const FRESH: Param[] = [
     key: "nitrate",
     label: "Nitrate",
     unit: "ppm",
-    hint: "under 20, under 30 if heavily planted",
+    hint: "under 20 ideal, under 40 fine, planted tanks run 20 to 50",
     target: 20,
     read: (v) =>
-      v > 60
-        ? { level: "bad", note: "High. Stress, algae and disease follow.", action: "A few water changes over the week and less food." }
-        : v > 25
-          ? { level: "watch", note: "Creeping up.", action: "Water change and check how much you are feeding." }
+      v > 80
+        ? { level: "bad", note: "High. This is where fish stress shows.", action: "A few water changes over the week and less food." }
+        : v > 40
+          ? { level: "watch", note: "Creeping up. Fine in a heavily planted tank, high for a fish-only community.", action: "Water change and check how much you are feeding." }
           : { level: "good", note: "Healthy." },
   },
   {
@@ -230,7 +230,7 @@ const FRESH: Param[] = [
     hint: "4 to 12 for most tanks",
     read: (v) =>
       v > 20
-        ? { level: "watch", note: "Very hard. Normal for Palm Beach County tap water, tough on soft-water fish.", action: "Blend with RO water for discus, tetras and planted tanks." }
+        ? { level: "watch", note: "Very hard. Not what comes out of the tap here; Boca Raton water is softened to about 4 dGH, so a reading this high usually means crushed coral, rock or a hard-water buffer in the tank.", action: "Find the source. Blend with RO water if you keep soft-water species." }
         : v < 3
           ? { level: "watch", note: "Very soft. Fine for some species, unstable pH for others.", action: "Mention it to Jason." }
           : { level: "good", note: "Workable for a community tank." },
@@ -244,7 +244,7 @@ const FRESH: Param[] = [
       v < 2
         ? { level: "watch", note: "Low. pH can crash overnight.", action: "A little crushed coral or a buffer, slowly." }
         : v > 12
-          ? { level: "watch", note: "High, typical of local tap water.", action: "Only an issue for soft-water species." }
+          ? { level: "watch", note: "High. Usually from crushed coral, aragonite or a buffer, not from local tap water.", action: "Only an issue for soft-water species." }
           : { level: "good", note: "pH will stay steady." },
   },
 ];

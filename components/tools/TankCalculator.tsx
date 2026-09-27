@@ -38,9 +38,10 @@ export default function TankCalculator() {
     const changeK = Math.max(0.05, Math.min(1, Number(change) / 100 || 0.2));
     const changeGal = net * changeK;
     const changeL = changeGal * 3.78541;
-    // reef salinity 35 ppt: about 35 g salt per liter, roughly 0.29 lb per US gallon
-    const saltLb = changeGal * 0.29;
-    const saltCups = changeGal * 0.5; // the common label rule of thumb
+    // Dry reef salt mix to reach 1.026 (35 ppt) is about 40 g per liter, roughly 0.34 lb per US gallon.
+    // The common label rule of half a cup per gallon only lands near 1.022.
+    const saltLb = changeGal * 0.34;
+    const saltCups = changeGal * 0.6;
     return { gross, net, liters, changeGal, changeL, saltLb, saltCups };
   }, [shape, L, W, H, bow, fill, rock, change]);
 
@@ -111,7 +112,7 @@ export default function TankCalculator() {
               <div className="mt-6 grid gap-3 sm:grid-cols-2">
                 <Stat label={`${change}% water change`} value={`${out.changeGal.toFixed(1)} gal`} sub={`${out.changeL.toFixed(0)} liters to mix or condition`} />
                 {salt ? (
-                  <Stat label="Salt mix for that change" value={`${out.saltLb.toFixed(1)} lb`} sub={`about ${out.saltCups.toFixed(1)} cups at reef salinity. Check your salt's label and a refractometer.`} />
+                  <Stat label="Salt mix for that change" value={`${out.saltLb.toFixed(1)} lb`} sub={`about ${out.saltCups.toFixed(1)} cups to reach 1.026. The half-cup-per-gallon label rule only gets to about 1.022, so mix, wait, and trim with a refractometer.`} />
                 ) : (
                   <Stat label="Conditioner" value="Dose for the change volume" sub="Palm Beach County water is chloramine treated, so use a conditioner that handles chloramine, not just chlorine." />
                 )}

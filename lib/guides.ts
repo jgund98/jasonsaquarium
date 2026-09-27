@@ -74,8 +74,8 @@ export const guides: Guide[] = [
       {
         h: "During an outage",
         p: [
-          "Oxygen and temperature are the two things that kill fish in an outage. A battery air pump handles oxygen. For temperature, keep the room closed, blinds down, and the tank covered with a towel or blanket to slow heat gain in summer. Do not feed. Do not open the tank more than you must. In a heavily stocked reef, hours matter; in a lightly stocked freshwater tank you have more time.",
-          "If the outage runs long, small partial water changes with pre-mixed water at the right temperature buy time. Bottled water is not a substitute for prepared saltwater.",
+          "Oxygen, temperature and the ammonia that builds while filtration is off are what kill fish in an outage. A battery air pump handles oxygen. For temperature, keep the room closed, blinds down, and the tank covered with a towel or blanket to slow heat gain in summer. Do not feed. Do not open the tank more than you must. In a heavily stocked reef, hours matter; in a lightly stocked freshwater tank you have more time.",
+          "If the outage runs past a day and you have no air pump, a small partial water change with pre-mixed water at the right temperature buys time. Otherwise leave the water alone. Bottled water is not a substitute for prepared saltwater.",
         ],
       },
       {
@@ -135,7 +135,7 @@ export const guides: Guide[] = [
     slug: "boca-raton-tap-water-aquarium",
     title: "What Boca Raton tap water means for your aquarium",
     description:
-      "Palm Beach County tap water is hard, treated with chloramine and can carry phosphate. Here is what that does to freshwater and reef tanks, and how water is prepared so a water change helps instead of hurts.",
+      "Palm Beach County tap water comes from shallow wells, is treated with chloramine and is softened before it reaches you. Here is what that does to freshwater and reef tanks, and how water is prepared so a water change helps instead of hurts.",
     date: "2026-09-27",
     minutes: 5,
     image: "/images/stock/tetras.jpg",
@@ -143,25 +143,25 @@ export const guides: Guide[] = [
     keywords: ["Boca Raton tap water aquarium", "chloramine fish tank", "RO DI water reef tank"],
     sections: [
       {
-        h: "Hard and treated",
+        h: "Softened and treated",
         p: [
-          "Municipal water across Boca Raton, Delray Beach and Boynton Beach comes from the Biscayne Aquifer and is hard, with high calcium and alkalinity, and it is disinfected with chloramine, which does not gas off the way chlorine does. Straight from the tap it will kill the bacteria your filter depends on and stress fish.",
+          "Municipal water in south Palm Beach County comes from shallow wells in the surficial aquifer system, the Biscayne Aquifer in Boca Raton. The raw water is hard, but Boca Raton softens it to a moderate 65 to 80 mg/L, about 4 dGH, with a pH around 8.0 to 8.5, and other county systems land somewhat harder. It is disinfected with chloramine, which does not gas off the way chlorine does. Straight from the tap it stresses fish and damages the filter's bacteria.",
         ],
       },
       {
         h: "For freshwater tanks",
         p: [
-          "A proper conditioner that neutralizes chloramine, not just chlorine, is the minimum. For soft-water fish like discus and many tetras, and for serious planted tanks, blending with RO water gets the hardness down to where the fish and plants want it.",
+          "A proper conditioner that neutralizes chloramine, not just chlorine, is the minimum. The pH of 8 and up is the bigger issue for soft-water fish like discus and wild tetras, and for those species blending with RO water brings it down to where they want it.",
         ],
       },
       {
         h: "For reef tanks",
         p: [
-          "Reefs should never see tap water. Phosphate and silicate in county water feed algae, and the mineral content is wrong for mixing salt. RO/DI water, mixed with a quality salt and matched to the tank's salinity and temperature, is what Jason brings to every saltwater visit.",
+          "Reefs should never see tap water. Chloramine, the residual hardness and the high pH are wrong for mixing salt, and any phosphate or silicate in the supply feeds algae. RO/DI water, mixed with a quality salt and matched to the tank's salinity and temperature, is what Jason brings to every saltwater visit.",
         ],
       },
     ],
-    takeaway: "Condition for chloramine on freshwater, use RO/DI for reefs, and never assume tap water is neutral.",
+    takeaway: "Condition for chloramine on freshwater, use RO/DI for reefs, and know that Boca water is softened but alkaline.",
   },
   {
     slug: "why-are-my-fish-dying",
