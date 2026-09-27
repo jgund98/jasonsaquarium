@@ -32,10 +32,10 @@ export default function Hero() {
         aria-hidden="true"
         className="pointer-events-none absolute inset-y-0 right-0 w-[85%] md:w-[56%]"
         style={{
-          backgroundImage: "url(/images/hero/reef-backdrop.jpg)",
+          backgroundImage: "url(/images/hero/reef-backdrop-2.jpg)",
           backgroundSize: "cover",
-          backgroundPosition: "70% 60%",
-          opacity: 0.5,
+          backgroundPosition: "65% 55%",
+          opacity: 0.62,
           WebkitMaskImage:
             "radial-gradient(70% 85% at 72% 58%, #000 18%, rgba(0,0,0,0.6) 48%, transparent 76%), linear-gradient(180deg, transparent 0%, #000 30%, #000 80%, transparent 100%)",
           maskImage:

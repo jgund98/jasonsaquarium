@@ -75,8 +75,6 @@ export const services: Service[] = [
     ],
     image: "/images/services/maintenance.jpg",
     imageAlt: "Cleaning the front glass of a saltwater reef aquarium",
-    video: "/videos/maintenance.mp4",
-    poster: "/images/services/maintenance-poster.jpg",
     accent: "lagoon",
   },
   {
