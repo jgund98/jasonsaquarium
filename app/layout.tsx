@@ -23,7 +23,9 @@ export const metadata: Metadata = {
     default: `Aquarium Service in Palm Beach County, FL | ${site.name}`,
     template: `%s | Jason's Aquarium`,
   },
-  description: clip(site.description),
+  description: clip(
+    "Owner-operated aquarium cleaning, maintenance, installation and assessments for reef, freshwater and pond systems across Palm Beach County and north Broward, FL."
+  ),
   openGraph: {
     type: "website",
     siteName: site.name,
