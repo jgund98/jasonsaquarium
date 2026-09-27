@@ -86,7 +86,8 @@ export default function Hero() {
           <div className="pointer-events-none mt-8 max-w-2xl rise-in [&_a]:pointer-events-auto" style={{ animationDelay: "380ms" }}>
             <p className="max-w-[34rem] text-pretty text-[1.05rem] leading-relaxed text-white/85 md:text-[1.15rem]">
               From routine maintenance to water testing and troubleshooting, Jason keeps your
-              aquarium healthy and looking its best, across Palm Beach County and north Broward.
+              aquarium healthy and looking its best, across{" "}
+              <strong className="font-bold text-white">Palm Beach County and north Broward</strong>.
             </p>
             <div className="mt-7 flex flex-wrap items-center gap-3">
               <a href={site.smsPhotoHref} className="btn btn-coral md:hidden">
