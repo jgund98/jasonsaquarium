@@ -310,7 +310,7 @@ export default function WaterTestDecoder() {
   const clear = () => setVals({});
 
   return (
-    <div className="grid items-stretch gap-8 lg:grid-cols-[1fr_1fr] lg:gap-12">
+    <div className="grid items-start gap-8 lg:grid-cols-[1fr_1fr] lg:gap-12">
       <div className="rounded-[1.75rem] bg-white p-6 ring-1 ring-[var(--line)] md:p-8">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div className="inline-flex rounded-full bg-shell p-1 ring-1 ring-[var(--line)]">
@@ -361,7 +361,7 @@ export default function WaterTestDecoder() {
         </div>
       </div>
 
-      <div className="flex flex-col [&>div]:flex-1">
+      <div>
         {!verdict ? (
           <div className="rounded-[1.75rem] bg-abyss p-8 text-white">
             <p className="eyebrow text-aqua">Your read</p>
@@ -411,6 +411,7 @@ export default function WaterTestDecoder() {
             <p className="mt-4 text-[0.8rem] text-white/55">Results stay on this device only. Nothing is sent until you tap the text button.</p>
           </div>
         )}
+        <div className="mt-5 rounded-[1.5rem] bg-mist p-5 text-[0.9rem] leading-relaxed text-ink">One reading is a snapshot. The trend over a few weeks is what tells you where the tank is going, so write the numbers down each time or let the tool remember them on this device.</div>
       </div>
     </div>
   );

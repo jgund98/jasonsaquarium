@@ -2,6 +2,7 @@ import Link from "next/link";
 import { site } from "@/lib/site";
 import { Bubbles, Container, Reveal } from "@/components/Section";
 import { PhoneIcon } from "@/components/Header";
+import { Watermark } from "@/components/Brand";
 
 export default function CtaBand({
   title = "Tell Jason about your tank",
@@ -21,6 +22,7 @@ export default function CtaBand({
         }}
       />
       <Bubbles count={12} />
+      <Watermark className="-right-20 top-1/2 -translate-y-1/2" />
       <Container className="relative">
         <div className="grid items-center gap-10 lg:grid-cols-[1.2fr_0.8fr]">
           <Reveal>

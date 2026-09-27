@@ -49,7 +49,7 @@ export default function TankCalculator() {
     : "";
 
   return (
-    <div className="grid items-stretch gap-8 lg:grid-cols-[1fr_1fr] lg:gap-12">
+    <div className="grid items-start gap-8 lg:grid-cols-[1fr_1fr] lg:gap-12">
       <div className="rounded-[1.75rem] bg-white p-6 ring-1 ring-[var(--line)] md:p-8">
         <p className="text-[0.85rem] font-bold uppercase tracking-[0.16em] text-lagoon">Shape</p>
         <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
@@ -95,7 +95,7 @@ export default function TankCalculator() {
         </div>
       </div>
 
-      <div className="flex flex-col [&>div]:flex-1">
+      <div>
         <div className="rounded-[1.75rem] bg-abyss p-7 text-white md:p-8">
           <p className="eyebrow text-aqua">Your tank</p>
           {!out ? (
@@ -130,6 +130,7 @@ export default function TankCalculator() {
             </>
           )}
         </div>
+        <div className="mt-5 rounded-[1.5rem] bg-mist p-5 text-[0.9rem] leading-relaxed text-ink">Measure inside the glass, not the outside of the frame, and use the real water line. Rock, sand and a sump all change the true volume, which is why two tanks sold as the same size can need very different water changes.</div>
       </div>
     </div>
   );

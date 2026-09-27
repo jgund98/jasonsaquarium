@@ -126,7 +126,7 @@ export const services: Service[] = [
         a: "Yes. Jason has replaced tanks on short notice, moving fish and coral into the new system the same day. Call or text right away so the livestock can be kept safe.",
       },
     ],
-    image: "/images/services/install.jpg",
+    image: "/images/services/install-2.jpg",
     imageAlt: "A built-in aquarium set into the shelving of a modern living room",
     accent: "coral",
   },

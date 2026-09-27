@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import clsx from "clsx";
-import { Bubbles, Container } from "./Section";
+import { Bubbles, Container, Wave } from "./Section";
 import { site } from "@/lib/site";
 import { PhoneIcon } from "./Header";
 import { Stars } from "./Footer";
@@ -123,6 +123,7 @@ export default function PageHero({
           )}
         </div>
       </Container>
+      <Wave from="#041a2e" to="#ffffff" className="relative" />
     </section>
   );
 }

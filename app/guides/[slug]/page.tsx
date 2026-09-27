@@ -9,6 +9,7 @@ import CtaBand from "@/components/home/CtaBand";
 import { PhoneIcon } from "@/components/Header";
 import { Arrow } from "@/components/home/ServicesShowcase";
 import { JsonLd, breadcrumbJsonLd } from "@/lib/schema";
+import { Callout } from "@/components/Brand";
 
 export function generateStaticParams() {
   return guides.map((g) => ({ slug: g.slug }));
@@ -73,6 +74,12 @@ export default async function GuidePage({ params }: PageProps<"/guides/[slug]">)
             <div className="max-w-3xl">
               {g.sections.map((s, i) => (
                 <Reveal key={s.h} delay={Math.min(i, 2) * 50} className="mb-10">
+                  {i === 2 && (
+                    <Callout eyebrow="Try it on your tank" className="mb-10">
+                      The free tools on this site do the math for you: decode a water test, size a water change, or plan a service schedule.{" "}
+                      <Link href="/tools" className="font-bold text-abyss underline-offset-4 hover:underline">Open the tools</Link>
+                    </Callout>
+                  )}
                   <h2 className="font-display text-[1.5rem] leading-tight text-abyss md:text-[1.9rem]">{s.h}</h2>
                   {s.p.map((p) => (
                     <p key={p.slice(0, 30)} className="mt-4 text-pretty text-[1.05rem] leading-relaxed text-ink-soft">{p}</p>

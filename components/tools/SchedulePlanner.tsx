@@ -92,7 +92,7 @@ export default function SchedulePlanner() {
     : "";
 
   return (
-    <div className="grid items-stretch gap-8 lg:grid-cols-[1fr_1fr] lg:gap-12">
+    <div className="grid items-start gap-8 lg:grid-cols-[1fr_1fr] lg:gap-12">
       <div className="space-y-7 rounded-[1.75rem] bg-white p-6 ring-1 ring-[var(--line)] md:p-8">
         <Q label="What kind of system" opts={waterOpts} value={water} onChange={setWater} />
         <Q label="How big" opts={sizeOpts} value={size} onChange={setSize} />
@@ -101,7 +101,7 @@ export default function SchedulePlanner() {
         <Q label="And you" opts={ownerOpts} value={owner} onChange={setOwner} />
       </div>
 
-      <div className="flex flex-col [&>div]:flex-1">
+      <div>
         {!plan ? (
           <div className="rounded-[1.75rem] bg-abyss p-8 text-white">
             <p className="eyebrow text-aqua">Your plan</p>
@@ -141,6 +141,7 @@ export default function SchedulePlanner() {
             </div>
           </div>
         )}
+        <div className="mt-5 rounded-[1.5rem] bg-mist p-5 text-[0.9rem] leading-relaxed text-ink">This is the rhythm Jason starts from, not a contract. Tanks change with the seasons, the stocking and the equipment, and the schedule changes with them after he has seen the tank.</div>
       </div>
     </div>
   );

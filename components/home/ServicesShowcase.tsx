@@ -3,6 +3,7 @@ import Image from "next/image";
 import clsx from "clsx";
 import { services } from "@/lib/services";
 import { Container, Reveal, SectionHead } from "@/components/Section";
+import { FishBullet } from "@/components/Brand";
 
 const accentBg = {
   lagoon: "bg-lagoon",
@@ -69,7 +70,7 @@ export default function ServicesShowcase() {
                   <ul className="mt-5 space-y-2 text-[0.9rem] text-ink">
                     {s.bullets.slice(0, 3).map((b) => (
                       <li key={b} className="flex gap-2.5">
-                        <span className={clsx("mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full", accentBg[s.accent])} />
+                        <FishBullet />
                         <span>{b}</span>
                       </li>
                     ))}

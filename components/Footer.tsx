@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "./Logo";
+import Wordmark from "./Wordmark";
 import { site, palmBeachTowns, browardTowns } from "@/lib/site";
 import { services, specialties } from "@/lib/services";
 import { PhoneIcon } from "./Header";
@@ -13,7 +13,7 @@ export default function Footer() {
       <div className="container-x pt-10 pb-12 md:pt-16">
         <div className="grid gap-12 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
           <div>
-            <Logo tone="light" />
+            <Wordmark tone="light" id="footer" className="w-56" />
             <p className="mt-6 max-w-sm text-[0.95rem] leading-relaxed text-white/70 text-pretty">
               Mobile aquarium cleaning, design, installation and assessments for homes and
               businesses across Palm Beach County and north Broward. Owned and operated by{" "}

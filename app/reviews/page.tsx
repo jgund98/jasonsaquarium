@@ -6,6 +6,7 @@ import { reviews } from "@/lib/reviews";
 import { site } from "@/lib/site";
 import { Stars } from "@/components/Footer";
 import { JsonLd, breadcrumbJsonLd } from "@/lib/schema";
+import { FishMark } from "@/components/Logo";
 
 export const metadata: Metadata = {
   title: "Aquarium Service Reviews in Palm Beach County",
@@ -33,7 +34,7 @@ export default function ReviewsPage() {
               <Reveal key={r.name} as="article" delay={Math.min(i, 3) * 60} className="rounded-[1.75rem] bg-shell p-7 ring-1 ring-[var(--line)] md:p-9">
                 <div className="flex flex-wrap items-center justify-between gap-3">
                   <div className="flex items-center gap-3">
-                    <span className="grid h-10 w-10 place-items-center rounded-full bg-abyss text-[0.95rem] font-bold text-aqua">{r.name.charAt(0)}</span>
+                    <span className="grid h-10 w-10 place-items-center rounded-full bg-abyss"><FishMark className="h-6 w-7" id={`rv-${i}`} /></span>
                     <div>
                       <p className="font-bold text-abyss">{r.name}</p>
                       <p className="text-[0.8rem] text-ink-soft">Google review · {r.when}</p>

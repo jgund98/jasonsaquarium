@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Container, Reveal, SectionHead } from "@/components/Section";
 import { site } from "@/lib/site";
 import { PhoneIcon } from "@/components/Header";
+import { FishBullet } from "@/components/Brand";
 
 /**
  * "Twelve weeks without a visit." Drag the slider and watch the same tank age
@@ -144,7 +145,7 @@ export default function WhyHire() {
             <ul className="mt-3 space-y-2 text-[0.98rem] text-ink">
               {fits.map((f) => (
                 <li key={f} className="flex gap-3">
-                  <span className="mt-[9px] h-1.5 w-1.5 shrink-0 rounded-full bg-coral" />
+                  <FishBullet />
                   {f}
                 </li>
               ))}

@@ -13,6 +13,7 @@ import { JsonLd, breadcrumbJsonLd, faqJsonLd, serviceJsonLd } from "@/lib/schema
 import { featuredReviews } from "@/lib/reviews";
 import { Stars } from "@/components/Footer";
 import AlgaeWipe from "@/components/AlgaeWipe";
+import { BrandBand, Callout, FishBullet } from "@/components/Brand";
 
 export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
@@ -88,19 +89,17 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
                 <ul className="mt-6 grid gap-3 sm:grid-cols-2">
                   {s.bullets.map((b) => (
                     <li key={b} className="flex gap-3 rounded-2xl bg-white p-4 ring-1 ring-[var(--line)]">
-                      <span className="mt-1 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-kelp/15 text-kelp">
-                        <svg viewBox="0 0 20 20" className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth="2.6">
-                          <path d="M4 10.5l4 4 8-8" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                      </span>
+                      <FishBullet />
                       <span className="text-[0.95rem] leading-snug text-ink">{b}</span>
                     </li>
                   ))}
                 </ul>
               </Reveal>
-              <Reveal delay={100} className="prose-lg mt-10 space-y-5 text-pretty text-[1.05rem] leading-relaxed text-ink-soft">
-                {s.body.map((p) => (
-                  <p key={p.slice(0, 24)}>{p}</p>
+              <Reveal delay={100} className="mt-10 space-y-6">
+                <p className="font-display text-pretty text-[1.25rem] leading-snug text-abyss md:text-[1.45rem]">{s.body[0]}</p>
+                {s.body[1] && <Callout eyebrow="Where the difference shows">{s.body[1]}</Callout>}
+                {s.body.slice(2).map((p) => (
+                  <p key={p.slice(0, 24)} className="text-pretty text-[1.05rem] leading-relaxed text-ink-soft">{p}</p>
                 ))}
               </Reveal>
               <Reveal delay={140} className="mt-10 rounded-[1.5rem] bg-abyss p-7 text-white">
@@ -157,6 +156,8 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
           </div>
         </Container>
       </section>
+
+      <BrandBand />
 
       <section className="bg-shell py-20 md:py-24">
         <Container>

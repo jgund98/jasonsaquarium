@@ -11,7 +11,15 @@ function glyphs(font, text, size, x0, y0, spacing = 0) {
   font.forEachGlyph(text, x0, y0, size, { kerning: true, letterSpacing: spacing / size }, (g, gx, gy) => {
     const p = g.getPath(gx, gy, size);
     const bb = p.getBoundingBox();
-    out.push({ ch: String.fromCodePoint(g.unicode ?? 63), d: p.toPathData(2), x: gx, bb, adv: (g.advanceWidth / font.unitsPerEm) * size });
+    const f = (v) => (Number.isFinite(v) ? v.toFixed(2) : null);
+    let d = "", last = [0, 0];
+    for (const c of p.commands) {
+      if (c.type === "M" || c.type === "L") { d += `${c.type}${f(c.x)} ${f(c.y)} `; last = [c.x, c.y]; }
+      else if (c.type === "Q") { const x1 = Number.isFinite(c.x1) ? c.x1 : last[0], y1 = Number.isFinite(c.y1) ? c.y1 : last[1]; d += `Q${f(x1)} ${f(y1)} ${f(c.x)} ${f(c.y)} `; last = [c.x, c.y]; }
+      else if (c.type === "C") { d += `C${f(c.x1)} ${f(c.y1)} ${f(c.x2)} ${f(c.y2)} ${f(c.x)} ${f(c.y)} `; last = [c.x, c.y]; }
+      else if (c.type === "Z") d += "Z ";
+    }
+    out.push({ ch: String.fromCodePoint(g.unicode ?? 63), d: d.trim(), x: gx, bb, adv: (g.advanceWidth / font.unitsPerEm) * size });
     x = gx;
   });
   return out;

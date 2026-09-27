@@ -14,6 +14,7 @@ import { Arrow } from "@/components/home/ServicesShowcase";
 import { JsonLd, breadcrumbJsonLd, faqJsonLd } from "@/lib/schema";
 import { featuredReviews } from "@/lib/reviews";
 import { Stars } from "@/components/Footer";
+import { BrandBand, Callout } from "@/components/Brand";
 
 export function generateStaticParams() {
   return cities.map((c) => ({ city: c.slug }));
@@ -101,9 +102,10 @@ export default async function CityPage({ params }: PageProps<"/aquarium-service/
                 <h2 className="font-display text-[1.8rem] leading-tight text-abyss md:text-[2.3rem]">
                   What tanks look like in {c.name}
                 </h2>
-                {c.local.map((p) => (
+                {c.local.slice(0, -1).map((p) => (
                   <p key={p.slice(0, 30)} className="text-ink-soft">{p}</p>
                 ))}
+                <Callout eyebrow={`Good to know in ${c.name}`}>{c.local[c.local.length - 1]}</Callout>
               </Reveal>
 
               <Reveal delay={80} className="mt-10">
@@ -123,10 +125,10 @@ export default async function CityPage({ params }: PageProps<"/aquarium-service/
               <Reveal delay={120} className="mt-10">
                 <h3 className="font-display text-[1.5rem] leading-tight text-abyss md:text-[1.8rem]">Services available in {c.name}</h3>
                 <div className="mt-5 grid gap-3 sm:grid-cols-2">
-                  {[...services, ...specialties].map((s) => (
+                  {[...services, ...specialties, { slug: "tools", name: "Free tools for your tank" }].map((s) => (
                     <Link
                       key={s.slug}
-                      href={"bullets" in s ? `/services/${s.slug}` : `/aquariums/${s.slug}`}
+                      href={s.slug === "tools" ? "/tools" : "bullets" in s ? `/services/${s.slug}` : `/aquariums/${s.slug}`}
                       className="group flex items-center justify-between gap-3 rounded-2xl bg-shell p-4 font-semibold text-abyss ring-1 ring-[var(--line)] hover:bg-mist"
                     >
                       {s.name}
@@ -154,6 +156,8 @@ export default async function CityPage({ params }: PageProps<"/aquarium-service/
           </div>
         </Container>
       </section>
+
+      <BrandBand />
 
       <section className="bg-shell py-20 md:py-24">
         <Container>

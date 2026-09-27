@@ -3,6 +3,7 @@ import Image from "next/image";
 import { specialties } from "@/lib/services";
 import { Bubbles, Container, Reveal, SectionHead } from "@/components/Section";
 import { Arrow } from "./ServicesShowcase";
+import { Watermark } from "@/components/Brand";
 
 export default function Specialties() {
   return (
@@ -16,6 +17,7 @@ export default function Specialties() {
         }}
       />
       <Bubbles count={16} />
+      <Watermark />
       <Container className="relative">
         <SectionHead
           tone="dark"

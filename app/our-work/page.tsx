@@ -7,6 +7,7 @@ import CtaBand from "@/components/home/CtaBand";
 import { reviews } from "@/lib/reviews";
 import { Stars } from "@/components/Footer";
 import { JsonLd, breadcrumbJsonLd } from "@/lib/schema";
+import { FishBullet } from "@/components/Brand";
 
 export const metadata: Metadata = {
   title: "Our Work: Real Aquariums Serviced in Palm Beach County",
@@ -103,17 +104,19 @@ export default function OurWorkPage() {
       <section className="bg-sand py-20 md:py-28">
         <Container>
           <SectionHead eyebrow="Client stories" title="Jobs described by the people who paid for them" lede="Each of these comes from a public Google review. Quotes are exact." />
-          <div className="mt-12 grid gap-5 md:grid-cols-2">
+          <div className="mt-12 divide-y divide-[var(--line)] border-y border-[var(--line)]">
             {stories.map((s, i) => (
-              <Reveal key={s.title} as="article" delay={i * 80} className="flex">
-                <div className="flex w-full flex-col rounded-[1.75rem] bg-white p-7 ring-1 ring-[var(--line)] md:p-8">
-                  <p className="eyebrow text-lagoon">{s.kicker}</p>
-                  <h3 className="font-display mt-3 text-[1.5rem] leading-tight text-abyss md:text-[1.75rem]">{s.title}</h3>
-                  <p className="mt-3 text-pretty text-[0.98rem] leading-relaxed text-ink-soft">{s.body}</p>
-                  <blockquote className="mt-auto border-l-2 border-coral pl-4 pt-6">
-                    <p className="text-pretty text-[0.95rem] italic leading-relaxed text-ink">&ldquo;{s.quote}&rdquo;</p>
-                    <footer className="mt-2 flex items-center gap-2 text-[0.82rem] font-semibold text-ink-soft">
-                      <Stars className="h-3" /> {s.who}
+              <Reveal key={s.title} as="article" delay={Math.min(i, 2) * 70} className="grid gap-5 py-10 md:grid-cols-[0.38fr_0.62fr] md:gap-12">
+                <div>
+                  <p className="eyebrow flex items-center gap-2 text-lagoon"><FishBullet className="mt-0" />{s.kicker}</p>
+                  <h3 className="font-display mt-3 text-balance text-[1.6rem] leading-tight text-abyss md:text-[2rem]">{s.title}</h3>
+                </div>
+                <div className={`border-l-4 pl-6 md:pl-8 ${i % 2 ? "border-aqua" : "border-coral"}`}>
+                  <p className="text-pretty text-[1.02rem] leading-relaxed text-ink-soft">{s.body}</p>
+                  <blockquote className="mt-5">
+                    <p className="font-display text-pretty text-[1.15rem] leading-snug text-abyss md:text-[1.3rem]">&ldquo;{s.quote}&rdquo;</p>
+                    <footer className="mt-2 flex items-center gap-2 text-[0.85rem] font-semibold text-ink-soft">
+                      <Stars className="h-3" /> {s.who} · Google review
                     </footer>
                   </blockquote>
                 </div>

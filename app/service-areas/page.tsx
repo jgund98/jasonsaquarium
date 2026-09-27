@@ -26,8 +26,8 @@ export default function ServiceAreasPage() {
         eyebrow="Service areas"
         title="Aquarium service areas from Jupiter to Pompano Beach"
         lede="Jason is based in west Boca Raton and runs grouped route days across Palm Beach County and the north Broward towns just over the line. Pick your town for what service looks like there."
-        image="/images/areas/waterfront-home.jpg"
-        imageAlt="A waterfront South Florida home with royal palms and a dock"
+        image="/images/work/lobby-reef-1200.jpg"
+        imageAlt="A wall-mounted reef aquarium Jason services in Palm Beach County"
       />
 
       {[

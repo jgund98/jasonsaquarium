@@ -1,9 +1,13 @@
 import type { Faq } from "./services";
 
 // Written the way people actually ask, including voice and AI-search phrasing.
-export const faqGroups: { title: string; faqs: Faq[] }[] = [
+export type FaqGroup = { title: string; note: string; link: { label: string; href: string }; faqs: Faq[] };
+
+export const faqGroups: FaqGroup[] = [
   {
     title: "Getting started",
+    note: "What it is like to hire one person instead of a company.",
+    link: { label: "How a visit works", href: "/services/aquarium-cleaning-maintenance" },
     faqs: [
       {
         q: "Who cleans fish tanks near me in Palm Beach County?",
@@ -29,6 +33,8 @@ export const faqGroups: { title: string; faqs: Faq[] }[] = [
   },
   {
     title: "Maintenance and cost",
+    note: "What drives the price and how often a tank really needs a visit.",
+    link: { label: "Plan a schedule for your tank", href: "/tools/service-planner" },
     faqs: [
       {
         q: "How much does aquarium maintenance cost in Palm Beach County?",
@@ -58,6 +64,8 @@ export const faqGroups: { title: string; faqs: Faq[] }[] = [
   },
   {
     title: "Saltwater, freshwater and ponds",
+    note: "Every kind of water Jason works in, and what each one needs.",
+    link: { label: "Reef and saltwater service", href: "/aquariums/saltwater-reef-aquariums" },
     faqs: [
       {
         q: "Do you service both saltwater and freshwater tanks?",
@@ -79,6 +87,8 @@ export const faqGroups: { title: string; faqs: Faq[] }[] = [
   },
   {
     title: "Problems and emergencies",
+    note: "What to do in the first hour, before you add anything to the tank.",
+    link: { label: "Decode your water test", href: "/tools/water-test" },
     faqs: [
       {
         q: "My fish are dying. What should I do?",
@@ -104,6 +114,8 @@ export const faqGroups: { title: string; faqs: Faq[] }[] = [
   },
   {
     title: "Installation and assessments",
+    note: "New tanks, inherited tanks, moves and second opinions.",
+    link: { label: "Design and installation", href: "/services/aquarium-design-installation" },
     faqs: [
       {
         q: "Can you set up a new aquarium in my home or office?",
@@ -125,6 +137,8 @@ export const faqGroups: { title: string; faqs: Faq[] }[] = [
   },
   {
     title: "About the company",
+    note: "Who Jason is, where he drives, and who he is not.",
+    link: { label: "About Jason", href: "/about" },
     faqs: [
       {
         q: "Where is Jason's Aquarium Service located?",

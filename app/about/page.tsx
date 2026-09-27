@@ -9,6 +9,8 @@ import { reviews } from "@/lib/reviews";
 import { Stars } from "@/components/Footer";
 import { PhoneIcon } from "@/components/Header";
 import { JsonLd, breadcrumbJsonLd } from "@/lib/schema";
+import { Callout, FishBullet, Watermark } from "@/components/Brand";
+import { Bubbles } from "@/components/Section";
 
 export const metadata: Metadata = {
   title: "About Jason, Palm Beach County Aquarium Technician",
@@ -67,9 +69,9 @@ export default function AboutPage() {
                 family flies in, call me. I have moved fish into a new tank the same day the old one
                 failed more than once, and I will tell you honestly what I can do and how fast.
               </p>
-              <p className="font-semibold text-abyss">
-                Text me a photo of your tank. I will tell you what it needs.
-              </p>
+              <Callout tone="coral">
+                <span className="font-display text-[1.2rem] leading-snug">Text me a photo of your tank. I will tell you what it needs.</span>
+              </Callout>
               <div className="flex flex-wrap gap-3 pt-2">
                 <a href={site.smsHref} className="btn btn-abyss">
                   Text Jason
@@ -111,10 +113,12 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="bg-shell py-20 md:py-24">
-        <Container>
-          <SectionHead eyebrow="Plainly" title="What you get and what you do not" />
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
+      <section className="relative isolate overflow-hidden bg-abyss py-20 text-white md:py-24">
+        <Bubbles count={10} />
+        <Watermark />
+        <Container className="relative">
+          <SectionHead tone="dark" eyebrow="Plainly" title="What you get and what you do not" />
+          <div className="mt-10 grid gap-8 md:grid-cols-3">
             {[
               {
                 t: "The same person every visit",
@@ -129,15 +133,18 @@ export default function AboutPage() {
                 b: "Calls and texts go to Jason, seven days a week, including the emergency ones. That is the whole company and that is the point.",
               },
             ].map((c, i) => (
-              <Reveal key={c.t} delay={i * 80} className="rounded-[1.5rem] bg-white p-7 ring-1 ring-[var(--line)]">
-                <h3 className="font-display text-[1.3rem] leading-tight text-abyss">{c.t}</h3>
-                <p className="mt-3 text-pretty text-[0.95rem] leading-relaxed text-ink-soft">{c.b}</p>
+              <Reveal key={c.t} delay={i * 80} className="border-l-2 border-aqua/50 pl-5">
+                <h3 className="font-display flex items-start gap-2 text-[1.35rem] leading-tight">
+                  <FishBullet className="mt-1.5" />
+                  {c.t}
+                </h3>
+                <p className="mt-3 text-pretty text-[0.95rem] leading-relaxed text-white/75">{c.b}</p>
               </Reveal>
             ))}
           </div>
-          <Reveal delay={200} className="mt-10 text-[0.9rem] text-ink-soft">
+          <Reveal delay={200} className="mt-10 text-[0.9rem] text-white/60">
             {site.legalName}, formed 2021, based in west Boca Raton, serving Palm Beach County and north Broward.{" "}
-            <Link href="/service-areas" className="font-semibold text-abyss underline-offset-4 hover:underline">
+            <Link href="/service-areas" className="font-semibold text-aqua underline-offset-4 hover:underline">
               See every area
             </Link>
             . {site.disambiguation}

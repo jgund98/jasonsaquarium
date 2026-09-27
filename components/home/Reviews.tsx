@@ -3,6 +3,7 @@ import { featuredReviews } from "@/lib/reviews";
 import { site } from "@/lib/site";
 import { Bubbles, Container, Reveal, SectionHead } from "@/components/Section";
 import { Stars } from "@/components/Footer";
+import { Watermark } from "@/components/Brand";
 
 /**
  * Editorial wall of quotes on deep water. No card grid: each quote is set at
@@ -30,6 +31,7 @@ export default function Reviews() {
         }}
       />
       <Bubbles count={14} />
+      <Watermark className="-left-20 right-auto top-auto bottom-0" />
       <Container className="relative">
         <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <SectionHead
