@@ -36,6 +36,7 @@ export default function TankVolumePage() {
     <>
       <JsonLd data={[breadcrumbJsonLd([{ name: "Home", url: "/" }, { name: "Tools", url: "/tools" }, { name: "Tank Volume Calculator", url: "/tools/tank-volume" }]), app, faqJsonLd(faqs)]} />
       <PageHero
+        waveTo="var(--shell)"
         crumbs={[{ name: "Home", url: "/" }, { name: "Tools", url: "/tools" }, { name: "Tank Volume Calculator", url: "/tools/tank-volume" }]}
         eyebrow="Free tool"
         title="How many gallons is your tank really"

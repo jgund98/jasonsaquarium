@@ -36,6 +36,7 @@ export default function PlannerPage() {
     <>
       <JsonLd data={[breadcrumbJsonLd([{ name: "Home", url: "/" }, { name: "Tools", url: "/tools" }, { name: "Service Schedule Planner", url: "/tools/service-planner" }]), app, faqJsonLd(faqs)]} />
       <PageHero
+        waveTo="var(--shell)"
         crumbs={[{ name: "Home", url: "/" }, { name: "Tools", url: "/tools" }, { name: "Schedule Planner", url: "/tools/service-planner" }]}
         eyebrow="Free tool"
         title="How often does your tank actually need a visit"

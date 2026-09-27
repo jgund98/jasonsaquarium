@@ -23,6 +23,7 @@ export default function PageHero({
   poster,
   compact = false,
   wave = true,
+  waveTo = "#ffffff",
   children,
 }: {
   eyebrow?: string;
@@ -35,6 +36,8 @@ export default function PageHero({
   poster?: string;
   compact?: boolean;
   wave?: boolean;
+  /** Background of the section directly under the hero, so the wave edge matches it. */
+  waveTo?: string;
   children?: React.ReactNode;
 }) {
   const hasMedia = Boolean(image || video);
@@ -125,7 +128,7 @@ export default function PageHero({
           )}
         </div>
       </Container>
-      {wave && <Wave from="#041a2e" to="#ffffff" className="relative" />}
+      {wave && <Wave from="#041a2e" to={waveTo} className="relative" />}
     </section>
   );
 }

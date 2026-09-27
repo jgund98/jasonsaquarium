@@ -51,6 +51,7 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
         ]}
       />
       <PageHero
+        waveTo="var(--shell)"
         crumbs={[
           { name: "Home", url: "/" },
           { name: "Services", url: "/services" },

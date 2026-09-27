@@ -33,6 +33,7 @@ export default function HurricanePage() {
     <>
       <JsonLd data={[breadcrumbJsonLd([{ name: "Home", url: "/" }, { name: "Tools", url: "/tools" }, { name: "Hurricane Checklist", url: "/tools/hurricane-checklist" }]), howto]} />
       <PageHero
+        waveTo="var(--shell)"
         crumbs={[{ name: "Home", url: "/" }, { name: "Tools", url: "/tools" }, { name: "Hurricane Checklist", url: "/tools/hurricane-checklist" }]}
         eyebrow="Free tool · June through November"
         title="Get the tank ready before the cone shows up"

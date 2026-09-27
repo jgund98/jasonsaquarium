@@ -39,6 +39,7 @@ export default function WaterTestPage() {
     <>
       <JsonLd data={[breadcrumbJsonLd([{ name: "Home", url: "/" }, { name: "Tools", url: "/tools" }, { name: "Water Test Decoder", url: "/tools/water-test" }]), app, faqJsonLd(faqs)]} />
       <PageHero
+        waveTo="var(--shell)"
         crumbs={[{ name: "Home", url: "/" }, { name: "Tools", url: "/tools" }, { name: "Water Test Decoder", url: "/tools/water-test" }]}
         eyebrow="Free tool"
         title="Decode your water test in plain English"
