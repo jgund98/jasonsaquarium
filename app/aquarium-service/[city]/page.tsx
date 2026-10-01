@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: PageProps<"/aquarium-service/
 // skyline pretending to be the city.
 function cityMeta(c: { name: string; angle: string }) {
   const angle = c.angle.charAt(0).toUpperCase() + c.angle.slice(1);
-  return `Aquarium service in ${c.name}, FL: cleaning, maintenance, installation and assessments for reef, freshwater and pond systems. ${angle}. Call or text Jason at ${site.phone}.`;
+  return `Aquarium service in ${c.name}, FL: cleaning, maintenance, installation and assessments for reef, freshwater and pond systems. ${angle}. Owner-operated, free quotes. Call or text Jason at ${site.phone}.`;
 }
 
 function cityImage(angle: string): { src: string; alt: string } {

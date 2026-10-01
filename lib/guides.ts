@@ -233,8 +233,227 @@ export const guides: Guide[] = [
     ],
     takeaway: "Freshwater is the forgiving one, saltwater is the showpiece. Both depend on a schedule.",
   },
+  {
+    slug: "moving-an-aquarium-palm-beach-county",
+    title: "Moving an aquarium across town without losing a fish",
+    description:
+      "How a tank move actually goes in Palm Beach County: what to do the week before, how the fish and rock travel, why the filter media must never dry out, and what the new room needs before the water goes back in.",
+    date: "2026-10-01",
+    minutes: 6,
+    image: "/images/stock/living-room-tank.jpg",
+    imageAlt: "A large freshwater aquarium set into a living room wall",
+    keywords: ["aquarium moving service Palm Beach County", "how to move a fish tank", "relocate aquarium Boca Raton"],
+    sections: [
+      {
+        h: "The week before",
+        p: [
+          "Stop adding anything new. No fish, no coral, no fertilizer changes. Do a normal water change five or six days out, not the day before, so the tank is clean but settled. Cut feeding to once a day and skip it entirely for the last twenty four hours. Fish travel better with an empty gut and the water stays cleaner in the buckets.",
+          "Measure the new spot. A filled 90 gallon tank weighs close to a thousand pounds, and a second-floor condo in Boca Raton or an older house in Lake Worth Beach may need the floor checked. Find the outlets, find the nearest water source and look at where the afternoon sun lands. A west-facing window will grow algae on the new glass within a month.",
+        ],
+      },
+      {
+        h: "What never travels in the tank",
+        p: [
+          "Water. A glass tank is built to be supported evenly from below. Carry it with even an inch of water sloshing in the bottom and the seams take stress they were never designed for. The sand or gravel comes out too, or at most stays as a thin damp layer. Deep substrate that has sat undisturbed for years holds pockets of gas that will foul the water the moment it is stirred.",
+          "Rock, plants and filter media ride in their own containers, under tank water, out of the sun. The bacteria that keep ammonia at zero live on those surfaces, not in the water column. Let the media dry out for an hour and the tank has to cycle all over again, with the fish in it.",
+        ],
+      },
+      {
+        h: "How the fish ride",
+        p: [
+          "Small fish go in bags with tank water and air, inside a cooler or an insulated box so the temperature holds. Larger fish and anything with spines go in buckets with lids. Corals sit in shallow containers so they are not stacked on each other. In South Florida the car is the danger, not the distance. A sealed car in July climbs past a hundred degrees in minutes, so the fish go in last, the air conditioning runs the whole way and nobody stops for lunch.",
+        ],
+      },
+      {
+        h: "Setting back up",
+        p: [
+          "Level the stand first, then the tank, before a drop of water goes in. Rock and hardscape go back, then the old water that was saved, then fresh water mixed and matched to the same temperature and, for saltwater, the same salinity. Filters and heaters start, the water clears, and only then do the fish come out of their bags, floated and acclimated the way they would be on the day they were bought.",
+          "Keep the lights off the first day, feed lightly for a week and test ammonia and nitrite daily for the first several days. A small bump is common. A climbing number means the bacteria took a hit and a water change is due.",
+        ],
+      },
+      {
+        h: "When to hand it off",
+        p: [
+          "Anything over about 50 gallons, anything in a wall, anything with a sump, and any reef tank are moves worth not doing alone. Jason moves tanks across Palm Beach County and north Broward as part of his installation work, and the same visit can swap in a bigger tank or newer equipment if the move was the excuse you were waiting for.",
+        ],
+      },
+    ],
+    takeaway: "Empty the tank fully, keep the rock and media wet, keep the fish cool, and level everything before the water goes back.",
+  },
+  {
+    slug: "office-aquarium-palm-beach-county",
+    title: "An office aquarium for your Palm Beach County business",
+    description:
+      "What a lobby or waiting room tank really involves: the right size for the space, where it can and cannot go, how service fits around business hours, and who looks after it over a holiday closure or a hurricane.",
+    date: "2026-10-01",
+    minutes: 5,
+    image: "/images/stock/office-tank.jpg",
+    imageAlt: "A planted aquarium on a cabinet in a clean office",
+    keywords: ["office aquarium service", "lobby fish tank maintenance Palm Beach County", "commercial aquarium Boca Raton"],
+    sections: [
+      {
+        h: "Why offices keep tanks",
+        p: [
+          "A waiting room with a tank is quieter. People watch fish instead of the clock, kids settle, and the front desk hears fewer complaints. Medical and dental practices figured this out decades ago, which is why so many of the tanks on Jason's route sit in offices along Glades Road, in downtown West Palm Beach and in the Jupiter medical corridor.",
+          "It only works if the tank looks good every single day. A dirty tank in a lobby says more about a business than no tank at all, and that is the real reason an office tank needs a schedule rather than a volunteer from the staff.",
+        ],
+      },
+      {
+        h: "Size and placement",
+        p: [
+          "Bigger is easier. A 75 to 125 gallon tank holds its temperature and chemistry far better than a 20 gallon on a reception counter, and it reads as a feature instead of a fishbowl. It needs a wall that can take the weight, an outlet on its own circuit if possible, no direct sun, and a path for a water cart. In-wall tanks in a leased space usually need the landlord's sign-off before anyone cuts drywall, so that conversation comes first.",
+          "Freshwater or saltwater is a budget and maintenance choice, not a looks choice. A well-planted freshwater tank or a bright African cichlid tank holds a room as well as a reef at a fraction of the running cost. A reef is the showpiece and it is serviced weekly for a reason.",
+        ],
+      },
+      {
+        h: "How service fits the business",
+        p: [
+          "Visits are scheduled around patients and clients, early or late or on a quiet afternoon. Access is arranged once, with a key, a code or a front desk contact, and it stays that way. Jason brings his own water, so a visit does not involve the office kitchen, and the only sign he was there is a cleaner tank.",
+          "Feeding is the one daily job that stays with the office. An automatic feeder handles it, and over a long weekend or a holiday closure the feeder, an auto top-off and a quick check visit cover the gap. For a hurricane closure there is a plan written down before June, not improvised the day the cone appears.",
+        ],
+      },
+      {
+        h: "What it costs",
+        p: [
+          "An office tank is quoted the same way as a home tank: by size, water type, visit frequency and equipment. Most offices land on a weekly or bi-weekly visit, and the number comes before the first one, not after.",
+        ],
+      },
+    ],
+    takeaway: "Go bigger than you think, keep it out of the sun, put the feeding on a machine and the cleaning on a schedule.",
+  },
+  {
+    slug: "aquarium-algae-types-and-what-they-mean",
+    title: "Aquarium algae: what each kind is telling you",
+    description:
+      "Brown film, green dots, hair, red slime, green water and black tufts each point to a different cause. How to tell them apart in a Palm Beach County tank and what actually fixes each one.",
+    date: "2026-10-01",
+    minutes: 6,
+    image: "/images/wipe/dirty.jpg",
+    imageAlt: "Green algae film covering the front glass of a neglected aquarium",
+    keywords: ["brown algae in fish tank", "green hair algae reef tank", "red slime cyanobacteria aquarium", "how to get rid of aquarium algae"],
+    sections: [
+      {
+        h: "Brown dust on everything",
+        p: [
+          "Diatoms. A tan film on the glass, sand and rock that wipes off with a finger. It shows up in nearly every new tank and after a big substrate change because it feeds on silicates in fresh sand and tap water. It usually burns itself out in a few weeks. If it keeps coming back in an established tank, the water source is the suspect, and in Palm Beach County that often means tap water going in where RO/DI water should.",
+        ],
+      },
+      {
+        h: "Hard green dots on the glass",
+        p: [
+          "Green spot algae. Tiny circles that laugh at a sponge and need a blade. It likes strong light and low phosphate, so it is common on reef tanks that are otherwise very clean and on freshwater tanks sitting near a window. Scrape it on a schedule and shorten the photoperiod. It is the one algae that is more of a chore than a warning.",
+        ],
+      },
+      {
+        h: "Green hair and green fuzz",
+        p: [
+          "Hair algae is a nutrient problem wearing a green wig. Nitrate and phosphate are high, usually from overfeeding, too many fish, a filter that has not been cleaned, or a water change schedule that slipped. Pulling it by hand helps for a week. Fixing it means testing, cutting the food, cleaning the filter and getting water changes back on schedule, then giving the clean-up crew a chance to keep up.",
+        ],
+      },
+      {
+        h: "Red or dark slime",
+        p: [
+          "Cyanobacteria, called red slime in saltwater and blue-green algae in freshwater. It is a bacterium, not an algae, and it grows in sheets that peel off in one piece and smell like a swamp. It wants low flow and dissolved organics. More flow across the dead spots, a deep clean of the sand, and a hard look at the feeding usually clears it. Chemical cures exist and they treat the symptom.",
+        ],
+      },
+      {
+        h: "Green water you cannot see through",
+        p: [
+          "Free-floating single-celled algae, mostly a freshwater and pond problem. Light plus nutrients, often after a filter was rinsed in tap water and the bacteria crashed. Water changes alone rarely win because the algae doubles faster than you can dilute it. A few days of darkness or a UV sterilizer clears it, and then the cause gets fixed so it stays clear.",
+        ],
+      },
+      {
+        h: "Black tufts and bubbles",
+        p: [
+          "Black beard algae in planted tanks grows on leaf edges and driftwood where flow is weak and carbon dioxide swings. Steady CO2, better circulation and trimming the worst leaves beat it. In reefs, green bubble algae is a different animal, a sack that spreads when it pops, so it comes out whole, by hand, with the tank's water running through a filter sock. Bryopsis, the feathery one, needs a specific treatment and is worth a photo to Jason before trying anything.",
+        ],
+      },
+      {
+        h: "The pattern underneath",
+        p: [
+          "Almost every algae comes down to light, nutrients and flow. A South Florida tank near a window gets more light than its owner thinks. A tank fed twice a day by two different people gets more nutrients than anyone admits. And a pump that has slowed with age moves less water than the day it was bought. Test the water, read the numbers and the algae will tell you which of the three it is.",
+        ],
+      },
+    ],
+    takeaway: "Brown means new or silicates, green dots mean light, hair means nutrients, slime means flow, green water means both. Fix the cause or it comes back.",
+  },
+  {
+    slug: "koi-pond-care-south-florida-year",
+    title: "Koi pond care through a South Florida year",
+    description:
+      "Palm Beach County ponds skip the frozen winter and get a long hot summer instead. Season by season: heat and oxygen, rainy-season runoff, hurricane prep, cool-front feeding, spawning and the predators that visit at dawn.",
+    date: "2026-10-01",
+    minutes: 6,
+    image: "/images/stock/koi-group.jpg",
+    imageAlt: "A group of koi gathered near the surface of a clear garden pond",
+    keywords: ["koi pond maintenance Florida", "pond algae green water South Florida", "koi pond service Wellington", "koi feeding temperature"],
+    sections: [
+      {
+        h: "Summer is the hard season",
+        p: [
+          "Up north a pond's danger is ice. Here it is heat. Warm water holds less oxygen, and a pond at 88 degrees with a dozen big koi and a weak air pump can lose fish overnight with no warning. Summer means aeration running around the clock, shade over at least part of the surface from plants or a sail, and never cleaning the filter and doing a large water change on the same hot afternoon.",
+          "Feed in the morning and evening when the water is cooler and skip feeding entirely on days over 90. Koi are always happy to eat. They are not always able to digest.",
+        ],
+      },
+      {
+        h: "Rainy season and runoff",
+        p: [
+          "The afternoon storms from June to October do two things to a pond. They dump a lot of soft, acidic rain that can move pH fast, and they wash fertilizer, mulch and dirt off the lawn and into the water. A pond in Wellington or Royal Palm Beach with a grass slope running toward it gets a dose of lawn fertilizer with every storm, which is exactly the fuel string algae wants.",
+          "A lip or a planted edge that keeps runoff out does more for water quality than any chemical. After a very heavy rain, test and skim the surface, and check that the overflow is clear so the pond drains where it is supposed to and not into the house.",
+        ],
+      },
+      {
+        h: "Hurricane season",
+        p: [
+          "The pond has the same two problems as a tank in a storm, no power and debris, plus a third: it can flood. Before a storm, lower the level a few inches, pull or secure anything that can blow in, and have a battery air pump ready. After, net out leaves and branches before they rot, test ammonia, and expect the water to go cloudy and then clear over a week as the filter catches up. Power can be out for days, and koi survive that far better with air than with a running pump that does nothing.",
+        ],
+      },
+      {
+        h: "The cool fronts",
+        p: [
+          "December through February brings a handful of nights in the 40s, and the western communities cool off more than the coast. Koi slow down below 60 degrees and their digestion slows faster than their appetite. Switch to a wheat germ food and feed less when the water drops into the 50s, and skip a day entirely after a front. The pond does not need to be shut down; it needs you to stop feeding like it is July.",
+        ],
+      },
+      {
+        h: "Spring spawning and visitors",
+        p: [
+          "As the water warms through March and April, koi spawn. It looks like a fight at dawn, the water goes milky from the eggs, and ammonia can spike. A water change the next day settles it. Spring also brings the herons, and raccoons and otters are year-round, so a pond with nowhere for the fish to hide loses fish. Depth, overhangs and a few tunnels of pipe on the bottom are the real defense.",
+        ],
+      },
+      {
+        h: "What a service visit covers",
+        p: [
+          "Skimmer and filter cleaning, a proper water change with dechlorinated water, string algae removal, pump and UV checks, a look at every fish for ulcers or clamped fins, and water testing written down. Ponds in Boca Raton, Delray Beach and Wellington are part of Jason's regular route, on a schedule set by the season, more often in the hottest months.",
+        ],
+      },
+    ],
+    takeaway: "Oxygen in summer, runoff in the rain, air during a storm, lighter feeding on cool nights, and hiding places all year.",
+  },
 ];
 
 export function getGuide(slug: string) {
   return guides.find((g) => g.slug === slug);
+}
+
+// Which guides each service and specialty page links to. Every guide is
+// linked from at least one money page so none of them sits orphaned.
+const related: Record<string, string[]> = {
+  "aquarium-cleaning-maintenance": ["aquarium-maintenance-cost-palm-beach-county", "aquarium-algae-types-and-what-they-mean", "how-to-choose-an-aquarium-service-boca-raton"],
+  "aquarium-design-installation": ["saltwater-vs-freshwater-aquarium-which-is-right", "office-aquarium-palm-beach-county", "moving-an-aquarium-palm-beach-county"],
+  "aquarium-assessment": ["aquarium-algae-types-and-what-they-mean", "why-are-my-fish-dying", "boca-raton-tap-water-aquarium"],
+  "emergency-aquarium-service": ["why-are-my-fish-dying", "hurricane-prep-for-aquariums-south-florida", "moving-an-aquarium-palm-beach-county"],
+  "saltwater-reef-aquariums": ["aquarium-algae-types-and-what-they-mean", "boca-raton-tap-water-aquarium", "saltwater-vs-freshwater-aquarium-which-is-right"],
+  "freshwater-planted-aquariums": ["aquarium-algae-types-and-what-they-mean", "saltwater-vs-freshwater-aquarium-which-is-right", "office-aquarium-palm-beach-county"],
+  "ponds-water-gardens": ["koi-pond-care-south-florida-year", "hurricane-prep-for-aquariums-south-florida", "aquarium-algae-types-and-what-they-mean"],
+};
+
+export function guidesFor(pageSlug: string): Guide[] {
+  return (related[pageSlug] ?? []).map(getGuide).filter((g): g is Guide => Boolean(g));
+}
+
+/** The next three guides in order, wrapping around, so every guide is linked
+ *  from three others instead of the first three getting every link. */
+export function nextGuides(slug: string, n = 3): Guide[] {
+  const i = guides.findIndex((g) => g.slug === slug);
+  return Array.from({ length: Math.min(n, guides.length - 1) }, (_, k) => guides[(i + 1 + k) % guides.length]);
 }

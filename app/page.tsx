@@ -9,9 +9,11 @@ import FaqTeaser from "@/components/home/FaqTeaser";
 import CtaBand from "@/components/home/CtaBand";
 import { JsonLd, faqJsonLd } from "@/lib/schema";
 import { homeFaqs } from "@/lib/faqs";
+import { site } from "@/lib/site";
 
 export const metadata = {
-  alternates: { canonical: "/" },
+  title: { absolute: "Aquarium Service in Palm Beach County, FL | Jason's Aquarium" },
+  alternates: { canonical: `${site.url}/` },
 };
 
 export default function HomePage() {

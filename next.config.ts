@@ -11,6 +11,17 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 60 * 60 * 24 * 30,
     deviceSizes: [390, 640, 768, 1024, 1280, 1536, 1920],
   },
+  // One canonical host. The old epicdevsolutions preview subdomain, the
+  // *.vercel.app alias and the bare apex all 308 to www.
+  async redirects() {
+    const to = "https://www.jasonsaquariumservice.com/:path*";
+    return ["jasonsaquarium.epicdevsolutions.com", "jasonsaquarium.vercel.app", "jasonsaquariumservice.com"].map((host) => ({
+      source: "/:path*",
+      has: [{ type: "host", value: host }],
+      destination: to,
+      permanent: true,
+    }));
+  },
   async headers() {
     return [
       {

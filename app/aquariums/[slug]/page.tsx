@@ -10,6 +10,7 @@ import { Container, Reveal, SectionHead } from "@/components/Section";
 import FaqList from "@/components/Faq";
 import CtaBand from "@/components/home/CtaBand";
 import { Arrow } from "@/components/home/ServicesShowcase";
+import RelatedGuides from "@/components/RelatedGuides";
 import { JsonLd, breadcrumbJsonLd, faqJsonLd, serviceJsonLd } from "@/lib/schema";
 
 const media: Record<string, { video: string; poster: string; gallery: { src: string; alt: string }[] }> = {
@@ -48,12 +49,19 @@ export function generateStaticParams() {
   return specialties.map((s) => ({ slug: s.slug }));
 }
 
+// Titles phrased the way people search, not the nav label plus "Service".
+const specialtyTitles: Record<string, string> = {
+  "saltwater-reef-aquariums": "Saltwater & Reef Aquarium Service in Palm Beach County",
+  "freshwater-planted-aquariums": "Freshwater & Planted Aquarium Service in Palm Beach County",
+  "ponds-water-gardens": "Koi Pond & Water Garden Service in Palm Beach County",
+};
+
 export async function generateMetadata({ params }: PageProps<"/aquariums/[slug]">): Promise<Metadata> {
   const { slug } = await params;
   const s = getSpecialty(slug);
   if (!s) return {};
   return {
-    title: `${s.name} Service in Palm Beach County, FL`,
+    title: specialtyTitles[s.slug] ?? `${s.name} in Palm Beach County, FL`,
     description: clip(`${s.short} Cleaning, maintenance, setup and troubleshooting for ${s.name.toLowerCase()} in Boca Raton, Delray Beach, Boynton Beach and across Palm Beach County.`),
     alternates: { canonical: `/aquariums/${s.slug}` },
   };
@@ -151,6 +159,7 @@ export default async function SpecialtyPage({ params }: PageProps<"/aquariums/[s
                   </Link>
                 ))}
               </Reveal>
+              <RelatedGuides slug={s.slug} />
             </div>
             <Reveal delay={80}>
               <FaqList faqs={s.faqs} />

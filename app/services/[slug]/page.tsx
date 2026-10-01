@@ -14,6 +14,7 @@ import { JsonLd, breadcrumbJsonLd, faqJsonLd, serviceJsonLd } from "@/lib/schema
 import { featuredReviews } from "@/lib/reviews";
 import { Stars } from "@/components/Footer";
 import AlgaeWipe from "@/components/AlgaeWipe";
+import RelatedGuides from "@/components/RelatedGuides";
 import { BrandBand, Callout, FishBullet } from "@/components/Brand";
 
 export function generateStaticParams() {
@@ -164,7 +165,10 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
       <section className="bg-shell py-20 md:py-24">
         <Container>
           <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
-            <SectionHead eyebrow="Questions" title={`Common questions about ${s.name.toLowerCase()}`} />
+            <div>
+              <SectionHead eyebrow="Questions" title={`Common questions about ${s.name.toLowerCase()}`} />
+              <RelatedGuides slug={s.slug} />
+            </div>
             <Reveal delay={80}>
               <FaqList faqs={s.faqs} />
             </Reveal>

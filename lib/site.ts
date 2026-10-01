@@ -30,7 +30,7 @@ export const site = {
   hours: "Call or text any time. Jason answers his own phone.",
   hoursShort: "24 hours, 7 days",
 
-  url: "https://jasonsaquarium.epicdevsolutions.com",
+  url: "https://www.jasonsaquariumservice.com",
   googleMapsUrl:
     "https://www.google.com/maps/place/?q=place_id:ChIJO5eZxNMh2YgRQxr1R7sDmGw",
   googleReviewUrl: "https://search.google.com/local/writereview?placeid=ChIJO5eZxNMh2YgRQxr1R7sDmGw",

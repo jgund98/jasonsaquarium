@@ -3,7 +3,7 @@ import { clip } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { guides, getGuide } from "@/lib/guides";
+import { guides, getGuide, nextGuides } from "@/lib/guides";
 import { site } from "@/lib/site";
 import { Container, Reveal } from "@/components/Section";
 import CtaBand from "@/components/home/CtaBand";
@@ -32,7 +32,7 @@ export default async function GuidePage({ params }: PageProps<"/guides/[slug]">)
   const { slug } = await params;
   const g = getGuide(slug);
   if (!g) notFound();
-  const others = guides.filter((o) => o.slug !== g.slug).slice(0, 3);
+  const others = nextGuides(g.slug);
   const article = {
     "@context": "https://schema.org",
     "@type": "Article",

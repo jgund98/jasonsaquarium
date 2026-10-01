@@ -123,7 +123,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <p className="mt-12 max-w-4xl text-[0.85rem] leading-relaxed text-white/45 text-pretty">
+        <p className="mt-12 max-w-4xl text-[0.85rem] leading-relaxed text-white/60 text-pretty">
           {site.disambiguation}{" "}
           Jason services aquariums in Boca Raton, Delray Beach, Boynton Beach, Highland Beach,
           Deerfield Beach, Parkland, Coral Springs, Wellington, West Palm Beach and the rest of
@@ -138,7 +138,7 @@ export default function Footer() {
             href={site.epic.url}
             target="_blank"
             rel="noopener"
-            className="inline-flex items-center gap-2 opacity-80 transition-opacity hover:opacity-100"
+            className="inline-flex items-center gap-2 text-white/80 transition-opacity hover:opacity-100"
           >
             <span>Site by</span>
             <Image
