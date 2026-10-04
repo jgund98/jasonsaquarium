@@ -6,7 +6,6 @@ export const site = {
   legalName: "Jason's Aquarium Service LLC",
   shortName: "Jason's Aquarium",
   owner: "Jason",
-  ownerFull: "Jason Wasloff",
   ownerFirst: "Jason",
   tagline: "Aquarium cleaning, design and care across Palm Beach County.",
   description:
@@ -18,8 +17,6 @@ export const site = {
   smsPhotoHref: "sms:+15165287824?&body=" + encodeURIComponent("Hi Jason, here is a photo of my tank. Can you tell me what it needs?"),
   phoneE164: "+15165287824",
 
-  // Where website leads are emailed. Override with LEAD_TO_EMAIL in Vercel.
-  leadEmail: "jgundyt@gmail.com",
 
   // No storefront and no home base. Mobile service across the county.
   homeCity: "Palm Beach County",

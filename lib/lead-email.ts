@@ -15,7 +15,8 @@ const BREVO_ENDPOINT = "https://api.brevo.com/v3/smtp/email";
 
 const FROM_EMAIL = process.env.LEAD_FROM_EMAIL || "noreply@epicdevsolutions.com";
 const FROM_NAME = process.env.LEAD_FROM_NAME || "Jason's Aquarium Service website";
-const TO_EMAIL = process.env.LEAD_TO_EMAIL || "jgundyt@gmail.com"; // Jason's inbox goes here once we have it
+// Server-only: Jason's inbox. Never import this into a client component.
+const TO_EMAIL = process.env.LEAD_TO_EMAIL || "jwasloff@yahoo.com";
 const SITE_NAME = process.env.LEAD_SITE_NAME || "www.jasonsaquariumservice.com";
 
 export type LeadField = [label: string, value: string | undefined | null];

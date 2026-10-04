@@ -21,7 +21,7 @@ Every business fact lives in `lib/site.ts`. Copy for services, cities, FAQs and 
 
 ## Before going live (Jordan)
 
-1. Set `BREVO_API_KEY` in Vercel. Recipient defaults to jgundyt@gmail.com in `lib/lead-email.ts`; change to Jason's inbox or set `LEAD_TO_EMAIL`. Until the key exists the form shows an error with the phone number instead of a false success.
+1. Set `BREVO_API_KEY` in Vercel. Leads go to Jason at the default in `lib/lead-email.ts` (server-only; set `LEAD_TO_EMAIL` to override). BREVO_API_KEY is set in Vercel Production (2026-10-04). Until the key exists the form shows an error with the phone number instead of a false success.
 2. Confirm with Jason: "usually the same day" reply promise (used on the form and CTAs), "no contract, no minimum" (home), and whether he wants pricing published. Aquaholic publishes prices and it is the one thing they have that we do not.
 3. Ask Jason for a photo of himself (About page and corner card use the fish mark for now) and for 10 to 15 seconds of phone video per visit. The only real photos are the two usable ones from his Google listing; the other two uploads there are junk phone screenshots and he should delete them.
 4. The 516 phone reads as out of area to Google and to people. A 561 number forwarding to his cell would help the map pack.
