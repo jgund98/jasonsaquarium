@@ -11,7 +11,7 @@ export default function Footer() {
     <footer className="relative bg-abyss text-white pb-[calc(env(safe-area-inset-bottom)+5.5rem)] md:pb-0">
       <div className="wave-mask-bottom h-12 bg-deep md:h-16" aria-hidden="true" />
       <div className="container-x pt-10 pb-12 md:pt-16">
-        <div className="grid gap-12 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
+        <div className="grid gap-12 lg:grid-cols-[1.2fr_0.9fr_1.7fr_0.9fr]">
           <div>
             <Wordmark tone="light" id="footer" className="w-56" />
             <p className="mt-6 max-w-sm text-[0.95rem] leading-relaxed text-white/70 text-pretty">
@@ -75,7 +75,7 @@ export default function Footer() {
 
           <div>
             <h3 className="eyebrow text-aqua">Palm Beach County</h3>
-            <ul className="mt-5 grid grid-cols-2 gap-x-4 gap-y-2.5 text-[0.9rem] sm:grid-cols-1">
+            <ul className="mt-5 grid grid-cols-2 gap-x-4 gap-y-2.5 text-[0.9rem] sm:grid-cols-3 lg:grid-cols-2">
               {palmBeachTowns.map((t) => (
                 <li key={t.slug}>
                   <Link href={`/aquarium-service/${t.slug}`} className="text-white/80 hover:text-white">
@@ -132,7 +132,10 @@ export default function Footer() {
 
         <div className="mt-8 flex flex-col gap-4 border-t border-[var(--line-dark)] pt-6 text-[0.8rem] text-white/50 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {year} {site.legalName}. All rights reserved.
+            © {year} {site.legalName}. All rights reserved.{" "}
+            <Link href="/privacy" className="ml-2 text-white/70 underline-offset-4 hover:text-white hover:underline">
+              Privacy
+            </Link>
           </p>
           <a
             href={site.epic.url}

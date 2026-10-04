@@ -41,7 +41,7 @@ export default async function GuidePage({ params }: PageProps<"/guides/[slug]">)
     datePublished: g.date,
     dateModified: g.date,
     image: `${site.url}${g.image}`,
-    author: { "@type": "Person", name: "Jason", worksFor: { "@id": `${site.url}/#business` } },
+    author: { "@id": `${site.url}/#jason`, "@type": "Person", name: site.ownerFirst, url: `${site.url}/about` },
     publisher: { "@id": `${site.url}/#business` },
     mainEntityOfPage: `${site.url}/guides/${g.slug}`,
     keywords: g.keywords.join(", "),
@@ -59,7 +59,9 @@ export default async function GuidePage({ params }: PageProps<"/guides/[slug]">)
               <span className="h-1 w-1 rounded-full bg-white/40" />
               <Link href="/guides" className="hover:text-white">Guides</Link>
             </nav>
-            <p className="eyebrow text-aqua">{g.minutes} minute read · {new Date(g.date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</p>
+            <p className="eyebrow text-aqua">
+              By <Link href="/about" className="underline decoration-aqua/50 underline-offset-4 hover:text-white">{site.ownerFirst}</Link> · {g.minutes} minute read · {new Date(g.date + "T12:00:00").toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}
+            </p>
             <h1 className="font-display mt-4 max-w-4xl text-balance text-[clamp(2rem,4.8vw,4rem)] leading-[1.04]">{g.title}</h1>
             <p className="mt-5 max-w-2xl text-pretty text-[1.05rem] leading-relaxed text-white/80 md:text-[1.15rem]">{g.description}</p>
           </Container>

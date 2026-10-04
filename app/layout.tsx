@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 import MobileDock from "@/components/MobileDock";
 import OwnerPopup from "@/components/OwnerPopup";
 import SmoothScroll from "@/components/SmoothScroll";
-import { localBusinessJsonLd } from "@/lib/schema";
+import { localBusinessJsonLd, personJsonLd, websiteJsonLd } from "@/lib/schema";
 
 const figtree = Figtree({
   variable: "--font-figtree",
@@ -33,6 +33,9 @@ export const metadata: Metadata = {
     images: [{ url: "/og.jpg", width: 1200, height: 630, alt: site.name }],
   },
   twitter: { card: "summary_large_image" },
+  alternates: {
+    types: { "application/rss+xml": [{ url: "/guides/feed.xml", title: "Jason's Aquarium guides" }] },
+  },
   robots: { index: true, follow: true },
   // Set GOOGLE_SITE_VERIFICATION and BING_SITE_VERIFICATION in Vercel and
   // redeploy; the meta tags render only when the values exist.
@@ -55,7 +58,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col">
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd()) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify([localBusinessJsonLd(), websiteJsonLd(), personJsonLd()]) }}
         />
         <SmoothScroll />
         <Header />

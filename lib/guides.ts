@@ -429,6 +429,102 @@ export const guides: Guide[] = [
     ],
     takeaway: "Oxygen in summer, runoff in the rain, air during a storm, lighter feeding on cool nights, and hiding places all year.",
   },
+  {
+    slug: "how-often-to-clean-a-fish-tank",
+    title: "How often should you clean a fish tank",
+    description:
+      "A real schedule for freshwater, planted, saltwater and reef tanks: what to do weekly, every two weeks and monthly, how much water to change, and the signs a tank needs a visit sooner than planned.",
+    date: "2026-10-01",
+    minutes: 5,
+    image: "/images/services/maintenance.jpg",
+    imageAlt: "Cleaning the front glass of a saltwater reef aquarium",
+    keywords: ["how often to clean a fish tank", "how often to change aquarium water", "fish tank cleaning schedule", "how often clean reef tank"],
+    sections: [
+      {
+        h: "The short answer",
+        p: [
+          "If you do the upkeep yourself, most freshwater tanks want a small water change and a glass cleaning every one to two weeks and a filter clean about once a month. On a professional schedule, most freshwater tanks are serviced every two to four weeks, because each visit is a full service instead of a quick change. Reef tanks need attention weekly or every two weeks. Fish-only saltwater tanks sit in between. The tank decides, though, not the calendar: a lightly stocked 75 gallon tank and a crowded 20 gallon tank are different jobs even if they hold the same fish.",
+        ],
+      },
+      {
+        h: "Freshwater community tanks",
+        p: [
+          "Change 15 to 25 percent of the water every one to two weeks, using conditioned water at the same temperature. Vacuum the gravel where waste collects, usually the front and the corners, rather than the whole bed at once. Wipe the glass, check the heater and look at every fish. Once a month, rinse the filter sponge in the water you just took out of the tank, never under the tap. Tap water kills the bacteria the filter depends on.",
+        ],
+      },
+      {
+        h: "Planted tanks",
+        p: [
+          "Planted tanks want a larger weekly water change, often 30 to 50 percent, because fertilizer builds up and algae is waiting for any imbalance. Trim fast-growing stems every week or two so they do not shade everything below them. Clean the glass before the change so the algae you scrape off leaves with the old water.",
+        ],
+      },
+      {
+        h: "Saltwater and reef tanks",
+        p: [
+          "A reef does best on a weekly or bi-weekly visit: 10 to 15 percent water change with saltwater mixed and matched to the tank's salinity and temperature, glass cleaned, skimmer cup emptied, filter socks swapped, and alkalinity, calcium, magnesium, nitrate and phosphate tested and written down. Small, steady changes beat big, occasional ones. A reef that gets a 40 percent change once a month swings far more than one that gets a little every week.",
+          "Fish-only saltwater tanks can often go every two weeks, with the same care on the water going in.",
+        ],
+      },
+      {
+        h: "Signs it needs attention sooner",
+        p: [
+          "Cloudy water, a film on the surface, algae coming back days after a cleaning, fish breathing hard at the top, a filter that sounds different, or a smell. Any of those means something has drifted, and a water test will usually say what. In South Florida summer, add a heater or chiller check: tanks near a window or in a warm room can run hotter than their owners realize.",
+        ],
+      },
+      {
+        h: "When to hand it off",
+        p: [
+          "If the schedule keeps slipping, the tank is telling you the honest answer. That is most of what a regular service visit fixes. Jason sets the frequency by looking at the tank and the water numbers, and if your tank needs fewer visits than you expected, he will say so.",
+        ],
+      },
+    ],
+    takeaway: "Do it yourself: small freshwater changes every one to two weeks. On a service schedule: freshwater every two to four weeks, reefs weekly or bi-weekly. Small and steady beats big and rare.",
+  },
+  {
+    slug: "cloudy-aquarium-water",
+    title: "Cloudy aquarium water: what white, green and yellow mean",
+    description:
+      "Cloudy fish tank water comes in three colors and each one has a different cause. How to tell a bacterial bloom from algae from tannins, what to do today, and what not to do in a Palm Beach County tank.",
+    date: "2026-10-01",
+    minutes: 5,
+    image: "/images/services/assessment.jpg",
+    imageAlt: "Testing aquarium water with a liquid test kit",
+    keywords: ["cloudy aquarium water", "cloudy fish tank water", "white cloudy fish tank", "green water aquarium", "yellow aquarium water"],
+    sections: [
+      {
+        h: "Milky white or gray",
+        p: [
+          "In a new tank, or right after a big cleaning or a filter swap, milky water is almost always a bacterial bloom. Free-floating bacteria multiply on extra nutrients faster than the filter bacteria can keep up. It looks alarming and usually clears in a few days to a week if you leave it alone. Feed lightly, do not change the filter media, and test ammonia and nitrite. If those read zero, patience is the fix.",
+          "White cloudiness that shows up right after adding new sand or gravel is just dust and settles out. Cloudiness in an established tank that never had trouble before is a different story. It usually follows overfeeding, a dead fish or snail hidden behind the rock, or a filter that has not been cleaned in a long time. That one needs a test and a look.",
+        ],
+      },
+      {
+        h: "Green",
+        p: [
+          "Green water is free-floating algae, and you usually cannot see across the tank once it takes hold. It needs light and nutrients, which in South Florida often means a tank near a window or lights left on too long, plus a little too much food. Water changes alone rarely beat it, because the algae doubles faster than you can dilute it. A few days of total darkness with the lights off and the tank covered, or a UV sterilizer, clears it. Then cut the light hours and the feeding so it does not come back.",
+        ],
+      },
+      {
+        h: "Yellow or tea colored",
+        p: [
+          "Clear but yellow or brown water is tannins from driftwood, leaves or some soils. It is harmless and some fish prefer it. Activated carbon in the filter and regular water changes remove it if you do not like the look. Yellow water in a tank without wood is different. It usually means dissolved waste is building up and a water change is overdue.",
+        ],
+      },
+      {
+        h: "What not to do",
+        p: [
+          "Do not tear the tank down and scrub everything, and do not replace all the filter media at once. Both remove the bacteria that keep the water safe and turn a cosmetic problem into a dangerous one. Do not add a clarifier and stop there either. Clarifiers clump particles so the filter can catch them, but the cause is still in the tank.",
+        ],
+      },
+      {
+        h: "When to call",
+        p: [
+          "If fish are gasping at the surface, hiding or dying, or ammonia or nitrite reads above zero, the cloudiness is a symptom of something that needs attention now. Text Jason a photo and your test numbers. Most cloudy tanks get fixed with one visit and a change to the routine.",
+        ],
+      },
+    ],
+    takeaway: "White in a new tank: wait it out. Green: light and nutrients. Yellow with driftwood: harmless. Any cloudiness plus sick fish: test and call.",
+  },
 ];
 
 export function getGuide(slug: string) {
@@ -438,12 +534,12 @@ export function getGuide(slug: string) {
 // Which guides each service and specialty page links to. Every guide is
 // linked from at least one money page so none of them sits orphaned.
 const related: Record<string, string[]> = {
-  "aquarium-cleaning-maintenance": ["aquarium-maintenance-cost-palm-beach-county", "aquarium-algae-types-and-what-they-mean", "how-to-choose-an-aquarium-service-boca-raton"],
+  "aquarium-cleaning-maintenance": ["how-often-to-clean-a-fish-tank", "aquarium-maintenance-cost-palm-beach-county", "how-to-choose-an-aquarium-service-boca-raton"],
   "aquarium-design-installation": ["saltwater-vs-freshwater-aquarium-which-is-right", "office-aquarium-palm-beach-county", "moving-an-aquarium-palm-beach-county"],
-  "aquarium-assessment": ["aquarium-algae-types-and-what-they-mean", "why-are-my-fish-dying", "boca-raton-tap-water-aquarium"],
+  "aquarium-assessment": ["cloudy-aquarium-water", "why-are-my-fish-dying", "aquarium-algae-types-and-what-they-mean"],
   "emergency-aquarium-service": ["why-are-my-fish-dying", "hurricane-prep-for-aquariums-south-florida", "moving-an-aquarium-palm-beach-county"],
   "saltwater-reef-aquariums": ["aquarium-algae-types-and-what-they-mean", "boca-raton-tap-water-aquarium", "saltwater-vs-freshwater-aquarium-which-is-right"],
-  "freshwater-planted-aquariums": ["aquarium-algae-types-and-what-they-mean", "saltwater-vs-freshwater-aquarium-which-is-right", "office-aquarium-palm-beach-county"],
+  "freshwater-planted-aquariums": ["how-often-to-clean-a-fish-tank", "cloudy-aquarium-water", "saltwater-vs-freshwater-aquarium-which-is-right"],
   "ponds-water-gardens": ["koi-pond-care-south-florida-year", "hurricane-prep-for-aquariums-south-florida", "aquarium-algae-types-and-what-they-mean"],
 };
 

@@ -210,12 +210,12 @@ body {
   transform: translateY(0);
 }
 .btn-coral {
-  background: var(--coral);
+  background: var(--coral-deep);
   color: #fff;
   box-shadow: 0 10px 30px -12px rgba(255, 106, 77, 0.7);
 }
 .btn-coral:hover {
-  background: var(--coral-deep);
+  background: #c94324;
 }
 .btn-abyss {
   background: var(--abyss);

@@ -2,6 +2,8 @@ import { site, serviceAreas } from "./site";
 import { services, specialties, type Faq } from "./services";
 
 const ID = `${site.url}/#business`;
+export const PERSON_ID = `${site.url}/#jason`;
+export const WEBSITE_ID = `${site.url}/#website`;
 
 export function localBusinessJsonLd() {
   return {
@@ -18,7 +20,8 @@ export function localBusinessJsonLd() {
     logo: `${site.url}/brand/logo-mark.png`,
     hasMap: site.googleMapsUrl,
     priceRange: "$$",
-    founder: { "@type": "Person", name: site.owner },
+    founder: { "@id": PERSON_ID },
+    employee: { "@id": PERSON_ID },
     foundingDate: site.founded,
     address: {
       "@type": "PostalAddress",
@@ -60,6 +63,32 @@ export function localBusinessJsonLd() {
       "Aquarium water chemistry",
       "Aquarium installation",
     ],
+  };
+}
+
+export function personJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": PERSON_ID,
+    name: site.ownerFirst,
+    jobTitle: "Owner and aquarium technician",
+    url: `${site.url}/about`,
+    worksFor: { "@id": ID },
+    knowsAbout: ["Saltwater reef aquariums", "Freshwater and planted aquariums", "Koi ponds", "Aquarium water chemistry", "Aquarium installation"],
+  };
+}
+
+export function websiteJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": WEBSITE_ID,
+    url: site.url,
+    name: site.name,
+    alternateName: [site.shortName, site.legalName],
+    publisher: { "@id": ID },
+    inLanguage: "en-US",
   };
 }
 

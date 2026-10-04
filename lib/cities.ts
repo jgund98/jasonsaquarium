@@ -310,6 +310,34 @@ export const cities: City[] = [
     nearby: ["lantana", "boynton-beach", "wellington", "west-palm-beach"],
   },
   {
+    slug: "greenacres",
+    name: "Greenacres",
+    county: "Palm Beach",
+    zips: ["33463", "33467"],
+    drive: "Palm Beach County",
+    lead:
+      "Jason's Aquarium Service cleans, sets up and maintains aquariums in Greenacres. Freshwater community tanks, first tanks for kids, planted tanks and small reefs in homes along Jog Road, Lake Worth Road and Forest Hill Boulevard get tested water, clean glass and an honest read on what the tank needs, weekly, bi-weekly or monthly.",
+    local: [
+      "Greenacres is a family town, and the tanks here reflect it. A lot of the work is a 29 to 75 gallon freshwater tank in a living room or a kid's bedroom, set up with good intentions and now a little greener than anyone wanted. Those tanks rarely need anything dramatic. They need the filter cleaned properly, the right amount of water changed, a feeding routine that does not drown the fish, and someone who can explain why it went cloudy.",
+      "A first tank goes better with a plan. Jason helps families pick fish that will actually get along at their adult size, which matters more than most pet store tags suggest, and sets up a schedule that fits a busy house. Some families want a visit every two weeks. Others want one deep clean and a lesson, then a check-in when something looks off.",
+      "Greenacres water comes through a treated municipal supply with chloramine in it, which does not boil or gas off the way plain chlorine does. Every bucket of new water needs a conditioner that handles chloramine, and the dose has to match the volume. Getting that wrong is one of the quiet reasons first tanks lose fish in their first month.",
+    ],
+    neighborhoods: ["Jog Road corridor", "Lake Worth Road corridor", "Forest Hill Boulevard area", "Melaleuca Lane area", "Haverhill Road area"],
+    landmarks: ["Okeeheelee Park"],
+    angle: "family homes, first tanks and freshwater community tanks",
+    faqs: [
+      {
+        q: "My kids' tank keeps turning cloudy. Can you fix it for good?",
+        a: "Usually, yes. Cloudy water in a family tank almost always comes from overfeeding, a filter cleaned the wrong way or too many fish for the tank. Jason tests the water, fixes the cause and shows the family what to change so it stays clear between visits.",
+      },
+      {
+        q: "Do you help pick fish for a first tank in Greenacres?",
+        a: "Yes. Jason recommends fish that fit the tank at their adult size and get along with each other, and stocks the tank in stages so the filter can keep up.",
+      },
+    ],
+    nearby: ["lake-worth-beach", "wellington", "lantana", "boynton-beach"],
+  },
+  {
     slug: "wellington",
     name: "Wellington",
     county: "Palm Beach",
@@ -357,6 +385,62 @@ export const cities: City[] = [
       },
     ],
     nearby: ["wellington", "west-palm-beach", "lake-worth-beach"],
+  },
+  {
+    slug: "westlake",
+    name: "Westlake",
+    county: "Palm Beach",
+    zips: ["33470"],
+    drive: "Palm Beach County",
+    lead:
+      "Jason's Aquarium Service designs, installs and maintains aquariums in Westlake. New construction is the best time to plan a tank, and Jason helps Westlake homeowners place a built-in or freestanding aquarium before the drywall and outlets are final, then keeps it healthy with regular cleaning and water testing.",
+    local: [
+      "Westlake is the newest city in Palm Beach County, and most of the homes off Seminole Pratt Whitney Road are new or still going up. That changes the conversation. In an older house the tank has to fit the room. In a new one the room can be planned around the tank: a dedicated outlet, a wall that can carry a few hundred pounds of water, a closet behind an in-wall tank for the filtration, and a path for a water cart that does not cross the new floors.",
+      "Built-in tanks designed from the start are easier to live with for years. The equipment is hidden but reachable, the lights are on a timer that suits the room, and a service visit takes less time because nothing is wedged behind a cabinet. Jason talks through those details with the homeowner and, when it helps, with the builder.",
+      "New homes also have new everything in the water lines. Fresh plumbing and municipal water with chloramine both point to conditioning every drop that goes into a tank, and for a reef, using RO/DI water rather than tap.",
+    ],
+    neighborhoods: ["Westlake new-home communities", "Seminole Pratt Whitney Road corridor"],
+    landmarks: ["Westlake Adventure Park"],
+    angle: "new construction, built-in tanks designed with the house",
+    faqs: [
+      {
+        q: "We are building in Westlake. When should we plan the aquarium?",
+        a: "Before the walls are closed if you want an in-wall or built-in tank. Jason can walk the plans with you so the outlet, the wall support and the equipment space are right the first time.",
+      },
+      {
+        q: "Do you install freestanding tanks in new homes too?",
+        a: "Yes. Freestanding tanks on a proper stand are often the simplest option, and Jason will tell you which makes more sense for the room and the fish you want.",
+      },
+    ],
+    nearby: ["the-acreage", "royal-palm-beach", "wellington", "palm-beach-gardens"],
+  },
+  {
+    slug: "the-acreage",
+    name: "The Acreage",
+    county: "Palm Beach",
+    zips: ["33470", "33411", "33412"],
+    drive: "Palm Beach County",
+    lead:
+      "Jason's Aquarium Service maintains aquariums and backyard ponds in The Acreage and Loxahatchee. Homes on well water need their tank water handled differently, and Jason tests, conditions and prepares water for reef tanks, freshwater tanks and ponds on large Acreage lots on a regular schedule.",
+    local: [
+      "Most homes in The Acreage run on private wells, and well water is the single biggest difference between a tank here and one in town. Acreage wells commonly carry iron, hardness and sometimes the rotten egg smell of hydrogen sulfide, and every home's softener or filter setup is a little different. Water that is fine for a shower can still stain a tank orange, feed algae or swing pH in a planted tank.",
+      "So the first visit starts with the water. Jason tests what comes out of the tap after the house treatment, then decides what the tank needs: conditioned well water for a hardy freshwater tank, or RO/DI water for a reef and for sensitive fish. Saltwater for reef tanks is mixed from purified water ahead of every visit.",
+      "The lots are big, and a lot of them have ponds, canals and room for a water feature. Pond service here means managing the runoff from lawns and horse paddocks, keeping pumps clear of leaves and debris and keeping fish safe from the herons and otters that live along the canals.",
+    ],
+    neighborhoods: ["The Acreage", "Loxahatchee", "Loxahatchee Groves", "Orange Boulevard area", "Hamlin Boulevard area", "Seminole Pratt Whitney Road area"],
+    landmarks: ["Acreage Community Park", "Lion Country Safari"],
+    angle: "large lots on well water, backyard ponds and canals",
+    faqs: [
+      {
+        q: "Can I use my well water in my aquarium?",
+        a: "Sometimes. It depends on what your well and treatment system put out. Jason tests it first. Hardy freshwater tanks can often use conditioned well water, while reef tanks and sensitive fish do better on RO/DI water.",
+      },
+      {
+        q: "Do you service ponds in The Acreage and Loxahatchee?",
+        a: "Yes. Pond cleaning, pump and filter service, algae control and fish health checks are part of the work on Acreage and Loxahatchee properties.",
+      },
+    ],
+    nearby: ["westlake", "royal-palm-beach", "jupiter-farms", "wellington"],
   },
   {
     slug: "manalapan",
@@ -475,6 +559,143 @@ export const cities: City[] = [
       },
     ],
     nearby: ["palm-beach-gardens", "west-palm-beach"],
+  },
+  {
+    slug: "riviera-beach",
+    name: "Riviera Beach",
+    county: "Palm Beach",
+    zips: ["33404", "33407", "33419"],
+    drive: "Palm Beach County",
+    lead:
+      "Jason's Aquarium Service provides aquarium cleaning, reef tank maintenance and installation in Riviera Beach and on Singer Island. Oceanfront condo tanks, marina offices and homes on the mainland get regular water changes, water testing and equipment checks on a weekly, bi-weekly or monthly schedule.",
+    local: [
+      "A lot of reef keepers in this part of the county started under water. The snorkel trail at Phil Foster Park under the Blue Heron Bridge is one of the best known shore dives in the country, and people who spend their weekends looking at real reef fish tend to want a reef tank that looks like the real thing. Those tanks need stable alkalinity, calcium and salinity more than anything, and that only comes from testing on a schedule.",
+      "On Singer Island most tanks are in high-rise condominiums. That means service elevators, association rules about water, and a building engineer who wants to know nothing is going to leak into the unit below. Jason brings prepared saltwater in sealed containers, protects the floors, and keeps the equipment in shape so a failed seal never becomes a ceiling stain two floors down.",
+      "On the mainland, the work runs from family freshwater tanks to office tanks near the Port of Palm Beach and the marinas along the Intracoastal.",
+    ],
+    neighborhoods: ["Singer Island", "Palm Beach Shores", "Marina District", "Lake Park area", "Ocean Avenue condominiums"],
+    landmarks: ["Phil Foster Park", "Ocean Reef Park", "Port of Palm Beach"],
+    angle: "Singer Island condos, reef tanks for divers and snorkelers",
+    faqs: [
+      {
+        q: "Can you service a reef tank in a Singer Island condo?",
+        a: "Yes. Condo tanks are routine. Jason brings prepared saltwater in sealed containers, works around building rules and elevator schedules, and keeps the equipment maintained so leaks do not happen.",
+      },
+      {
+        q: "Do you set up new reef tanks in Riviera Beach?",
+        a: "Yes. Jason designs, installs, cycles and stocks reef systems in stages, then keeps them on a regular service schedule.",
+      },
+    ],
+    nearby: ["north-palm-beach", "west-palm-beach", "palm-beach-gardens", "palm-beach"],
+  },
+  {
+    slug: "north-palm-beach",
+    name: "North Palm Beach",
+    county: "Palm Beach",
+    zips: ["33408", "33410"],
+    drive: "Palm Beach County",
+    lead:
+      "Jason's Aquarium Service maintains and installs aquariums in North Palm Beach. Waterfront homes on the Intracoastal and its canals, the condominiums at Old Port Cove and homes near the North Palm Beach Country Club get reef, freshwater and pond service with tested water and a clean tank every visit.",
+    local: [
+      "North Palm Beach is a boating town, and a lot of its homes sit on canals that run out to the Intracoastal and Lake Worth Lagoon. People who live on the water often keep saltwater tanks, and many of those tanks are established systems that have been running for years. An older reef is usually a stable one, as long as the equipment keeps up. Heaters, return pumps and skimmers wear out quietly, and catching a tired pump before it fails is half of what a regular visit is for.",
+      "Waterfront homes also take the brunt of hurricane season. A tank in North Palm Beach should have a written plan before June: a battery air pump, a way to keep temperature steady without power, and someone who will check on it if the family evacuates. Jason builds that plan with every client who wants one.",
+      "Inland, around the country club and along Prosperity Farms Road, the mix is closer to the rest of the county: family freshwater tanks, planted tanks and the occasional pond.",
+    ],
+    neighborhoods: ["Old Port Cove", "Lost Tree Village", "North Palm Beach Country Club area", "Prosperity Farms Road area", "Juno Isles", "Village waterfront canals"],
+    landmarks: ["John D. MacArthur Beach State Park"],
+    angle: "waterfront homes, established saltwater and reef systems",
+    faqs: [
+      {
+        q: "Can you take over service on an older reef tank in North Palm Beach?",
+        a: "Yes. Jason starts with a full assessment, testing the water and checking every piece of equipment, then sets a schedule that keeps the system stable instead of changing everything at once.",
+      },
+      {
+        q: "What happens to my tank if we evacuate for a hurricane?",
+        a: "Plan it before the season. Jason can set up battery air and a temperature plan, and check the tank after the storm passes when roads allow.",
+      },
+    ],
+    nearby: ["juno-beach", "palm-beach-gardens", "riviera-beach", "jupiter"],
+  },
+  {
+    slug: "juno-beach",
+    name: "Juno Beach",
+    county: "Palm Beach",
+    zips: ["33408"],
+    drive: "Palm Beach County",
+    lead:
+      "Jason's Aquarium Service cleans and maintains aquariums in Juno Beach. Reef and freshwater tanks in the oceanfront condominiums along A1A and in homes west of U.S. 1 get regular water changes, water testing and equipment checks, with extra care for seasonal residents who are away part of the year.",
+    local: [
+      "Juno Beach is a small town with a lot of ocean in it. The Loggerhead Marinelife Center and the pier draw people who care about what lives in the water, and plenty of them keep a tank at home. Most of the tanks here are in condominiums along A1A, which usually means a mid-size reef or a fish-only saltwater tank that fits the space, and a building with rules about water and deliveries.",
+      "Many Juno Beach owners are seasonal. A tank left on its own from April to November needs more than an automatic feeder. It needs someone testing the water, topping off evaporation, cleaning the glass and checking that the heater and pumps are still doing their jobs. Jason keeps those tanks on a standing schedule so the owner walks back into a clean, healthy tank in the fall.",
+    ],
+    neighborhoods: ["A1A oceanfront condominiums", "Universe Boulevard area", "West of U.S. 1"],
+    landmarks: ["Loggerhead Marinelife Center", "Juno Beach Pier"],
+    angle: "oceanfront condos, seasonal residents and mid-size reef tanks",
+    faqs: [
+      {
+        q: "We are only in Juno Beach for the winter. Can you keep the tank going while we are away?",
+        a: "Yes. A standing schedule covers testing, water changes, top-off and equipment checks all year, and Jason can add a visit right before you get back.",
+      },
+      {
+        q: "Is a reef tank practical in a condo?",
+        a: "Usually, yes, if it is sized for the floor and the building's rules. Jason will tell you what size and setup make sense for your unit.",
+      },
+    ],
+    nearby: ["north-palm-beach", "jupiter", "palm-beach-gardens", "tequesta"],
+  },
+  {
+    slug: "jupiter-farms",
+    name: "Jupiter Farms",
+    county: "Palm Beach",
+    zips: ["33478"],
+    drive: "Palm Beach County",
+    lead:
+      "Jason's Aquarium Service maintains ponds and aquariums in Jupiter Farms. Koi and goldfish ponds, water features and indoor tanks on large rural lots get regular cleaning, water testing and pump and filter service, with water prepared for homes on private wells.",
+    local: [
+      "Jupiter Farms is about as rural as Palm Beach County gets, with big lots, horses and a lot of wildlife. Ponds are a large part of the work here. A pond out west lives with leaves, runoff from pastures, heavy summer rain and visitors: herons at dawn, raccoons at night and river otters wandering up from the Loxahatchee. Deep water, overhangs and places for fish to hide matter as much as the filter does.",
+      "Indoor tanks here run on well water. Jason tests what the house treatment puts out before using it, and uses RO/DI water for reef tanks and sensitive freshwater fish. Some homes have a room in a barn or a workshop set aside for tanks, and those systems get the same testing and equipment checks as a living room display.",
+    ],
+    neighborhoods: ["Jupiter Farms", "Indiantown Road corridor", "Jupiter Farms Road area"],
+    landmarks: ["Riverbend Park", "Loxahatchee River"],
+    angle: "rural lots, koi ponds and water features, homes on well water",
+    faqs: [
+      {
+        q: "Something keeps taking fish out of my pond. What can I do?",
+        a: "Herons, raccoons and otters are the usual suspects out west. Deeper water, overhangs, fish caves and netting during the worst season help. Jason can look at the pond and suggest what fits it.",
+      },
+      {
+        q: "Do you work with well water in Jupiter Farms?",
+        a: "Yes. Jason tests the well water first and decides whether to condition it or use RO/DI water, depending on the tank and the fish.",
+      },
+    ],
+    nearby: ["jupiter", "tequesta", "the-acreage", "palm-beach-gardens"],
+  },
+  {
+    slug: "tequesta",
+    name: "Tequesta",
+    county: "Palm Beach",
+    zips: ["33469"],
+    drive: "Palm Beach County",
+    lead:
+      "Jason's Aquarium Service maintains and installs aquariums in Tequesta, the northernmost village in Palm Beach County. Homes along the Loxahatchee River and the Intracoastal, Tequesta Country Club and the neighborhoods off U.S. 1 get reef, freshwater and pond service with tested water and clean tanks on a regular schedule.",
+    local: [
+      "Tequesta sits where the Loxahatchee River meets the Intracoastal, and a lot of its homes face the water. Larger homes here tend to have room for a real display: a big reef, a fish-only saltwater tank with large fish, or a planted tank that anchors a living room. Bigger systems are more forgiving of small mistakes and less forgiving of neglect, which is why they do best on a steady weekly or bi-weekly schedule.",
+      "River and Intracoastal homes also sit low, and the same planning that protects the house in hurricane season should cover the tank. Battery air, a way to hold temperature, and a check after the storm keep a large system from crashing while the power is out.",
+    ],
+    neighborhoods: ["Tequesta Country Club", "Turtle Creek", "Loxahatchee River waterfront", "Tequesta Drive area", "Jupiter Inlet Colony", "Beach Road condominiums"],
+    landmarks: ["Coral Cove Park", "Loxahatchee River"],
+    angle: "river and Intracoastal homes, large reef and fish-only displays",
+    faqs: [
+      {
+        q: "Do you service aquariums in Tequesta?",
+        a: "Yes. Tequesta is part of the regular north county route, with weekly, bi-weekly and monthly schedules for reef, freshwater and pond systems.",
+      },
+      {
+        q: "Can you maintain a large fish-only saltwater tank?",
+        a: "Yes. Large fish-only systems need steady water changes, good filtration maintenance and close attention to the fish, and Jason services them on a schedule that matches the bioload.",
+      },
+    ],
+    nearby: ["jupiter", "jupiter-farms", "juno-beach", "palm-beach-gardens"],
   },
   {
     slug: "deerfield-beach",

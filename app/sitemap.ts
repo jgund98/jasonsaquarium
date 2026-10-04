@@ -6,7 +6,7 @@ import { guides } from "@/lib/guides";
 import { tools } from "@/lib/tools";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date("2026-09-27");
+  const now = new Date("2026-10-01");
   const u = (p: string) => `${site.url}${p}`;
   return [
     { url: site.url, lastModified: now, changeFrequency: "weekly", priority: 1, images: [u("/og.jpg"), u("/images/work/lobby-reef-1200.jpg"), u("/images/work/reef-display.jpg")] },
@@ -24,5 +24,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: u("/tools"), lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     ...tools.map((t) => ({ url: u(`/tools/${t.slug}`), lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 })),
     { url: u("/contact"), lastModified: now, changeFrequency: "yearly", priority: 0.8 },
+    { url: u("/privacy"), lastModified: now, changeFrequency: "yearly", priority: 0.2 },
   ];
 }

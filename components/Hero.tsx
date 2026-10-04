@@ -9,7 +9,7 @@ import { Stars } from "./Footer";
 import { PhoneIcon } from "./Header";
 
 export default function Hero() {
-  preload("/images/hero/reef-backdrop-3.jpg", { as: "image", fetchPriority: "high" });
+  preload("/images/hero/reef-backdrop.webp", { as: "image", fetchPriority: "high" });
   const copyRef = useRef<HTMLDivElement>(null);
 
   return (
@@ -34,7 +34,7 @@ export default function Hero() {
         aria-hidden="true"
         className="pointer-events-none absolute inset-y-0 right-0 w-[85%] md:w-[56%]"
         style={{
-          backgroundImage: "url(/images/hero/reef-backdrop-3.jpg)",
+          backgroundImage: "url(/images/hero/reef-backdrop.webp)",
           backgroundSize: "cover",
           backgroundPosition: "65% 55%",
           opacity: 0.5,
